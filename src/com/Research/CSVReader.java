@@ -12,9 +12,6 @@ public class CSVReader {
     private String[] dataFromFile;
 
     //Constructors
-    public CSVReader(){
-        csvFile = "";
-    }
     public CSVReader(String fileName){
         csvFile = fileName;
     }
