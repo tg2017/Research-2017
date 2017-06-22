@@ -26,7 +26,15 @@ public class Profile {
     private double minVolume;
     private double avgVolume;
 
+    //Order of indexes in indices.csv
     //name, maxFrequency, minFrequency, avgFrequency, maxVolume, minVolume, avgVolume
+    //NOTE: this is to read in the indices of the values in the initialArray. So, in the original csv file containing
+    //the data for the profiles, the data can be sorted in any order; but, in the indices file, the index of each value
+    //must be specified in this order.
+    //Example:
+    //If, in the original csv file, the name is the first value, followed by maxFreq, followed by maxVol, then minFreq,
+    //minVol, avgFreq, and finally, avgVol, then in the indices csv file, the numbers must appear in the order
+    //"0,1,3,5,2,4,6".
 
     public Profile(List array){
         //Store values of "array" in "initialArray"
@@ -53,7 +61,7 @@ public class Profile {
     private void initialize(){
         this.convertToDouble();
         name = (String)(initialArray.get(indices.get(NAMEINDEX)));
-        System.out.println(name);
+        System.out.println("Name: " + name);
     }
 
     //Converts numerical String values stored in initialArray to doubles, and stores them in arrayOfDoubles

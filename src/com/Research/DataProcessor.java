@@ -11,6 +11,8 @@ public class DataProcessor {
     //Removes blank ("") elements from ArrayList
     public static List removeBlanks(List tempArrayOfValues){
         List arrayOfValues = new ArrayList<>();
+
+        //Add values of tempArrayOfValues to arrayOfValues
         for (Object tempElement : tempArrayOfValues){
             arrayOfValues.add(tempElement);
         }

@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Profile.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Profile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/CSVReader.java" afterPath="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/DataProcessor.java" afterPath="$PROJECT_DIR$/src/com/Research/DataProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Profile.java" afterPath="$PROJECT_DIR$/src/com/Research/Profile.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,7 +23,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -37,22 +38,21 @@
       <file leaf-file-name="DataProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/DataProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#removeBlanks#0;class#DataProcessor#0" expanded="false" />
                 <element signature="method#isDouble#0;class#DataProcessor#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Profile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="544">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Profile#0;class#Profile#0" expanded="false" />
@@ -107,8 +107,8 @@
         <option value="$PROJECT_DIR$/src/com/Research/CSVSplitter.java" />
         <option value="$PROJECT_DIR$/src/com/Research/DoubleConverter.java" />
         <option value="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/DataProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/DataProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Profile.java" />
       </list>
     </option>
@@ -425,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497987455188</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Started Profile class, converted &quot;for&quot; loops to &quot;foreach&quot; loops">
+      <created>1498089274943</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1498089274943</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -469,7 +476,8 @@
     <MESSAGE value="Test commit" />
     <MESSAGE value="Made to ArrayList" />
     <MESSAGE value="DataProcessor removeBlanks method works" />
-    <option name="LAST_COMMIT_MESSAGE" value="DataProcessor removeBlanks method works" />
+    <MESSAGE value="Started Profile class, converted &quot;for&quot; loops to &quot;foreach&quot; loops" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started Profile class, converted &quot;for&quot; loops to &quot;foreach&quot; loops" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -498,7 +506,6 @@
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#removeBlanks#0;class#DataProcessor#0" expanded="false" />
             <element signature="method#isDouble#0;class#DataProcessor#0" expanded="false" />
           </folding>
         </state>
@@ -545,7 +552,6 @@
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#removeBlanks#0;class#DataProcessor#0" expanded="false" />
             <element signature="method#isDouble#0;class#DataProcessor#0" expanded="false" />
           </folding>
         </state>
@@ -592,7 +598,6 @@
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#removeBlanks#0;class#DataProcessor#0" expanded="false" />
             <element signature="method#isDouble#0;class#DataProcessor#0" expanded="false" />
           </folding>
         </state>
@@ -639,7 +644,6 @@
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#removeBlanks#0;class#DataProcessor#0" expanded="false" />
             <element signature="method#isDouble#0;class#DataProcessor#0" expanded="false" />
           </folding>
         </state>
@@ -686,7 +690,6 @@
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#removeBlanks#0;class#DataProcessor#0" expanded="false" />
             <element signature="method#isDouble#0;class#DataProcessor#0" expanded="false" />
           </folding>
         </state>
@@ -730,25 +733,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/DataProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#removeBlanks#0;class#DataProcessor#0" expanded="false" />
             <element signature="method#isDouble#0;class#DataProcessor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
-            <element signature="method#Profile#1;class#Profile#0" expanded="false" />
-            <element signature="method#convertToDouble#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -759,6 +748,19 @@
           <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#Profile#1;class#Profile#0" expanded="false" />
+            <element signature="method#convertToDouble#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
