@@ -40,15 +40,7 @@ public class Profile {
     private double avgVolume;
 
 
-
-    public Profile(List array){
-        //Store values of "array" in "initialArray"
-        for (Object element : array) {
-            initialArray.add(element);
-        }
-        this.initialize();
-    }
-
+    //Constructor: Takes in a List ("array") that contains values to be stored, and a List<Integer> that contains the indices
     public Profile(List array, List<Integer> arrayOfIndices){
         //Store values of "array" in "initialArray"
         for (Object initializerObject : array) {

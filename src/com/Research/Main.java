@@ -41,72 +41,38 @@ public class Main {
             finalValues.add(DataProcessor.removeBlanks(tempElement));
         }
 
+        //Get indices values from indices.csv file
         initialIndices = indexReader.getValues();
 
+        //Convert indices to Integers and store them in finalIndices
         for (String index : initialIndices){
             if(DataProcessor.isInteger(index)){
                 finalIndices.add(DataProcessor.convertToInteger(index));
             }
         }
 
+        //Create and store the Profiles
         for (List profileArray : finalValues){
             profiles.add(new Profile(profileArray, finalIndices));
         }
 
+        //Print summaries of Profiles
         for (Profile printTest : profiles){
             printTest.printSummary();
             System.out.println();
             System.out.println();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //Print test values
         //Print temp values
         System.out.println("Temp Values ArrayList:\n" + tempValues);
 
         //Example use:
         //To print the 2nd array
-        System.out.println("\nThe 2nd temp array:\n" + tempValues.get(1));
+        //System.out.println("\nThe 2nd temp array:\n" + tempValues.get(1));
 
         //To print the fourth value of the second array
-        System.out.println("\nThe 4th value of the 2nd temp array:\n" + tempValues.get(1).get(3));
+        //System.out.println("\nThe 4th value of the 2nd temp array:\n" + tempValues.get(1).get(3));
 
         System.out.println();
 
@@ -115,10 +81,10 @@ public class Main {
 
         //Example use:
         //To print the 2nd array
-        System.out.println("\nThe 2nd array:\n" + finalValues.get(1));
+        //System.out.println("\nThe 2nd array:\n" + finalValues.get(1));
 
         //To print the fourth value of the second array
-        System.out.println("\nThe 4th value of the 2nd array:\n" + finalValues.get(1).get(3));
+        //System.out.println("\nThe 4th value of the 2nd array:\n" + finalValues.get(1).get(3));
 
     }
 }
