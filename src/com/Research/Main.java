@@ -8,12 +8,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CSVReader cr = new CSVReader("C:/Users/Taylor/Desktop/joe.csv");
-        CSVReader indexReader = new CSVReader("C:/Users/Taylor/Desktop/indices.txt");
-        String[] initialArray;
-        ArrayList<List> tempValues = new ArrayList<>();
-        ArrayList<List> finalValues = new ArrayList<>();
-        List<Profile> profiles;
+        //Objects pertaining to the accessing of data from csv files
+        String filename = "C:/Users/Taylor/Desktop/joe.csv"; //File location of csv file for profiles
+        String indexFilename = "C:/Users/Taylor/Desktop/indices.txt"; //File location of indices csv file
+        CSVReader cr = new CSVReader(filename); //Reads in data from csv file for profiles
+        CSVReader indexReader = new CSVReader(indexFilename); //Reads in indices from indices csv file
+
+        //Objects pertaining to the storing of data from csv files
+        String[] initialArray; //Stores data for profiles from csv as Strings
+        String[] initialIndices; //Stores indices from indices csv file as Strings
+
+        List<List> tempValues = new ArrayList<>(); //Temporarily stores data for profiles in a List of Lists
+        List<List> finalValues = new ArrayList<>(); //Stores final, processed (formatted) data for profiles in a List of Lists
+        List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
+        List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
+
 
         //Read in values from csv, separated by "new"
         cr.setSplitString("new");
@@ -22,15 +31,72 @@ public class Main {
         initialArray = cr.getValues();
 
         //Add values to tempValues
-        for (String anInitialArray : initialArray) {
-            List parsedArray = Arrays.asList(anInitialArray.split("\\s*,\\s*"));
+        for (String initialArrayElement : initialArray) {
+            List parsedArray = Arrays.asList(initialArrayElement.split("\\s*,\\s*"));
             tempValues.add(parsedArray);
         }
 
         //Remove blank ("") values from arrays and store new arrays in finalValues
-        for (List tempValue : tempValues) {
-            finalValues.add(DataProcessor.removeBlanks(tempValue));
+        for (List tempElement : tempValues) {
+            finalValues.add(DataProcessor.removeBlanks(tempElement));
         }
+
+        initialIndices = indexReader.getValues();
+
+        for (String index : initialIndices){
+            if(DataProcessor.isInteger(index)){
+                finalIndices.add(DataProcessor.convertToInteger(index));
+            }
+        }
+
+        for (List profileArray : finalValues){
+            profiles.add(new Profile(profileArray, finalIndices));
+        }
+
+        for (Profile printTest : profiles){
+            printTest.printSummary();
+            System.out.println();
+            System.out.println();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //Print temp values
         System.out.println("Temp Values ArrayList:\n" + tempValues);
@@ -55,5 +121,4 @@ public class Main {
         System.out.println("\nThe 4th value of the 2nd array:\n" + finalValues.get(1).get(3));
 
     }
-
 }
