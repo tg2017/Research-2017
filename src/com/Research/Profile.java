@@ -29,7 +29,6 @@ public class Profile {
     //This says that the name is index 0, maxFrequency is index 1, minFrequency is index 3, etc.
 
     private List<Object> initialArray = new ArrayList<>();
-    private List<Double> arrayOfDoubles = new ArrayList<>();
     private List<Integer> indices = new ArrayList<>();
     private String name;
     private double maxFrequency;
@@ -83,4 +82,85 @@ public class Profile {
     public void printSummary(){
         System.out.println(this.toString());
     }
-}
+
+    //"Get" methods
+    public String getName() {
+        return name;
+    }
+    public double getMaxFrequency(){
+        return maxFrequency;
+    }
+    public double getMinFrequency(){
+        return minFrequency;
+    }
+    public double getAvgFrequency(){
+        return avgFrequency;
+    }
+    public double getMaxVolume(){
+        return maxVolume;
+    }
+    public double getMinVolume(){
+        return minVolume;
+    }
+    public double getAvgVolume(){
+        return avgVolume;
+    }
+
+
+    public ProfileComparison compareToProfile(Profile otherProfile){
+        //Declare and instantiate local instance variables for otherProfile
+        String otherName = otherProfile.getName();
+        double otherMaxFrequency = otherProfile.getMaxFrequency();
+        double otherMinFrequency = otherProfile.getMinFrequency();
+        double otherAvgFrequency = otherProfile.getAvgFrequency();
+        double otherMaxVolume = otherProfile.getMaxVolume();
+        double otherMinVolume = otherProfile.getMinVolume();
+        double otherAvgVolume = otherProfile.getAvgVolume();
+
+        boolean nameDiff;
+        double maxFreqDiff;
+        double minFreqDiff;
+        double avgFreqDiff;
+        double maxVolDiff;
+        double minVolDiff;
+        double avgVolDiff;
+
+        //Determines if profiles are exactly equal, including name
+        if(name.equals(otherName)){
+            if(maxFrequency == otherMaxFrequency && minFrequency == otherMinFrequency && avgFrequency == otherAvgFrequency){
+                if(maxVolume == otherMaxVolume && minVolume == otherMinVolume && avgVolume == otherAvgVolume){
+                    return new ProfileComparison(false);
+                }
+            }
+        }
+
+        //Determines if profiles are exactly equal, but name is different
+        if (!name.equals(otherName)){
+            if(maxFrequency == otherMaxFrequency && minFrequency == otherMinFrequency && avgFrequency == otherAvgFrequency) {
+                if (maxVolume == otherMaxVolume && minVolume == otherMinVolume && avgVolume == otherAvgVolume) {
+                    return new ProfileComparison(true, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+                }
+            }
+        }
+
+        //Determines the data to be used in ProfileComparison object (differences, etc) and returns that object
+        if(name.equals(otherName)) {
+            nameDiff = false;
+        } else {
+            nameDiff = true;
+        }
+
+        //Differences are absolute value of this object's data minus the other object's data
+        maxFreqDiff = Math.abs(maxFrequency - otherMaxFrequency);
+        minFreqDiff = Math.abs(minFrequency - otherMinFrequency);
+        avgFreqDiff = Math.abs(avgFrequency - otherAvgFrequency);
+        maxVolDiff = Math.abs(maxVolume - otherMaxVolume);
+        minVolDiff = Math.abs(minVolume - otherMinVolume);
+        avgVolDiff = Math.abs(avgVolume - otherAvgVolume);
+
+        return new ProfileComparison(nameDiff, maxFreqDiff, minFreqDiff, avgFreqDiff, maxVolDiff, minVolDiff, avgVolDiff);
+
+
+    } //End of method
+
+} //End of class

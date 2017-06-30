@@ -65,8 +65,7 @@ public class Main {
 
         //Print test values
         //Print temp values
-        System.out.println("Temp Values ArrayList:\n" + tempValues);
-
+        //System.out.println("Temp Values ArrayList:\n" + tempValues);
         //Example use:
         //To print the 2nd array
         //System.out.println("\nThe 2nd temp array:\n" + tempValues.get(1));
