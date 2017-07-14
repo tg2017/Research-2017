@@ -129,7 +129,7 @@ public class Profile {
         if(name.equals(otherName)){
             if(maxFrequency == otherMaxFrequency && minFrequency == otherMinFrequency && avgFrequency == otherAvgFrequency){
                 if(maxVolume == otherMaxVolume && minVolume == otherMinVolume && avgVolume == otherAvgVolume){
-                    return new ProfileComparison(false);
+                    return new ProfileComparison(false, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
                 }
             }
         }

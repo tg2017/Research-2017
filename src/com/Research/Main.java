@@ -6,24 +6,37 @@ import java.util.List;
 
 public class Main {
 
+    //Objects pertaining to the accessing of data from csv files
+    static String filename = "C:/Users/Taylor/Desktop/joe.csv"; //File location of csv file for profiles
+    static String indexFilename = "C:/Users/Taylor/Desktop/indices.txt"; //File location of indices csv file
+    static CSVReader cr = new CSVReader(filename); //Reads in data from csv file for profiles
+    static CSVReader indexReader = new CSVReader(indexFilename); //Reads in indices from indices csv file
+
+    //Objects pertaining to the storing of data from csv files
+    static String[] initialArray; //Stores data for profiles from csv as Strings
+    static String[] initialIndices; //Stores indices from indices csv file as Strings
+
+    //Lists for storing data
+    static List<List> tempValues = new ArrayList<>(); //Temporarily stores data for profiles in a List of Lists
+    static List<List> finalValues = new ArrayList<>(); //Stores final, processed (formatted) data for profiles in a List of Lists
+    static List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
+    static List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
+
     public static void main(String[] args) {
 
-        //Objects pertaining to the accessing of data from csv files
-        String filename = "C:/Users/Taylor/Desktop/joe.csv"; //File location of csv file for profiles
-        String indexFilename = "C:/Users/Taylor/Desktop/indices.txt"; //File location of indices csv file
-        CSVReader cr = new CSVReader(filename); //Reads in data from csv file for profiles
-        CSVReader indexReader = new CSVReader(indexFilename); //Reads in indices from indices csv file
+        //Read in data from csv file and store them in arrays
+        readAndStore();
 
-        //Objects pertaining to the storing of data from csv files
-        String[] initialArray; //Stores data for profiles from csv as Strings
-        String[] initialIndices; //Stores indices from indices csv file as Strings
+        //Read and store index data, and create profiles based on data
+        createProfiles();
 
-        List<List> tempValues = new ArrayList<>(); //Temporarily stores data for profiles in a List of Lists
-        List<List> finalValues = new ArrayList<>(); //Stores final, processed (formatted) data for profiles in a List of Lists
-        List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
-        List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
+        //Print everything out
+        printOutput();
 
+    }
 
+    //Reads in data from csv file and stores them in Lists
+    private static void readAndStore(){
         //Read in values from csv, separated by "new"
         cr.setSplitString("new");
 
@@ -41,6 +54,10 @@ public class Main {
             finalValues.add(DataProcessor.removeBlanks(tempElement));
         }
 
+    }
+
+    //Reads in and stores data from indices csv file, and uses those indices and data from other csv file to create profiles
+    private static void createProfiles(){
         //Get indices values from indices.csv file
         initialIndices = indexReader.getValues();
 
@@ -55,7 +72,10 @@ public class Main {
         for (List profileArray : finalValues){
             profiles.add(new Profile(profileArray, finalIndices));
         }
+    }
 
+    //Prints out data from profiles and comparison
+    private static void printOutput(){
         //Print summaries of Profiles
         for (Profile printTest : profiles){
             printTest.printSummary();
@@ -85,5 +105,11 @@ public class Main {
         //To print the fourth value of the second array
         //System.out.println("\nThe 4th value of the 2nd array:\n" + finalValues.get(1).get(3));
 
+        //Comparison test
+        ProfileComparison comparisonTest = profiles.get(0).compareToProfile(profiles.get(5));
+        System.out.println("\n");
+        comparisonTest.printSummary();
     }
+
 }
+

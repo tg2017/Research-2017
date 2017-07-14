@@ -15,25 +15,20 @@ public class ProfileComparison {
     private double avgVolDiff;
 
     //Constructors
-    //Determines only if the names are different
-    public ProfileComparison(boolean namesDifferent){
-        nameDiff = namesDifferent;
-    }
-
     //Takes in all data as differences: the difference between data stored in the profile and data given in the sample
     public ProfileComparison(boolean namesDifferent, double maxFrequencyDifference, double minFrequencyDifference,
                              double avgFrequencyDifference, double maxVolumeDifference, double minVolumeDifference, double avgVolumeDifference){
         nameDiff = namesDifferent;
         maxFreqDiff = maxFrequencyDifference;
         minFreqDiff = minFrequencyDifference;
-        avgFreqDiff = minFrequencyDifference;
+        avgFreqDiff = avgFrequencyDifference;
         maxVolDiff = maxVolumeDifference;
         minVolDiff = minVolumeDifference;
         avgVolDiff = avgVolumeDifference;
 
-        if (maxFreqDiff == 0.0 && minFreqDiff == 0.0 && avgFreqDiff == 0.0){
-            if (maxVolDiff == 0.0 && minVolDiff == 0.0 && avgVolDiff == 0.0){
-                if (nameDiff){
+        if (maxFreqDiff == 0 && minFreqDiff == 0 && avgFreqDiff == 0){
+            if (maxVolDiff == 0 && minVolDiff == 0 && avgVolDiff == 0){
+                if (!nameDiff){
                     isEqual = true;
                     isEqualIgnoreName = true;
                 } else {
@@ -68,18 +63,20 @@ public class ProfileComparison {
     }
 
     public String toString(){
-        String output;
+        //Initialize output message with Error message, to be overwritten later
+        String output = "ERROR";
 
         //If they are equal...
-        if (isEqual){
-            output = "The profiles are exactly the same.";
-        } else if (isEqualIgnoreName){
-            output = "The profiles are exactly the same except for the name, which differs.";
-
+        if(isEqual || isEqualIgnoreName){
+            if (isEqual){
+                output = "The profiles are exactly the same.";
+            } else if (isEqualIgnoreName) {
+                output = "The profiles are exactly the same, except for the name, which differs.";
+            }
         //Otherwise...
         } else {
             //Determine name equality and represent as String
-            if (nameDiff) {
+            if (!nameDiff) {
                 output = "The names are the same.\n";
             } else {
                 output = "The names are not the same.\n";
@@ -94,13 +91,10 @@ public class ProfileComparison {
             output += "\nThe difference in average frequency is: " + avgVolDiff;
         }
         return output;
-
-
     }
 
     public void printSummary(){
         System.out.println(this.toString());
     }
 
-
-}
+} //End of class
