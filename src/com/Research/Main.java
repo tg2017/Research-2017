@@ -2,6 +2,7 @@ package com.Research;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -23,6 +24,7 @@ public class Main {
     static List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
     static List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
     static List<ProfileComparison> comparisons = new ArrayList<>(); //List of ProfileComparison objects that store the data from each of the comparisons between the sample and the known profiles
+    static List<Double> sumsOfDiffs = new ArrayList<>(); //List that contains all of the sums of differences of the ProfileComparisons in the comparisons list
 
     //Data for Sample
     static String sampleName;
@@ -33,6 +35,9 @@ public class Main {
     static String sampleMinVolStr;
     static String sampleAvgVolStr;
     static Profile sampleProfile;
+
+    static int indexOfLowest; //Stores the index of the lowest sumOfDiffs in the sumsOfDiffs list
+    static ProfileComparison closestMatch;
 
     //Main method
     public static void main(String[] args) {
@@ -50,7 +55,20 @@ public class Main {
         sampleProfile = enterSample();
 
         //Compare sample to all profiles and get results as a List of ProfileComparison objects
-        sampleProfile.compareToProfiles(profiles);
+        comparisons = sampleProfile.compareToProfiles(profiles);
+
+        //Put sum of diffs values into sumsOfDiffs
+        for (ProfileComparison tempComparison : comparisons) {
+            sumsOfDiffs.add(tempComparison.getSumOfDiffs());
+        }
+
+        //Determine which profile most closely matches the sample by determining which Sum of Diffs is lowest
+        indexOfLowest = sumsOfDiffs.indexOf(Collections.min(sumsOfDiffs));
+        closestMatch = comparisons.get(indexOfLowest);
+
+        System.out.println("\n\nClosest match: \n"  + profiles.get(indexOfLowest));
+        System.out.println("\nClosest match summary: " + closestMatch.toString());
+
 
         System.out.println("\nSample:");
         sampleProfile.printSummary();
