@@ -164,4 +164,13 @@ public class Profile {
 
     } //End of method
 
+    //Method that compares a profile to multiple profiles, and returns results in a list of ProfileComparison objects
+    public List<ProfileComparison> compareToProfiles(List<Profile> profileList){
+        List<ProfileComparison> listOfComparisons = new ArrayList<>();
+        for(int count = 0; count < profileList.size(); count++){
+            listOfComparisons.add(count, this.compareToProfile(profileList.get(count)));
+        }
+        return listOfComparisons;
+    }
+
 } //End of class

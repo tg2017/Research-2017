@@ -16,8 +16,9 @@ public class ProfileComparison {
     private double maxVolDiff;
     private double minVolDiff;
     private double avgVolDiff;
+    private double sumOfDiffs;
 
-    //Constructors
+    //Constructor
     //Takes in all data as differences: the difference between data stored in the profile and data given in the sample
     public ProfileComparison(boolean namesDifferent, double maxFrequencyDifference, double minFrequencyDifference,
                              double avgFrequencyDifference, double maxVolumeDifference, double minVolumeDifference, double avgVolumeDifference){
@@ -28,6 +29,7 @@ public class ProfileComparison {
         maxVolDiff = maxVolumeDifference;
         minVolDiff = minVolumeDifference;
         avgVolDiff = avgVolumeDifference;
+        sumOfDiffs = maxFreqDiff + minFreqDiff + avgFreqDiff + maxVolDiff + minVolDiff + avgVolDiff;
 
         if (maxFreqDiff == 0 && minFreqDiff == 0 && avgFreqDiff == 0){
             if (maxVolDiff == 0 && minVolDiff == 0 && avgVolDiff == 0){
@@ -63,6 +65,9 @@ public class ProfileComparison {
     }
     public double getAvgVolDiff(){
         return avgVolDiff;
+    }
+    public double getSumOfDiffs(){
+        return sumOfDiffs;
     }
 
     public String toString(){

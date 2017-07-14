@@ -22,6 +22,7 @@ public class Main {
     static List<String> sampleList = new ArrayList<>(); //Stores sample values as Strings
     static List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
     static List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
+    static List<ProfileComparison> comparisons = new ArrayList<>(); //List of ProfileComparison objects that store the data from each of the comparisons between the sample and the known profiles
 
     //Data for Sample
     static String sampleName;
@@ -48,6 +49,10 @@ public class Main {
         //Get data for sample from user and store it in a profile
         sampleProfile = enterSample();
 
+        //Compare sample to all profiles and get results as a List of ProfileComparison objects
+        sampleProfile.compareToProfiles(profiles);
+
+        System.out.println("\nSample:");
         sampleProfile.printSummary();
 
     }
@@ -123,9 +128,9 @@ public class Main {
         //System.out.println("\nThe 4th value of the 2nd array:\n" + finalValues.get(1).get(3));
 
         //Comparison test
-        ProfileComparison comparisonTest = profiles.get(0).compareToProfile(profiles.get(5));
-        System.out.println("\n");
-        comparisonTest.printSummary();
+        //ProfileComparison comparisonTest = profiles.get(0).compareToProfile(profiles.get(5));
+        //System.out.println("\n");
+        //comparisonTest.printSummary();
     }
 
     //Gets sample data from user and creates sample profile
@@ -153,6 +158,8 @@ public class Main {
         return new Profile(sampleList, finalIndices);
 
     }
+
+
 
 }
 
