@@ -106,7 +106,7 @@ public class Profile {
         return avgVolume;
     }
 
-
+    //Method that compares two profiles, and returns a ProfileComparison object
     public ProfileComparison compareToProfile(Profile otherProfile){
         //Declare and instantiate local instance variables for otherProfile
         String otherName = otherProfile.getName();
@@ -117,6 +117,7 @@ public class Profile {
         double otherMinVolume = otherProfile.getMinVolume();
         double otherAvgVolume = otherProfile.getAvgVolume();
 
+        //Declaring variables to be passed into ProfileComparison object as parameters
         boolean nameDiff;
         double maxFreqDiff;
         double minFreqDiff;

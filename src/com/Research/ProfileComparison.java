@@ -3,6 +3,9 @@ package com.Research;
 /**
  * Created by Taylor on 6/30/2017.
  */
+
+//Class serves as an object that contains the data gained from the compareToProfile method of the Profile class:
+    //made solely as an object to be returned by that method
 public class ProfileComparison {
     private boolean isEqual;
     private boolean isEqualIgnoreName;

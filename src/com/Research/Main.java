@@ -19,9 +19,21 @@ public class Main {
     //Lists for storing data
     static List<List> tempValues = new ArrayList<>(); //Temporarily stores data for profiles in a List of Lists
     static List<List> finalValues = new ArrayList<>(); //Stores final, processed (formatted) data for profiles in a List of Lists
+    static List<String> sampleList = new ArrayList<>(); //Stores sample values as Strings
     static List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
     static List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
 
+    //Data for Sample
+    static String sampleName;
+    static String sampleMaxFreqStr;
+    static String sampleMinFreqStr;
+    static String sampleAvgFreqStr;
+    static String sampleMaxVolStr;
+    static String sampleMinVolStr;
+    static String sampleAvgVolStr;
+    static Profile sampleProfile;
+
+    //Main method
     public static void main(String[] args) {
 
         //Read in data from csv file and store them in arrays
@@ -32,6 +44,11 @@ public class Main {
 
         //Print everything out
         printOutput();
+
+        //Get data for sample from user and store it in a profile
+        sampleProfile = enterSample();
+
+        sampleProfile.printSummary();
 
     }
 
@@ -109,6 +126,32 @@ public class Main {
         ProfileComparison comparisonTest = profiles.get(0).compareToProfile(profiles.get(5));
         System.out.println("\n");
         comparisonTest.printSummary();
+    }
+
+    //Gets sample data from user and creates sample profile
+    private static Profile enterSample(){
+
+        //Get data from user
+        sampleName = GetData.getString("What is the name?", "Enter Name");
+        sampleMaxFreqStr = GetData.getString("What is the maximum frequency of the sample?", "Enter Max Frequency");
+        sampleMinFreqStr = GetData.getString("What is the minimum frequency of the sample?", "Enter Min Frequency");
+        sampleAvgFreqStr = GetData.getString("What is the average frequency of the sample?", "Enter Average Frequency");
+        sampleMaxVolStr = GetData.getString("What is the maximum volume of the sample?", "Enter Max Volume");
+        sampleMinVolStr = GetData.getString("What is the minimum volume of the sample?", "Enter Min Volume");
+        sampleAvgVolStr = GetData.getString("What is the average volume of the sample?", "Enter Average Volume");
+
+        //Add values to list
+        sampleList.add(sampleName);
+        sampleList.add(sampleMaxFreqStr);
+        sampleList.add(sampleMinFreqStr);
+        sampleList.add(sampleAvgFreqStr);
+        sampleList.add(sampleMaxVolStr);
+        sampleList.add(sampleMinVolStr);
+        sampleList.add(sampleAvgVolStr);
+
+        //Create and return sample profile
+        return new Profile(sampleList, finalIndices);
+
     }
 
 }
