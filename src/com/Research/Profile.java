@@ -13,20 +13,18 @@ public class Profile {
     private final Integer MAXFREQINDEX = 1;
     private final Integer MINFREQINDEX = 2;
     private final Integer AVGFREQINDEX = 3;
-    private final Integer MAXVOLINDEX = 4;
-    private final Integer MINVOLINDEX = 5;
-    private final Integer AVGVOLINDEX = 6;
+
     //Order of indexes in indices.csv:
-    //name, maxFrequency, minFrequency, avgFrequency, maxVolume, minVolume, avgVolume
+    //name, maxFrequency, minFrequency, avgFrequency
     //
     //NOTE: this is to read in the indices of the values in the initialArray. So, in the original csv file containing
     //the data for the profiles, the data can be sorted in any order; but, in the indices file, the index of each value
     //must be specified in this order.
     //Example:
-    //If, in the original csv file, the name is the first value, followed by maxFreq, followed by maxVol, then minFreq,
-    //minVol, avgFreq, and finally, avgVol, then in the indices csv file, the numbers must appear in the order
-    //"0,1,3,5,2,4,6".
-    //This says that the name is index 0, maxFrequency is index 1, minFrequency is index 3, etc.
+    //If, in the original csv file, the name is the first value, followed by maxFreq, followed by minFreq,
+    //and svgFreq, then in the indices csv file, the numbers must appear in the order
+    //"0,1,2,3".
+    //This says that the name is index 0, maxFrequency is index 1, minFrequency is index 2, etc.
 
     private List<Object> initialArray = new ArrayList<>();
     private List<Integer> indices = new ArrayList<>();
@@ -34,9 +32,6 @@ public class Profile {
     private double maxFrequency;
     private double minFrequency;
     private double avgFrequency;
-    private double maxVolume;
-    private double minVolume;
-    private double avgVolume;
 
 
     //Constructor: Takes in a List ("array") that contains values to be stored, and a List<Integer> that contains the indices
@@ -60,9 +55,6 @@ public class Profile {
         maxFrequency = DataProcessor.convertToDouble(initialArray.get(indices.get(MAXFREQINDEX)));
         minFrequency = DataProcessor.convertToDouble(initialArray.get(indices.get(MINFREQINDEX)));
         avgFrequency = DataProcessor.convertToDouble(initialArray.get(indices.get(AVGFREQINDEX)));
-        maxVolume = DataProcessor.convertToDouble(initialArray.get(indices.get(MAXVOLINDEX)));
-        minVolume = DataProcessor.convertToDouble(initialArray.get(indices.get(MINVOLINDEX)));
-        avgVolume = DataProcessor.convertToDouble(initialArray.get(indices.get(AVGVOLINDEX)));
     }
 
     //Returns profile data summary as a String
@@ -71,10 +63,7 @@ public class Profile {
         output = "Name: " + name +
                 "\nMaximum Frequency: " + maxFrequency +
                 "\nMinimum Frequency: " + minFrequency +
-                "\nAverage Frequency: " + avgFrequency +
-                "\nMaximum Volume: " + maxVolume +
-                "\nMinimum Volume: " + minVolume +
-                "\nAverage Volume: " + avgVolume;
+                "\nAverage Frequency: " + avgFrequency;
         return output;
     }
 
@@ -96,15 +85,6 @@ public class Profile {
     public double getAvgFrequency(){
         return avgFrequency;
     }
-    public double getMaxVolume(){
-        return maxVolume;
-    }
-    public double getMinVolume(){
-        return minVolume;
-    }
-    public double getAvgVolume(){
-        return avgVolume;
-    }
 
     //Method that compares two profiles, and returns a ProfileComparison object
     public ProfileComparison compareToProfile(Profile otherProfile){
@@ -113,34 +93,25 @@ public class Profile {
         double otherMaxFrequency = otherProfile.getMaxFrequency();
         double otherMinFrequency = otherProfile.getMinFrequency();
         double otherAvgFrequency = otherProfile.getAvgFrequency();
-        double otherMaxVolume = otherProfile.getMaxVolume();
-        double otherMinVolume = otherProfile.getMinVolume();
-        double otherAvgVolume = otherProfile.getAvgVolume();
+
 
         //Declaring variables to be passed into ProfileComparison object as parameters
         boolean nameDiff;
         double maxFreqDiff;
         double minFreqDiff;
         double avgFreqDiff;
-        double maxVolDiff;
-        double minVolDiff;
-        double avgVolDiff;
 
         //Determines if profiles are exactly equal, including name
         if(name.equals(otherName)){
             if(maxFrequency == otherMaxFrequency && minFrequency == otherMinFrequency && avgFrequency == otherAvgFrequency){
-                if(maxVolume == otherMaxVolume && minVolume == otherMinVolume && avgVolume == otherAvgVolume){
-                    return new ProfileComparison(false, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-                }
+                return new ProfileComparison(false, 0.0, 0.0, 0.0);
             }
         }
 
         //Determines if profiles are exactly equal, but name is different
         if (!name.equals(otherName)){
             if(maxFrequency == otherMaxFrequency && minFrequency == otherMinFrequency && avgFrequency == otherAvgFrequency) {
-                if (maxVolume == otherMaxVolume && minVolume == otherMinVolume && avgVolume == otherAvgVolume) {
-                    return new ProfileComparison(true, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-                }
+                return new ProfileComparison(true, 0.0, 0.0, 0.056);
             }
         }
 
@@ -155,11 +126,8 @@ public class Profile {
         maxFreqDiff = Math.abs(maxFrequency - otherMaxFrequency);
         minFreqDiff = Math.abs(minFrequency - otherMinFrequency);
         avgFreqDiff = Math.abs(avgFrequency - otherAvgFrequency);
-        maxVolDiff = Math.abs(maxVolume - otherMaxVolume);
-        minVolDiff = Math.abs(minVolume - otherMinVolume);
-        avgVolDiff = Math.abs(avgVolume - otherAvgVolume);
 
-        return new ProfileComparison(nameDiff, maxFreqDiff, minFreqDiff, avgFreqDiff, maxVolDiff, minVolDiff, avgVolDiff);
+        return new ProfileComparison(nameDiff, maxFreqDiff, minFreqDiff, avgFreqDiff);
 
 
     } //End of method

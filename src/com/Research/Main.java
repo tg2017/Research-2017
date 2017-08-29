@@ -31,9 +31,6 @@ public class Main {
     static String sampleMaxFreqStr;
     static String sampleMinFreqStr;
     static String sampleAvgFreqStr;
-    static String sampleMaxVolStr;
-    static String sampleMinVolStr;
-    static String sampleAvgVolStr;
     static Profile sampleProfile;
 
     static int indexOfLowest; //Stores the index of the lowest sumOfDiffs in the sumsOfDiffs list
@@ -66,16 +63,18 @@ public class Main {
         indexOfLowest = sumsOfDiffs.indexOf(Collections.min(sumsOfDiffs));
         closestMatch = comparisons.get(indexOfLowest);
 
+        //Print the data for the closest match
         System.out.println("\n\nClosest match: \n"  + profiles.get(indexOfLowest));
         System.out.println("\nClosest match summary: " + closestMatch.toString());
 
-
+        //Print the sample data
         System.out.println("\nSample:");
         sampleProfile.printSummary();
 
     }
 
     //Reads in data from csv file and stores them in Lists
+    //Takes no user input from keyboard or mouse
     private static void readAndStore(){
         //Read in values from csv, separated by "new"
         cr.setSplitString("new");
@@ -97,6 +96,7 @@ public class Main {
     }
 
     //Reads in and stores data from indices csv file, and uses those indices and data from other csv file to create profiles
+    //Takes no direct user input
     private static void createProfiles(){
         //Get indices values from indices.csv file
         initialIndices = indexReader.getValues();
@@ -159,18 +159,12 @@ public class Main {
         sampleMaxFreqStr = GetData.getString("What is the maximum frequency of the sample?", "Enter Max Frequency");
         sampleMinFreqStr = GetData.getString("What is the minimum frequency of the sample?", "Enter Min Frequency");
         sampleAvgFreqStr = GetData.getString("What is the average frequency of the sample?", "Enter Average Frequency");
-        sampleMaxVolStr = GetData.getString("What is the maximum volume of the sample?", "Enter Max Volume");
-        sampleMinVolStr = GetData.getString("What is the minimum volume of the sample?", "Enter Min Volume");
-        sampleAvgVolStr = GetData.getString("What is the average volume of the sample?", "Enter Average Volume");
 
         //Add values to list
         sampleList.add(sampleName);
         sampleList.add(sampleMaxFreqStr);
         sampleList.add(sampleMinFreqStr);
         sampleList.add(sampleAvgFreqStr);
-        sampleList.add(sampleMaxVolStr);
-        sampleList.add(sampleMinVolStr);
-        sampleList.add(sampleAvgVolStr);
 
         //Create and return sample profile
         return new Profile(sampleList, finalIndices);

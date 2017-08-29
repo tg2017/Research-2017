@@ -13,33 +13,25 @@ public class ProfileComparison {
     private double maxFreqDiff;
     private double minFreqDiff;
     private double avgFreqDiff;
-    private double maxVolDiff;
-    private double minVolDiff;
-    private double avgVolDiff;
     private double sumOfDiffs;
 
     //Constructor
     //Takes in all data as differences: the difference between data stored in the profile and data given in the sample
     public ProfileComparison(boolean namesDifferent, double maxFrequencyDifference, double minFrequencyDifference,
-                             double avgFrequencyDifference, double maxVolumeDifference, double minVolumeDifference, double avgVolumeDifference){
+                             double avgFrequencyDifference){
         nameDiff = namesDifferent;
         maxFreqDiff = maxFrequencyDifference;
         minFreqDiff = minFrequencyDifference;
         avgFreqDiff = avgFrequencyDifference;
-        maxVolDiff = maxVolumeDifference;
-        minVolDiff = minVolumeDifference;
-        avgVolDiff = avgVolumeDifference;
-        sumOfDiffs = maxFreqDiff + minFreqDiff + avgFreqDiff + maxVolDiff + minVolDiff + avgVolDiff;
+        sumOfDiffs = maxFreqDiff + minFreqDiff + avgFreqDiff;
 
         if (maxFreqDiff == 0 && minFreqDiff == 0 && avgFreqDiff == 0){
-            if (maxVolDiff == 0 && minVolDiff == 0 && avgVolDiff == 0){
-                if (!nameDiff){
-                    isEqual = true;
-                    isEqualIgnoreName = true;
-                } else {
-                    isEqual = false;
-                    isEqualIgnoreName = true;
-                }
+            if (!nameDiff){
+                isEqual = true;
+                isEqualIgnoreName = true;
+            } else {
+                isEqual = false;
+                isEqualIgnoreName = true;
             }
         }
     }
@@ -56,15 +48,6 @@ public class ProfileComparison {
     }
     public double getAvgFreqDiff(){
         return avgFreqDiff;
-    }
-    public double getMaxVolDiff(){
-        return maxVolDiff;
-    }
-    public double getMinVolDiff(){
-        return minVolDiff;
-    }
-    public double getAvgVolDiff(){
-        return avgVolDiff;
     }
     public double getSumOfDiffs(){
         return sumOfDiffs;
@@ -94,9 +77,6 @@ public class ProfileComparison {
             output += "\nThe difference in maximum frequency is: " + maxFreqDiff;
             output += "\nThe difference in minimum frequency is: " + minFreqDiff;
             output += "\nThe difference in average frequency is: " + avgFreqDiff;
-            output += "\n\nThe difference in maximum volume is: " + maxVolDiff;
-            output += "\nThe difference in minimum volume is: " + minVolDiff;
-            output += "\nThe difference in average volume is: " + avgVolDiff;
         }
         return output;
     }
