@@ -96,7 +96,7 @@ public class ProfileComparison {
             output += "\nThe difference in average frequency is: " + avgFreqDiff;
             output += "\n\nThe difference in maximum volume is: " + maxVolDiff;
             output += "\nThe difference in minimum volume is: " + minVolDiff;
-            output += "\nThe difference in average frequency is: " + avgVolDiff;
+            output += "\nThe difference in average volume is: " + avgVolDiff;
         }
         return output;
     }

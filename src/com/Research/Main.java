@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
 
     //Objects pertaining to the accessing of data from csv files
-    static String filename = "C:/Users/Taylor/Desktop/joe.csv"; //File location of csv file for profiles
+    static String filename = "C:/Users/Taylor/Desktop/NewValues.txt"; //File location of csv file for profiles
     static String indexFilename = "C:/Users/Taylor/Desktop/indices.txt"; //File location of indices csv file
     static CSVReader cr = new CSVReader(filename); //Reads in data from csv file for profiles
     static CSVReader indexReader = new CSVReader(indexFilename); //Reads in indices from indices csv file
@@ -48,7 +48,7 @@ public class Main {
         //Read and store index data, and create profiles based on data
         createProfiles();
 
-        //Print everything out
+        //Print everything out (before sample entry)
         printOutput();
 
         //Get data for sample from user and store it in a profile
