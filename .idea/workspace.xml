@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/CSVReader.java" afterPath="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
@@ -22,13 +20,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+            <state relative-caret-position="283">
+              <caret line="188" column="110" lean-forward="false" selection-start-line="188" selection-start-column="110" selection-end-line="188" selection-end-column="110" />
               <folding>
                 <element signature="method#main#0;class#Main#0" expanded="false" />
+                <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
                 <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
                 <element signature="method#printOutput#0;class#Main#0" expanded="false" />
                 <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -70,12 +69,15 @@
       <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="53" column="66" lean-forward="true" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
+            <state relative-caret-position="205">
+              <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+                <element signature="method#initialize#0;class#Profile#0" expanded="false" />
                 <element signature="method#toString#0;class#Profile#0" expanded="false" />
+                <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+                <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -91,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSVReader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CSVReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/CSVReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="1326">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
@@ -121,6 +123,7 @@
       <find>pr</find>
       <find>vol</find>
       <find>getValues</find>
+      <find>content</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,8 +145,8 @@
         <option value="$PROJECT_DIR$/src/com/Research/GetData.java" />
         <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Profile.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
         <option value="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
       </list>
     </option>
   </component>
@@ -154,7 +157,7 @@
     <option name="height" value="876" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -167,43 +170,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2017 Project program" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2017 Project program" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2017 Project program" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2017 Project program" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Research" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -537,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504040241433</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Read data from CSV based on new line">
+      <created>1504111767447</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1504111767447</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -554,7 +528,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10945946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.074324325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -621,7 +595,8 @@
     <MESSAGE value="Added code that determines and prints the profile which most closely matches the sample" />
     <MESSAGE value="Before removing VOLUME" />
     <MESSAGE value="Removed Volume" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed Volume" />
+    <MESSAGE value="Read data from CSV based on new line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read data from CSV based on new line" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -641,7 +616,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -672,6 +650,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -699,7 +678,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -730,6 +712,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -757,7 +740,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -788,6 +774,7 @@
           <caret line="73" column="100" lean-forward="false" selection-start-line="73" selection-start-column="100" selection-end-line="73" selection-end-column="100" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -815,7 +802,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -846,6 +836,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -873,7 +864,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -896,6 +890,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -923,7 +918,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -946,6 +944,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -973,7 +972,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -996,6 +998,7 @@
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -1023,7 +1026,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1046,6 +1052,7 @@
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -1073,7 +1080,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
             <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1096,6 +1106,7 @@
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -1177,18 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="53" column="66" lean-forward="true" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
-            <element signature="method#toString#0;class#Profile#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
@@ -1197,27 +1196,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
-          <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
-            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
-            <element signature="method#enterSample#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/CSVReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="1326">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="188" column="110" lean-forward="false" selection-start-line="188" selection-start-column="110" selection-end-line="188" selection-end-column="110" />
+          <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
+            <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
+            <element signature="method#enterSample#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>

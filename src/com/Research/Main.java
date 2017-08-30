@@ -1,5 +1,8 @@
 package com.Research;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,12 +11,12 @@ import java.util.List;
 public class Main {
 
     //Objects pertaining to the accessing of data from csv files
-    static String filename = "C:/Users/Taylor/Desktop/NewValues.txt"; //File location of csv file for profiles
+    static String filename = "C:/Users/Taylor/Desktop/2017 Project Values - Sheet1.csv"; //File location of csv file for profiles
     static String indexFilename = "C:/Users/Taylor/Desktop/indices.txt"; //File location of indices csv file
     static CSVReader cr = new CSVReader(filename); //Reads in data from csv file for profiles
     static CSVReader indexReader = new CSVReader(indexFilename); //Reads in indices from indices csv file
 
-    //Objects pertaining to the storing of data from csv files
+    //Objects pertaining to the storing of data from the csv files
     static String[] initialArray; //Stores data for profiles from csv as Strings
     static String[] initialIndices; //Stores indices from indices csv file as Strings
 
@@ -34,8 +37,13 @@ public class Main {
     static Profile sampleProfile;
 
     static int indexOfLowest; //Stores the index of the lowest sumOfDiffs in the sumsOfDiffs list
-    static ProfileComparison closestMatch;
+    static ProfileComparison closestMatch; //Stores the comparison object of the closest match to the sample
 
+    //Objects for writing data to report file
+    static String reportFile = "C:/Users/Taylor/Desktop/MatchReport.txt";
+    static FileWriter fw;
+    static BufferedWriter bw;
+    static String repOutput;
     //Main method
     public static void main(String[] args) {
 
@@ -71,6 +79,8 @@ public class Main {
         System.out.println("\nSample:");
         sampleProfile.printSummary();
 
+        //Print data in report
+        printToReport();
     }
 
     //Reads in data from csv file and stores them in Lists
@@ -172,7 +182,25 @@ public class Main {
 
     }
 
+    //Print data in report file
+    private static void printToReport(){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(reportFile, true))) {
+            //Make String to be printed, with '\n' escape sequence
+            String repOutputTemp = "\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString();
 
+            //Replace '\n' escape sequence with '\r\n', which writes to a new line in file
+            repOutput = repOutputTemp.replaceAll("\n", "\r\n");
 
+            //Write data to file
+            bw.write(repOutput);
+
+            System.out.println("Successfully wrote data to file: " + reportFile);
+
+        } catch (IOException e) {
+            //Print error message if exception is caught
+            e.printStackTrace();
+            System.out.println("Error writing to file: " + reportFile);
+        }
+    }
 }
 

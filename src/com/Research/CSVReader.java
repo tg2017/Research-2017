@@ -47,6 +47,8 @@ public class CSVReader {
                 dataFromFile = new String[dataFromFileTemp.size()];
                 for(int x = 0; x < dataFromFileTemp.size(); x++) {
                     dataFromFile[x] = dataFromFileTemp.get(x);
+
+                    //Print Values
                     //System.out.println(dataFromFile[x]);
                 }
             } else {
@@ -56,9 +58,9 @@ public class CSVReader {
                     dataFromFile = line.split(csvSplitBy);
 
                     //Print values
-                /*for(int x = 0; x < dataFromFile.length; x++) {
-                    System.out.println(dataFromFile[x]);
-                }*/
+                    /*for(int x = 0; x < dataFromFile.length; x++) {
+                        System.out.println(dataFromFile[x]);
+                    }*/
                 }
             }
 
