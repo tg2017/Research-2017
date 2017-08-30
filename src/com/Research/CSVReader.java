@@ -1,5 +1,7 @@
 package com.Research;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Taylor Giles on 6/11/2017.
@@ -9,9 +11,10 @@ public class CSVReader {
     private BufferedReader br;
     private String csvFile;
     private String csvSplitBy = ",";
+    private List<String> dataFromFileTemp = new ArrayList<>();
     private String[] dataFromFile;
 
-    //Constructors
+    //Constructor
     public CSVReader(String fileName){
         csvFile = fileName;
     }
@@ -31,18 +34,34 @@ public class CSVReader {
         String line = "";
         try {
             br = new BufferedReader(new FileReader(csvFile));
-            while ((line = br.readLine()) != null) {
 
-                // use comma as separator
-                dataFromFile = line.split(csvSplitBy);
+            //If splitting by new line...
+            if(csvSplitBy.equalsIgnoreCase("new line")){
 
-                //Print values
-                /*int x = 0;
-                while(dataFromFile[x] != null) {
+                //Split lines from csv file by new line
+                for (line = br.readLine(); line != null; line = br.readLine()) {
+                    dataFromFileTemp.add(line);
+                }
+
+                //Put data from dataFromFileTemp into dataFromFile
+                dataFromFile = new String[dataFromFileTemp.size()];
+                for(int x = 0; x < dataFromFileTemp.size(); x++) {
+                    dataFromFile[x] = dataFromFileTemp.get(x);
+                    //System.out.println(dataFromFile[x]);
+                }
+            } else {
+                while ((line = br.readLine()) != null) {
+
+                    //csvSplitBy used as separator
+                    dataFromFile = line.split(csvSplitBy);
+
+                    //Print values
+                /*for(int x = 0; x < dataFromFile.length; x++) {
                     System.out.println(dataFromFile[x]);
-                    x++;
                 }*/
+                }
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

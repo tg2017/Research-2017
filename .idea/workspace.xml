@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Profile.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Profile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/CSVReader.java" afterPath="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Profile.java" afterPath="$PROJECT_DIR$/src/com/Research/Profile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" afterPath="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,14 +22,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="116" column="50" lean-forward="false" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
+            <state relative-caret-position="246">
+              <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
               <folding>
                 <element signature="method#main#0;class#Main#0" expanded="false" />
-                <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
                 <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
                 <element signature="method#printOutput#0;class#Main#0" expanded="false" />
                 <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -43,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/Research/GetData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="method#getString#0;class#GetData#0" expanded="false" />
                 <element signature="method#getInt#0;class#GetData#0" expanded="false" />
@@ -72,8 +70,8 @@
       <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+            <state relative-caret-position="133">
+              <caret line="53" column="66" lean-forward="true" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Profile#0;class#Profile#0" expanded="false" />
@@ -86,20 +84,20 @@
       <file leaf-file-name="ProfileComparison.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
+            <state relative-caret-position="436">
               <caret line="78" column="81" lean-forward="false" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSVReader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CSVReader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/CSVReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="537">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
-                <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+                <element signature="imports" expanded="true" />
                 <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
                 <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
               </folding>
@@ -122,6 +120,7 @@
       <find>public E remove(</find>
       <find>pr</find>
       <find>vol</find>
+      <find>getValues</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,11 +139,11 @@
         <option value="$PROJECT_DIR$/src/com/Research/DoubleConverter.java" />
         <option value="$PROJECT_DIR$/src/com/Research/DataProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Comparison.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
         <option value="$PROJECT_DIR$/src/com/Research/GetData.java" />
         <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Profile.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
       </list>
     </option>
   </component>
@@ -531,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504034194391</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Removed Volume">
+      <created>1504040241433</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1504040241433</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -547,25 +553,25 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04054054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10945946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.031875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.032432433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.032432433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -614,11 +620,12 @@
     <MESSAGE value="Added compareToProfiles mthod" />
     <MESSAGE value="Added code that determines and prints the profile which most closely matches the sample" />
     <MESSAGE value="Before removing VOLUME" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before removing VOLUME" />
+    <MESSAGE value="Removed Volume" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Volume" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -652,7 +659,7 @@
         <state relative-caret-position="544">
           <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -665,7 +672,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -711,7 +717,7 @@
         <state relative-caret-position="561">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -724,7 +730,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -770,7 +775,7 @@
         <state relative-caret-position="561">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -783,7 +788,6 @@
           <caret line="73" column="100" lean-forward="false" selection-start-line="73" selection-start-column="100" selection-end-line="73" selection-end-column="100" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -829,7 +833,7 @@
         <state relative-caret-position="561">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -842,7 +846,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -880,7 +883,7 @@
         <state relative-caret-position="561">
           <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -893,7 +896,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -931,7 +933,7 @@
         <state relative-caret-position="510">
           <caret line="68" column="31" lean-forward="false" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -944,7 +946,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -982,7 +983,7 @@
         <state relative-caret-position="272">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -995,7 +996,6 @@
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -1033,7 +1033,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -1046,7 +1046,6 @@
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -1084,7 +1083,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -1097,7 +1096,6 @@
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
@@ -1123,7 +1121,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
             <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
@@ -1153,23 +1151,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/CSVReader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Research/GetData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="method#read#0;class#CSVReader#0" expanded="false" />
-            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
-            <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
+            <element signature="method#getString#0;class#GetData#0" expanded="false" />
+            <element signature="method#getInt#0;class#GetData#0" expanded="false" />
+            <element signature="method#getDouble#0;class#GetData#0" expanded="false" />
+            <element signature="method#getBoolean#0;class#GetData#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="78" column="81" lean-forward="false" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,8 +1179,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+        <state relative-caret-position="133">
+          <caret line="53" column="66" lean-forward="true" selection-start-line="53" selection-start-column="66" selection-end-line="53" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Profile#0;class#Profile#0" expanded="false" />
@@ -1198,29 +1189,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/GetData.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="method#getString#0;class#GetData#0" expanded="false" />
-            <element signature="method#getInt#0;class#GetData#0" expanded="false" />
-            <element signature="method#getDouble#0;class#GetData#0" expanded="false" />
-            <element signature="method#getBoolean#0;class#GetData#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="436">
+          <caret line="78" column="81" lean-forward="false" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="116" column="50" lean-forward="false" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
+        <state relative-caret-position="246">
+          <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
           <folding>
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#enterSample#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/CSVReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+            <element signature="method#getValues#0;class#CSVReader#0" expanded="false" />
           </folding>
         </state>
       </provider>

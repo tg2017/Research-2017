@@ -77,12 +77,12 @@ public class Main {
     //Takes no user input from keyboard or mouse
     private static void readAndStore(){
         //Read in values from csv, separated by "new"
-        cr.setSplitString("new");
+        cr.setSplitString("new line");
 
         //Get values from CSVReader
         initialArray = cr.getValues();
 
-        //Add values to tempValues
+        //Split values by comma and add to tempValues
         for (String initialArrayElement : initialArray) {
             List parsedArray = Arrays.asList(initialArrayElement.split("\\s*,\\s*"));
             tempValues.add(parsedArray);
@@ -98,7 +98,8 @@ public class Main {
     //Reads in and stores data from indices csv file, and uses those indices and data from other csv file to create profiles
     //Takes no direct user input
     private static void createProfiles(){
-        //Get indices values from indices.csv file
+        //Get indices values from indices.csv file, split by comma
+        indexReader.setSplitString(",");
         initialIndices = indexReader.getValues();
 
         //Convert indices to Integers and store them in finalIndices
