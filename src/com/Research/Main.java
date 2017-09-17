@@ -57,100 +57,56 @@ public class Main {
     static boolean useShimmer = true;
 
     //Variables pertaining to the creation and use of GUI
+    static  MenuGUI menu = new MenuGUI();
     static boolean finished = false;
     static boolean GUICreated = false;
     static boolean startProgram = false;
+    static String currentState;
 
     //Variables pertaining to the maintenance of the "engine" loop
     static int timesRun = 0;
 
+    public static void createGUI(){
+        //Start GUI
+        menu.setVisible(true);
+        GUICreated = true;
+    }
 
-    //Main method
-    public static void main(String[] args) {
+    //VERY IMPORTANT METHOD: OPERATES AS THE ENGINE OF THE PROGRAM - BASICALLY A MAIN METHOD
+    //Note: This code is NOT in the Main method because it needs to be called DIRECTLY from the GUI
+    public static void runTheProgram(){
 
-        //Initially create SettingsGUI, to make Main class aware of data present
-        SettingsGUI settings = new SettingsGUI();
-        settings.setVisible(false);
-        settings.dispose();
+        //Get rid of GUI menu
+        menu.dispose();
 
-        //"Engine" loop that continues program by returning to GUI Menu after completion
-        while(!finished) {
+        //"Engine" loop that continues program by returning to GUI Menu after completion:
+        if (timesRun < 1) {
+            System.out.println("Checkpoint 2");
+            //Read in data from csv file and store them in arrays
+            readAndStore();
 
-            //Loop that prevents program from continuing without closure of GUI
-            while (!startProgram) {
-                if (!GUICreated) {
-                    //Start GUI
-                    MenuGUI menu = new MenuGUI();
-                    menu.setVisible(true);
-                    GUICreated = true;
-                }
-            }
+            //Read and store index data, and create profiles based on data
+            createProfiles();
 
-            if(timesRun < 1) {
-                //Read in data from csv file and store them in arrays
-                readAndStore();
+            //Print everything out (before sample entry)
+            printOutput();
+        }
 
-                //Read and store index data, and create profiles based on data
-                createProfiles();
+        //Get sample data and compare it to profiles
 
-                //Print everything out (before sample entry)
-                printOutput();
-            }
+        //See if "Automatically Get Sample Data" is selected in Settings window GUI
+        useAuto = SettingsGUI.checkUseAuto();
+        System.out.println("Checkpoint 3");
+        if (useAuto) { //If user chooses to enter data automatically, do so...
+            autoSampleIn();
+            for (int autoCounter = 0; autoCounter < samples.size(); autoCounter++) {
 
-            //Get sample data and compare it to profiles
+                //Reset List values
+                comparisons = new ArrayList<>();
+                sumsOfDiffs = new ArrayList<>();
 
-            //See if "Automatically Get Sample Data" is selected in Settings window GUI
-            useAuto = SettingsGUI.checkUseAuto();
-            if (useAuto) { //If user chooses to enter data automatically, do so...
-                autoSampleIn();
-                for (int autoCounter = 0; autoCounter < samples.size(); autoCounter++) {
-
-                    //Reset List values
-                    comparisons = new ArrayList<>();
-                    sumsOfDiffs = new ArrayList<>();
-
-                    //Change sample to be compared
-                    sampleProfile = samples.get(autoCounter);
-
-                    //Compare sample to all profiles and get results as a List of ProfileComparison objects
-                    comparisons = sampleProfile.compareToProfiles(profiles);
-
-                    //Put sum of diffs values into sumsOfDiffs
-                    for (ProfileComparison tempComparison : comparisons) {
-                        sumsOfDiffs.add(tempComparison.getSumOfDiffs());
-                    }
-
-                    //Determine which profile most closely matches the sample by determining which Sum of Diffs is lowest
-                    indexOfLowest = sumsOfDiffs.indexOf(Collections.min(sumsOfDiffs));
-                    closestMatch = comparisons.get(indexOfLowest);
-
-                    //Print results to console
-                    System.out.println("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
-
-                    //Print data to report
-                    printToReport("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
-
-                    //Determine if program was correct. If so, increment "correct" counter by one. If not, increment "incorrect" counter by one.
-                    if (!closestMatch.getNameDiff()) { //If the names are NOT DIFFERENT, program was correct
-                        timesCorrect++;
-                    } else if (closestMatch.getNameDiff()) { //If names are DIFFERENT, program was incorrect
-                        timesIncorrect++;
-                    }
-                }
-                //Determine percentage of times the program was correct
-                if ((timesCorrect + timesIncorrect) != samples.size()) {
-                    System.out.println("ERROR. Something went wrong while determining percentage correct.");
-                } else {
-                    percentCorrect = (timesCorrect / samples.size()) * 100;
-                    System.out.println("\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.");
-                    System.out.println("The program was correct " + percentCorrect + "% of the time.");
-                    printToReport("\n\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.\nThe program was correct " + percentCorrect + "% of the time.\n\n**********************************************************************");
-                }
-
-
-            } else { //...Otherwise, get and handle data manually
-                //Get data for sample from user and store it in a profile
-                sampleProfile = manualSampleIn();
+                //Change sample to be compared
+                sampleProfile = samples.get(autoCounter);
 
                 //Compare sample to all profiles and get results as a List of ProfileComparison objects
                 comparisons = sampleProfile.compareToProfiles(profiles);
@@ -164,21 +120,79 @@ public class Main {
                 indexOfLowest = sumsOfDiffs.indexOf(Collections.min(sumsOfDiffs));
                 closestMatch = comparisons.get(indexOfLowest);
 
-                //Print the sample data to console
-                System.out.println("\nSample:");
-                sampleProfile.printSummary();
-
-                //Print the data for the closest match to console
-                System.out.println("\n\nClosest match: \n" + profiles.get(indexOfLowest));
-                System.out.println("\nClosest match summary: " + closestMatch.toString());
+                //Print results to console
+                System.out.println("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
 
                 //Print data to report
                 printToReport("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
+
+                //Determine if program was correct. If so, increment "correct" counter by one. If not, increment "incorrect" counter by one.
+                if (!closestMatch.getNameDiff()) { //If the names are NOT DIFFERENT, program was correct
+                    timesCorrect++;
+                } else if (closestMatch.getNameDiff()) { //If names are DIFFERENT, program was incorrect
+                    timesIncorrect++;
+                }
+            }
+            //Determine percentage of times the program was correct
+            if ((timesCorrect + timesIncorrect) != samples.size()) {
+                System.out.println("ERROR. Something went wrong while determining percentage correct.");
+            } else {
+                percentCorrect = (timesCorrect / samples.size()) * 100;
+                System.out.println("\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.");
+                System.out.println("The program was correct " + percentCorrect + "% of the time.");
+                printToReport("\n\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.\nThe program was correct " + percentCorrect + "% of the time.\n\n**********************************************************************");
             }
 
-            //Increment counter to avoid duplication of data in next iteration of "engine" loop
-            timesRun++;
+
+        } else { //...Otherwise, get and handle data manually
+            //Get data for sample from user and store it in a profile
+            sampleProfile = manualSampleIn();
+
+            //Compare sample to all profiles and get results as a List of ProfileComparison objects
+            comparisons = sampleProfile.compareToProfiles(profiles);
+
+            //Put sum of diffs values into sumsOfDiffs
+            for (ProfileComparison tempComparison : comparisons) {
+                sumsOfDiffs.add(tempComparison.getSumOfDiffs());
+            }
+
+            //Determine which profile most closely matches the sample by determining which Sum of Diffs is lowest
+            indexOfLowest = sumsOfDiffs.indexOf(Collections.min(sumsOfDiffs));
+            closestMatch = comparisons.get(indexOfLowest);
+
+            //Print the sample data to console
+            System.out.println("\nSample:");
+            sampleProfile.printSummary();
+
+            //Print the data for the closest match to console
+            System.out.println("\n\nClosest match: \n" + profiles.get(indexOfLowest));
+            System.out.println("\nClosest match summary: " + closestMatch.toString());
+
+            //Print data to report
+            printToReport("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
         }
+
+        //Increment counter to avoid duplication of data in next iteration of "engine" loop
+        timesRun++;
+
+        //Create new GUI to start again
+        createGUI();
+    }
+
+
+    //Main method
+    public static void main(String[] args) {
+
+        //Initially create SettingsGUI, to make Main class aware of data present
+        SettingsGUI settings = new SettingsGUI();
+        settings.setVisible(false);
+        settings.dispose();
+
+        //Create the GUI
+        createGUI();
+
+        System.out.println("New checkpoint");
+
     }
 
     //Reads in data from csv file and stores them in Lists
@@ -313,7 +327,7 @@ public class Main {
 
         //Create and store the samnples as Profile objects
         for (List sampleArray : finalSamples){
-           samples.add(new Profile(sampleArray, finalIndices));
+            samples.add(new Profile(sampleArray, finalIndices));
         }
     }
 
@@ -366,7 +380,10 @@ public class Main {
     //Set if program is finished (used by GUI) (NOTE: This is just a precaution, the GUI calls the System.exit method itself
     public static void setFinished(boolean done){ finished = done; }
 
-    //Allows GUI class to tell Main class if GUI is present
-    public static void setGUICreated(boolean GUIIsThere){ GUICreated = GUIIsThere; }
+    //Sets value that determines whether the GUI has already been created or not
+    public static void setGUICreated(boolean created){
+        GUICreated = created;
+    }
+
 }
 
