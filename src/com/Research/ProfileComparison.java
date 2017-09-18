@@ -5,7 +5,7 @@ package com.Research;
  */
 
 //Class serves as an object that contains the data gained from the compareToProfile method of the Profile class:
-    //made solely as an object to be returned by that method
+//made solely as an object to be returned by that method
 public class ProfileComparison {
     private boolean isEqual;
     private boolean isEqualIgnoreName;
@@ -70,7 +70,7 @@ public class ProfileComparison {
             } else if (isEqualIgnoreName) {
                 output = "The profiles are exactly the same, except for the name, which differs.";
             }
-        //Otherwise...
+            //Otherwise...
         } else {
             //Determine name equality and represent as String
             if (!nameDiff) {

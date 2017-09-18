@@ -1,5 +1,6 @@
 package com.Research;
 
+import javax.swing.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,65 +8,9 @@ import java.util.*;
 
 public class Main {
 
-    //Objects pertaining to the accessing of data from csv files
-    static String filename = "C:/Users/Taylor/Desktop/2017 Project Values - Sheet1 - Copy - Copy.csv"; //File location of csv file for profiles
-    static String indexFilename = "C:/Users/Taylor/Desktop/indices.txt"; //File location of indices csv file
-    static CSVReader cr = new CSVReader(filename); //Reads in data from csv file for profiles
-    static CSVReader indexReader = new CSVReader(indexFilename); //Reads in indices from indices csv file
+    //Methods
 
-    //Objects pertaining to the storing of data from the csv files
-    static String[] initialArray; //Stores data for profiles from csv as Strings
-    static String[] initialIndices; //Stores indices from indices csv file as Strings
-
-    //Lists for storing data
-    static List<List> tempValues = new ArrayList<>(); //Temporarily stores data for profiles in a List of Lists
-    static List<List> finalValues = new ArrayList<>(); //Stores final, processed (formatted) data for profiles in a List of Lists
-    static List<String> sampleList = new ArrayList<>(); //Stores sample values as Strings
-    static List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
-    static List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
-    static List<ProfileComparison> comparisons = new ArrayList<>(); //List of ProfileComparison objects that store the data from each of the comparisons between the sample and the known profiles
-    static List<Double> sumsOfDiffs = new ArrayList<>(); //List that contains all of the sums of differences of the ProfileComparisons in the comparisons list
-    static List<Profile> samples = new ArrayList<>(); //Array of samples stored in the program - data is accessed from the csv file WHEN DATA IS ENTERED AUTOMATICALLY
-
-    //Data for Sample
-    static String sampleName;
-    static String sampleMaxFreqStr;
-    static String sampleMinFreqStr;
-    static String sampleAvgFreqStr;
-    static String sampleJitterStr;
-    static String sampleShimmerStr;
-    static Profile sampleProfile;
-
-    //Objects regarding the closest match
-    static int indexOfLowest; //Stores the index of the lowest sumOfDiffs in the sumsOfDiffs list
-    static ProfileComparison closestMatch; //Stores the comparison object of the closest match to the sample
-
-    //Objects for writing data to report file
-    static String reportFilename = "C:/Users/Taylor/Desktop/Matches.txt";
-    static String reportOutput;
-
-    //Objects pertaining to the use of automatic data entry
-    static String sampleCSVFilename = "C:/Users/Taylor/Desktop/Samples.csv";
-    static boolean useAuto = true;
-    static double timesCorrect = 0.0;
-    static double timesIncorrect = 0.0;
-    static double percentCorrect;
-
-    //Objects pertaining to the use of different points of data
-    static boolean useFreq = true;
-    static boolean useJitter = true;
-    static boolean useShimmer = true;
-
-    //Variables pertaining to the creation and use of GUI
-    static  MenuGUI menu = new MenuGUI();
-    static boolean finished = false;
-    static boolean GUICreated = false;
-    static boolean startProgram = false;
-    static String currentState;
-
-    //Variables pertaining to the maintenance of the "engine" loop
-    static int timesRun = 0;
-
+    //Creates GUI Menu
     public static void createGUI(){
         //Start GUI
         menu.setVisible(true);
@@ -73,11 +18,23 @@ public class Main {
     }
 
     //VERY IMPORTANT METHOD: OPERATES AS THE ENGINE OF THE PROGRAM - BASICALLY A MAIN METHOD
-    //Note: This code is NOT in the Main method because it needs to be called DIRECTLY from the GUI
+    //Note: This code is NOT in the Main method because it needs to be called DIRECTLY from the GUI, to avoid Main method running without GUI input
     public static void runTheProgram(){
 
         //Get rid of GUI menu
         menu.dispose();
+
+
+        System.out.println(profileFilename);
+        System.out.println(indexFilename);
+        System.out.println(samplesFilename);
+        System.out.println(reportFilename);
+
+        //Initialize CSV Readers with filenames
+        cr = new CSVReader(profileFilename);
+        indexReader = new CSVReader(indexFilename);
+
+
 
         //"Engine" loop that continues program by returning to GUI Menu after completion:
         if (timesRun < 1) {
@@ -136,6 +93,7 @@ public class Main {
             //Determine percentage of times the program was correct
             if ((timesCorrect + timesIncorrect) != samples.size()) {
                 System.out.println("ERROR. Something went wrong while determining percentage correct.");
+                JOptionPane.showMessageDialog(null,"ERROR. Something went wrong while determining percentage correct.");
             } else {
                 percentCorrect = (timesCorrect / samples.size()) * 100;
                 System.out.println("\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.");
@@ -177,21 +135,35 @@ public class Main {
 
         //Create new GUI to start again
         createGUI();
-    }
 
+        //Restart "Successfully written" message counter
+        timesWrittenMessage = 0;
+    }
 
     //Main method
     public static void main(String[] args) {
 
+        //Initialize thisDirectory and filenamesFilename
+        thisDirectory = System.getProperty("user.dir");
+        filenamesFilename = thisDirectory + "\\filenames.txt";
+
+        //Get the filenames and tell SettingsGUI
+        fetchFilenamesFromFile();
+
         //Initially create SettingsGUI, to make Main class aware of data present
         SettingsGUI settings = new SettingsGUI();
         settings.setVisible(false);
+
+        //Tell SettingsGUI about filename data
+        SettingsGUI.setFilenames(getProfileFilename(), getIndexFilename(), getSampleFilename(), getReportFilename());
+
+        //Get rid of settings GUI window
         settings.dispose();
 
         //Create the GUI
         createGUI();
 
-        System.out.println("New checkpoint");
+        System.out.println("Main Method checkpoint - GUI created");
 
     }
 
@@ -276,32 +248,40 @@ public class Main {
 
     //Gets sample data from user and creates sample profile
     private static Profile manualSampleIn(){
+        Profile theSamples = null; //Initialize with null to satisfy "might not be initialized"
 
-        //Get data from user (manually)
-        sampleName = GetData.getString("What is the name?", "Enter Name");
-        sampleMaxFreqStr = GetData.getString("What is the maximum frequency of the sample?", "Enter Max Frequency");
-        sampleMinFreqStr = GetData.getString("What is the minimum frequency of the sample?", "Enter Min Frequency");
-        sampleAvgFreqStr = GetData.getString("What is the average frequency of the sample?", "Enter Average Frequency");
-        sampleJitterStr = GetData.getString("What is the jitter ratio of the sample?", "Enter Jitter Ratio");
-        sampleShimmerStr = GetData.getString("What is the shimmer value of the sample?", "Enter Shimmer Value");
+        try { //Try/catch deals with pressing of "cancel" button
+            //Get data from user (manually)
+            sampleName = GetData.getString("What is the name?", "Enter Name");
+            sampleMaxFreqStr = GetData.getString("What is the maximum frequency of the sample?", "Enter Max Frequency");
+            sampleMinFreqStr = GetData.getString("What is the minimum frequency of the sample?", "Enter Min Frequency");
+            sampleAvgFreqStr = GetData.getString("What is the average frequency of the sample?", "Enter Average Frequency");
+            sampleJitterStr = GetData.getString("What is the jitter ratio of the sample?", "Enter Jitter Ratio");
+            sampleShimmerStr = GetData.getString("What is the shimmer value of the sample?", "Enter Shimmer Value");
 
-        //Add values to list
-        sampleList.add(sampleName);
-        sampleList.add(sampleMaxFreqStr);
-        sampleList.add(sampleMinFreqStr);
-        sampleList.add(sampleAvgFreqStr);
-        sampleList.add(sampleJitterStr);
-        sampleList.add(sampleShimmerStr);
-
+            //Add values to list
+            sampleList.add(sampleName);
+            sampleList.add(sampleMaxFreqStr);
+            sampleList.add(sampleMinFreqStr);
+            sampleList.add(sampleAvgFreqStr);
+            sampleList.add(sampleJitterStr);
+            sampleList.add(sampleShimmerStr);
+            theSamples = new Profile(sampleList, finalIndices);
+        } catch (Exception ex){
+            ex.printStackTrace();
+            //Properly exit program
+            JOptionPane.showMessageDialog(null, "Cancelled. Leaving program");
+            System.exit(3);
+        }
         //Create and return sample profile
-        return new Profile(sampleList, finalIndices);
+        return theSamples;
     }
 
     //Gets sample data automatically from csv file and stores it in Profile "samples" object
     private static void autoSampleIn(){
 
         //CSVReader for sample auto-entry
-        CSVReader sampleReader = new CSVReader(sampleCSVFilename);
+        CSVReader sampleReader = new CSVReader(samplesFilename);
 
         //Temp arrays to store values
         String[] initialSampleArray;
@@ -345,24 +325,36 @@ public class Main {
 
             System.out.println("\n\nSuccessfully wrote data to file: " + reportFilename);
 
+            //Display "Successfully Written" message if auto-input is chosen and finished
+            if(useAuto) {
+                if (timesWrittenMessage == (samples.size()-1)) {
+                    JOptionPane.showMessageDialog(null, "Successfully wrote data to file: " + reportFilename);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Successfully wrote data to file: " + reportFilename);
+            }
+            timesWrittenMessage++;
+            System.out.println("Number of samples written to file in this runthrough: " + timesWrittenMessage);
+
         } catch (IOException e) {
             //Print error message if exception is caught
             e.printStackTrace();
             System.out.println("Error writing to file: " + reportFilename);
+            JOptionPane.showMessageDialog(null, "Error writing to file: " + reportFilename);
         }
     }
 
     //Return filenames (used by GUI)
-    public static String getFilename(){ return filename; }
+    public static String getProfileFilename(){ return profileFilename; }
     public static String getIndexFilename(){ return indexFilename; }
     public static String getReportFilename(){ return reportFilename; }
-    public static String getSampleAutoInFilename(){ return sampleCSVFilename; }
+    public static String getSampleFilename(){ return samplesFilename; }
 
     //Set filenames (used by GUI)
-    public static void setFilename(String newFilename) { filename = newFilename; }
+    public static void setProfileFilename(String newFilename) { profileFilename = newFilename; }
     public static void setIndexFilename(String newIndexFilename) { indexFilename = newIndexFilename; }
     public static void setReportFilename(String newReportFilename) { reportFilename = newReportFilename; }
-    public static void setSampleFilename(String newSampleFilename) { sampleCSVFilename = newSampleFilename; }
+    public static void setSampleFilename(String newSampleFilename) { samplesFilename = newSampleFilename; }
 
     //Set automatic input (used by GUI)
     public static void setAutoInput(boolean autoIn){
@@ -385,5 +377,163 @@ public class Main {
         GUICreated = created;
     }
 
-}
+    //Reset all variables
+    public static void reset(){
+        timesCorrect = 0.0;
+        timesIncorrect = 0.0;
+        reportOutput = "";
+        finished = false;
+        GUICreated = false;
+        startProgram = false;
+        timesWrittenMessage = 0;
+        comparisons = new ArrayList<>(); //List of ProfileComparison objects that store the data from each of the comparisons between the sample and the known profiles
+        sumsOfDiffs = new ArrayList<>(); //List that contains all of the sums of differences of the ProfileComparisons in the comparisons list
+        samples = new ArrayList<>(); //Array of samples stored in the program - data is accessed from the csv file WHEN DATA IS ENTERED AUTOMATICALLY
+        sampleList = new ArrayList<>(); //Stores sample values as Strings
+        String sampleName = null;
+        String sampleMaxFreqStr = null;
+        String sampleMinFreqStr = null;
+        String sampleAvgFreqStr = null;
+        String sampleJitterStr = null;
+        String sampleShimmerStr = null;
+        Profile sampleProfile = null;
+    }
 
+    //Methods that manage filenames
+    //Sets filename variables
+    private static void setFilenames(String filenameProfiles, String filenameIndices, String filenameSamples, String filenameReport){
+        profileFilename = filenameProfiles;
+        indexFilename = filenameIndices;
+        samplesFilename = filenameSamples;
+        reportFilename = filenameReport;
+        //filenamesFilename = filenameFilenames;
+    }
+    //Reads in filenames from "filenamesFilename" file
+    private static void fetchFilenamesFromFile(){
+
+        //Initialize and use filenameReader
+        filenameReader = new CSVReader(filenamesFilename);
+        filenameReader.setSplitString("new line");
+        String[] tempFilenames = filenameReader.getValues();
+
+
+        String filenameProfiles = tempFilenames[PROFILEFILENAMEINDEX];
+        String filenameIndices = tempFilenames[INDEXFILENAMEINDEX];
+        String filenameSamples = tempFilenames[SAMPLEFILENAMEINDEX];
+        String filenameReport = tempFilenames[REPORTFILENAMEINDEX];
+
+        setFilenames(filenameProfiles, filenameIndices, filenameSamples, filenameReport);
+
+    }
+
+    //Writes to "filenamesFilename" file
+    public static void changeFilenames(String[] newFileNames){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filenamesFilename, false))) {
+
+            String newFilenames= "";//Will store new filenames as single String, with "\r\n"'s
+
+            //Copy values of newFileNames into one string, newFilenames, with "\r\n"'s
+            for(int i = 0; i < newFileNames.length; i++) {
+                if (i == 0) {
+                    newFilenames += newFileNames[i];
+                } else {
+                    newFilenames += "\r\n" + newFileNames[i];
+                }
+            }
+
+            //Write data to file
+            bw.write(newFilenames);
+
+            //Display confirmation message
+            System.out.println("\n\nSuccessfully changed filename");
+            JOptionPane.showMessageDialog(null, "Successfully changed filename");
+
+
+        } catch (IOException e) {
+            //Print error message if exception is caught
+            e.printStackTrace();
+            System.out.println("Error changing filename in file: " + filenamesFilename);
+            JOptionPane.showMessageDialog(null, "Error changing filename in file: " + filenamesFilename);
+        }
+
+    }
+
+
+
+
+//**********************************************************************************************************************
+
+    //Variable Declaration
+
+    //Objects pertaining to the accessing of data from csv files
+    //Final variables that determine the location of each filename within the "tempFilenames" array in the "fetchFilenamesFromFile()" method
+    public static final int PROFILEFILENAMEINDEX = 0;
+    public static final int INDEXFILENAMEINDEX = 1;
+    public static final int SAMPLEFILENAMEINDEX = 2;
+    public static final int REPORTFILENAMEINDEX = 3;
+
+    static String profileFilename; //File location of csv file for profiles
+    static String indexFilename; //File location of indices csv file
+    static String thisDirectory ;//Stores directory of this class as a String. Used only by filenamesFilename (below)
+    static String filenamesFilename;//File location of txt file that contains the filenames of other files
+    //Note: The file to which this variable relates MUST be stored in the same folder as the Main class, otherwise the program will have issues
+    static CSVReader filenameReader; //Reads in the filenames for other Readers
+    static CSVReader cr; //Reads in data from csv file for profiles
+    static CSVReader indexReader; //Reads in indices from indices csv file
+
+    //Objects pertaining to the storing of data from the csv files
+    static String[] initialArray; //Stores data for profiles from csv as Strings
+    static String[] initialIndices; //Stores indices from indices csv file as Strings
+
+    //Lists for storing data
+    static List<List> tempValues = new ArrayList<>(); //Temporarily stores data for profiles in a List of Lists
+    static List<List> finalValues = new ArrayList<>(); //Stores final, processed (formatted) data for profiles in a List of Lists
+    static List<String> sampleList = new ArrayList<>(); //Stores sample values as Strings
+    static List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
+    static List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
+    static List<ProfileComparison> comparisons = new ArrayList<>(); //List of ProfileComparison objects that store the data from each of the comparisons between the sample and the known profiles
+    static List<Double> sumsOfDiffs = new ArrayList<>(); //List that contains all of the sums of differences of the ProfileComparisons in the comparisons list
+    static List<Profile> samples = new ArrayList<>(); //Array of samples stored in the program - data is accessed from the csv file WHEN DATA IS ENTERED AUTOMATICALLY
+
+    //Data for Sample
+    static String sampleName;
+    static String sampleMaxFreqStr;
+    static String sampleMinFreqStr;
+    static String sampleAvgFreqStr;
+    static String sampleJitterStr;
+    static String sampleShimmerStr;
+    static Profile sampleProfile;
+
+    //Objects regarding the closest match
+    static int indexOfLowest; //Stores the index of the lowest sumOfDiffs in the sumsOfDiffs list
+    static ProfileComparison closestMatch; //Stores the comparison object of the closest match to the sample
+
+    //Objects for writing data to report file
+    static String reportFilename;
+    static String reportOutput;
+
+    //Objects pertaining to the use of automatic data entry
+    static String samplesFilename;
+    static boolean useAuto = true;
+    static double timesCorrect = 0.0;
+    static double timesIncorrect = 0.0;
+    static double percentCorrect;
+
+    //Objects pertaining to the use of different points of data
+    static boolean useFreq = true;
+    static boolean useJitter = true;
+    static boolean useShimmer = true;
+
+    //Variables pertaining to the creation and use of GUI
+    static  MenuGUI menu = new MenuGUI();
+    static boolean finished = false;
+    static boolean GUICreated = false;
+    static boolean startProgram = false;
+
+    //Variables pertaining to the maintenance of the "engine" loop
+    static int timesRun = 0;
+    static int timesWrittenMessage = 0;
+
+
+
+}
