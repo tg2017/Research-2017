@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/filenames.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Profile.java" afterPath="$PROJECT_DIR$/src/com/Research/Profile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" afterPath="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -719,7 +714,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505617716095</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fixed a lot of stuff">
+      <created>1505775279362</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1505775279362</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -810,7 +812,8 @@
     <MESSAGE value="Before addition of Jitter and Shimmer" />
     <MESSAGE value="Fixed up GUI" />
     <MESSAGE value="Added jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added jar" />
+    <MESSAGE value="Fixed a lot of stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a lot of stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
