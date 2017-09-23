@@ -8,7 +8,9 @@ import java.util.*;
 
 public class Main {
 
-    //Methods
+    //***************
+    //*** Methods ***
+    //***************
 
     //Creates GUI Menu
     public static void createGUI(){
@@ -24,11 +26,11 @@ public class Main {
         //Get rid of GUI menu
         menu.dispose();
 
-
-        System.out.println(profileFilename);
-        System.out.println(indexFilename);
-        System.out.println(samplesFilename);
-        System.out.println(reportFilename);
+        //Print filenames
+        System.out.println("File for profiles: " + profileFilename);
+        System.out.println("File for indices: " + indexFilename);
+        System.out.println("File for samples: " + samplesFilename);
+        System.out.println("File for report: " + reportFilename);
 
         //Initialize CSV Readers with filenames
         cr = new CSVReader(profileFilename);
@@ -38,7 +40,6 @@ public class Main {
 
         //"Engine" loop that continues program by returning to GUI Menu after completion:
         if (timesRun < 1) {
-            System.out.println("Checkpoint 2");
             //Read in data from csv file and store them in arrays
             readAndStore();
 
@@ -53,7 +54,6 @@ public class Main {
 
         //See if "Automatically Get Sample Data" is selected in Settings window GUI
         useAuto = SettingsGUI.checkUseAuto();
-        System.out.println("Checkpoint 3");
         if (useAuto) { //If user chooses to enter data automatically, do so...
             autoSampleIn();
             for (int autoCounter = 0; autoCounter < samples.size(); autoCounter++) {
@@ -163,7 +163,7 @@ public class Main {
         //Create the GUI
         createGUI();
 
-        System.out.println("Main Method checkpoint - GUI created");
+        System.out.println("Main Method - GUI created");
 
     }
 
@@ -344,13 +344,13 @@ public class Main {
         }
     }
 
-    //Return filenames (used by GUI)
+    //Getters: Return filenames (used by GUI)
     public static String getProfileFilename(){ return profileFilename; }
     public static String getIndexFilename(){ return indexFilename; }
     public static String getReportFilename(){ return reportFilename; }
     public static String getSampleFilename(){ return samplesFilename; }
 
-    //Set filenames (used by GUI)
+    //Setters: Set filenames (used by GUI)
     public static void setProfileFilename(String newFilename) { profileFilename = newFilename; }
     public static void setIndexFilename(String newIndexFilename) { indexFilename = newIndexFilename; }
     public static void setReportFilename(String newReportFilename) { reportFilename = newReportFilename; }
@@ -460,10 +460,11 @@ public class Main {
 
 
 
-
 //**********************************************************************************************************************
 
-    //Variable Declaration
+    //****************************
+    //*** Variable Declaration ***
+    //****************************
 
     //Objects pertaining to the accessing of data from csv files
     //Final variables that determine the location of each filename within the "tempFilenames" array in the "fetchFilenamesFromFile()" method
@@ -517,9 +518,9 @@ public class Main {
     static boolean useAuto = true;
     static double timesCorrect = 0.0;
     static double timesIncorrect = 0.0;
-    static double percentCorrect;
+    static double percentCorrect = 0.0;
 
-    //Objects pertaining to the use of different points of data
+    //Variables pertaining to the use of different points of data
     static boolean useFreq = true;
     static boolean useJitter = true;
     static boolean useShimmer = true;
