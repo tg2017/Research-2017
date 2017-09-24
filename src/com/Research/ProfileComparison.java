@@ -15,7 +15,8 @@ public class ProfileComparison {
     private double avgFreqDiff;
     private double jitterDiff;
     private double shimmerDiff;
-    private double sumOfDiffs;
+    private double sumOfDiffs = 0.0;
+    private boolean useFreq = true, useJitter = true, useShimmer = true;
 
     //Constructor
     //Takes in all data as differences: the difference between data stored in the profile and data given in the sample
@@ -27,9 +28,24 @@ public class ProfileComparison {
         avgFreqDiff = avgFrequencyDifference;
         jitterDiff = jitterDifference;
         shimmerDiff = shimmerDifference;
-        sumOfDiffs = maxFreqDiff + minFreqDiff + avgFreqDiff + jitterDiff + shimmerDiff;
 
-        if (maxFreqDiff == 0 && minFreqDiff == 0 && avgFreqDiff == 0 && jitterDiff == 0 && shimmerDiff == 0){
+        if(useFreq){
+            sumOfDiffs += maxFreqDiff + minFreqDiff + avgFreqDiff;
+            System.out.println("useFreq:" + useFreq);
+        }
+        if(useJitter){
+            sumOfDiffs += jitterDiff;
+            System.out.println("useJitt:" + useJitter);
+        }
+        if(useShimmer){
+            sumOfDiffs += shimmerDiff;
+            System.out.println("useShimmer:" + useShimmer);
+        }
+        System.out.println("useFreq:" + useFreq);
+        System.out.println("useJitt:" + useJitter);
+        System.out.println("useShimmer:" + useShimmer);
+
+        if (sumOfDiffs == 0.0){
             if (!nameDiff){
                 isEqual = true;
                 isEqualIgnoreName = true;
@@ -40,7 +56,7 @@ public class ProfileComparison {
         }
     }
 
-    //"Get" methods
+    //Getter methods
     public boolean getNameDiff() {
         return nameDiff;
     }
@@ -57,6 +73,19 @@ public class ProfileComparison {
     public double getShimmerDiff() { return shimmerDiff; }
     public double getSumOfDiffs(){
         return sumOfDiffs;
+    }
+
+    //TODO: make setters for useFreq, useJitter, useShimmer
+    public void setUseFreq(boolean useIt){
+        useFreq = useIt;
+    }
+
+    public void setUseJitter(boolean useIt){
+        useJitter = useIt;
+    }
+
+    public void setUseShimmer(boolean useIt){
+        useShimmer = useIt;
     }
 
     public String toString(){
@@ -80,11 +109,18 @@ public class ProfileComparison {
             }
 
             //Represent data (differences) as Strings
-            output += "\nThe difference in maximum frequency is: " + maxFreqDiff + " Hz";
-            output += "\nThe difference in minimum frequency is: " + minFreqDiff + " Hz";
-            output += "\nThe difference in average frequency is: " + avgFreqDiff + " Hz";
-            output += "\nThe difference in jitter is: " + jitterDiff;
-            output += "\nThe difference in shimmer is: " + shimmerDiff;
+            if(useFreq) {
+                output += "\nThe difference in maximum frequency is: " + maxFreqDiff + " Hz";
+                output += "\nThe difference in minimum frequency is: " + minFreqDiff + " Hz";
+                output += "\nThe difference in average frequency is: " + avgFreqDiff + " Hz";
+            }
+            if(useJitter) {
+                output += "\nThe difference in jitter is: " + jitterDiff;
+            }
+            if(useShimmer) {
+                output += "\nThe difference in shimmer is: " + shimmerDiff;
+            }
+
             output += "\nThe overall difference is: " + sumOfDiffs;
         }
 

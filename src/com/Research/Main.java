@@ -51,7 +51,6 @@ public class Main {
         }
 
         //Get sample data and compare it to profiles
-
         //See if "Automatically Get Sample Data" is selected in Settings window GUI
         useAuto = SettingsGUI.checkUseAuto();
         if (useAuto) { //If user chooses to enter data automatically, do so...
@@ -67,6 +66,14 @@ public class Main {
 
                 //Compare sample to all profiles and get results as a List of ProfileComparison objects
                 comparisons = sampleProfile.compareToProfiles(profiles);
+
+                //Tell ProfileComparison objects "comparisons" what data to use
+                for(int i=0; i<comparisons.size(); i++){
+                    System.out.println("Main useFreq, jitt, shimm: " + useFreq + useJitter + useShimmer);
+                    comparisons.get(i).setUseFreq(useFreq);
+                    comparisons.get(i).setUseJitter(useJitter);
+                    comparisons.get(i).setUseShimmer(useShimmer);
+                }
 
                 //Put sum of diffs values into sumsOfDiffs
                 for (ProfileComparison tempComparison : comparisons) {
@@ -108,6 +115,13 @@ public class Main {
 
             //Compare sample to all profiles and get results as a List of ProfileComparison objects
             comparisons = sampleProfile.compareToProfiles(profiles);
+
+            //Tell ProfileComparison objects "comparisons" what data to use
+            for(int i=0; i<comparisons.size(); i++){
+                comparisons.get(i).setUseFreq(useFreq);
+                comparisons.get(i).setUseJitter(useJitter);
+                comparisons.get(i).setUseShimmer(useShimmer);
+            }
 
             //Put sum of diffs values into sumsOfDiffs
             for (ProfileComparison tempComparison : comparisons) {
@@ -156,6 +170,9 @@ public class Main {
 
         //Tell SettingsGUI about filename data
         SettingsGUI.setFilenames(getProfileFilename(), getIndexFilename(), getSampleFilename(), getReportFilename());
+
+        //Reset checkboxes to default values - essentially, make settings forget this ever happened
+        SettingsGUI.setAlreadyUsed(false);
 
         //Get rid of settings GUI window
         settings.dispose();
@@ -366,6 +383,11 @@ public class Main {
     public static void setUseJitter(boolean useIt){ useJitter = useIt; }
     public static void setUseShimmer(boolean useIt){ useShimmer = useIt; }
 
+    //Check data to be used
+    private static void checkUseFreq(){}
+    private static void checkUseJitter(){}
+    private static void checkUseShimmer(){}
+
     //Set start parameter (used by GUI)
     public static void setStart(boolean start){ startProgram = start; }
 
@@ -476,8 +498,11 @@ public class Main {
     static String profileFilename; //File location of csv file for profiles
     static String indexFilename; //File location of indices csv file
     static String thisDirectory ;//Stores directory of this class as a String. Used only by filenamesFilename (below)
-    static String filenamesFilename;//File location of txt file that contains the filenames of other files
-    //Note: The file to which this variable relates MUST be stored in the same folder as the Main class, otherwise the program will have issues
+
+    static String filenamesFilename;/*File location of txt file that contains the filenames of other files
+        ***NOTE: The file to which this variable relates MUST be stored in the same folder as the rest of the project,
+        otherwise the program will have issues. See initialization in Main method (uses thisDirectory (above))*/
+
     static CSVReader filenameReader; //Reads in the filenames for other Readers
     static CSVReader cr; //Reads in data from csv file for profiles
     static CSVReader indexReader; //Reads in indices from indices csv file
@@ -497,13 +522,13 @@ public class Main {
     static List<Profile> samples = new ArrayList<>(); //Array of samples stored in the program - data is accessed from the csv file WHEN DATA IS ENTERED AUTOMATICALLY
 
     //Data for Sample
-    static String sampleName;
-    static String sampleMaxFreqStr;
-    static String sampleMinFreqStr;
-    static String sampleAvgFreqStr;
-    static String sampleJitterStr;
-    static String sampleShimmerStr;
-    static Profile sampleProfile;
+    private static String sampleName;
+    private static String sampleMaxFreqStr;
+    private static String sampleMinFreqStr;
+    private static String sampleAvgFreqStr;
+    private static String sampleJitterStr;
+    private static String sampleShimmerStr;
+    private static Profile sampleProfile;
 
     //Objects regarding the closest match
     static int indexOfLowest; //Stores the index of the lowest sumOfDiffs in the sumsOfDiffs list
@@ -514,16 +539,16 @@ public class Main {
     static String reportOutput;
 
     //Objects pertaining to the use of automatic data entry
-    static String samplesFilename;
-    static boolean useAuto = true;
-    static double timesCorrect = 0.0;
-    static double timesIncorrect = 0.0;
-    static double percentCorrect = 0.0;
+    private static String samplesFilename;
+    private static boolean useAuto = true;
+    private static double timesCorrect = 0.0;
+    private static double timesIncorrect = 0.0;
+    private static double percentCorrect = 0.0;
 
     //Variables pertaining to the use of different points of data
-    static boolean useFreq = true;
-    static boolean useJitter = true;
-    static boolean useShimmer = true;
+    private static boolean useFreq = true;
+    private static boolean useJitter = true;
+    private static boolean useShimmer = true;
 
     //Variables pertaining to the creation and use of GUI
     static  MenuGUI menu = new MenuGUI();
