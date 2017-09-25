@@ -16,7 +16,7 @@ public class ProfileComparison {
     private double jitterDiff;
     private double shimmerDiff;
     private double sumOfDiffs = 0.0;
-    private boolean useFreq = true, useJitter = true, useShimmer = true;
+    private static  boolean useFreq = true, useJitter = true, useShimmer = true;
 
     //Constructor
     //Takes in all data as differences: the difference between data stored in the profile and data given in the sample
@@ -31,19 +31,13 @@ public class ProfileComparison {
 
         if(useFreq){
             sumOfDiffs += maxFreqDiff + minFreqDiff + avgFreqDiff;
-            System.out.println("useFreq:" + useFreq);
         }
         if(useJitter){
             sumOfDiffs += jitterDiff;
-            System.out.println("useJitt:" + useJitter);
         }
         if(useShimmer){
             sumOfDiffs += shimmerDiff;
-            System.out.println("useShimmer:" + useShimmer);
         }
-        System.out.println("useFreq:" + useFreq);
-        System.out.println("useJitt:" + useJitter);
-        System.out.println("useShimmer:" + useShimmer);
 
         if (sumOfDiffs == 0.0){
             if (!nameDiff){
@@ -76,15 +70,15 @@ public class ProfileComparison {
     }
 
     //TODO: make setters for useFreq, useJitter, useShimmer
-    public void setUseFreq(boolean useIt){
+    public static void setUseFreq(boolean useIt){
         useFreq = useIt;
     }
 
-    public void setUseJitter(boolean useIt){
+    public static void setUseJitter(boolean useIt){
         useJitter = useIt;
     }
 
-    public void setUseShimmer(boolean useIt){
+    public static void setUseShimmer(boolean useIt){
         useShimmer = useIt;
     }
 

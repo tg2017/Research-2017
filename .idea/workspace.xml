@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/Research/DataVault.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
@@ -30,12 +29,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+            <state relative-caret-position="161">
+              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
+                <element signature="method#main#0;class#Main#0" expanded="false" />
                 <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
                 <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
                 <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -46,7 +46,7 @@
                 <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
                 <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
                 <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-                <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+                <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -166,12 +166,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileComparison.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProfileComparison.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="138">
+              <caret line="23" column="110" lean-forward="false" selection-start-line="23" selection-start-column="110" selection-end-line="23" selection-end-column="110" />
               <folding>
+                <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
                 <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
               </folding>
             </state>
@@ -224,10 +225,10 @@
       <find>checkpoint</find>
       <find>sumOfDiffs</find>
       <find>comparisons</find>
-      <find>setUse</find>
       <find>settings</find>
       <find>freqCheckboxActionPerformed</find>
       <find>freqCheckbox</find>
+      <find>setUse</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -254,11 +255,11 @@
         <option value="$PROJECT_DIR$/src/com/Research/WaitForGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Profile.java" />
         <option value="$PROJECT_DIR$/src/com/Research/filenames.txt" />
-        <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
         <option value="$PROJECT_DIR$/src/com/Research/MenuGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/DataVault.java" />
         <option value="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
       </list>
     </option>
   </component>
@@ -741,7 +742,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506175535222</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added DataVault to prevent resetting of checkboxes in settings. NOTE: there are still problems with the changing of data to be used, this is NOT a working model">
+      <created>1506297329043</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1506297329043</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -757,7 +765,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07250342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.053351574" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -835,7 +843,8 @@
     <MESSAGE value="Fixed a lot of stuff" />
     <MESSAGE value="9/18/17, backup" />
     <MESSAGE value="Fixed up comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed up comments" />
+    <MESSAGE value="Added DataVault to prevent resetting of checkboxes in settings. NOTE: there are still problems with the changing of data to be used, this is NOT a working model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DataVault to prevent resetting of checkboxes in settings. NOTE: there are still problems with the changing of data to be used, this is NOT a working model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -860,6 +869,7 @@
         <state relative-caret-position="1377">
           <caret line="97" column="5" lean-forward="false" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
           <folding>
+            <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
             <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
           </folding>
         </state>
@@ -887,6 +897,7 @@
         <state relative-caret-position="1105">
           <caret line="73" column="100" lean-forward="false" selection-start-line="73" selection-start-column="100" selection-end-line="73" selection-end-column="100" />
           <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -897,7 +908,7 @@
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+            <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -930,6 +941,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
             <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
           </folding>
         </state>
@@ -957,6 +969,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -967,7 +980,7 @@
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+            <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1017,6 +1030,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -1027,7 +1041,7 @@
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+            <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1077,6 +1091,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -1087,7 +1102,7 @@
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+            <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1137,6 +1152,7 @@
         <state relative-caret-position="289">
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -1147,7 +1163,7 @@
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+            <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1197,6 +1213,7 @@
         <state relative-caret-position="153">
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -1207,7 +1224,7 @@
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+            <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1257,6 +1274,7 @@
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -1267,7 +1285,7 @@
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+            <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1392,16 +1410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1461,9 +1469,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+        <state relative-caret-position="161">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
+            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
@@ -1474,7 +1483,18 @@
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506297261834" expanded="false" signature="297:382" ph="{...}" />
+            <marker date="1506298343096" expanded="false" signature="297:382" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="23" column="110" lean-forward="false" selection-start-line="23" selection-start-column="110" selection-end-line="23" selection-end-column="110" />
+          <folding>
+            <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
+            <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
           </folding>
         </state>
       </provider>

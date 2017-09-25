@@ -26,6 +26,15 @@ public class Main {
         //Get rid of GUI menu
         menu.dispose();
 
+        //Determine what data should be used, based on checkboxes in settings window, and apply it to ProfileComparison
+        shouldUseFreq();
+        shouldUseJitter();
+        shouldUseShimmer();
+
+        ProfileComparison.setUseFreq(useFreq);
+        ProfileComparison.setUseJitter(useJitter);
+        ProfileComparison.setUseShimmer(useShimmer);
+
         //Print filenames
         System.out.println("File for profiles: " + profileFilename);
         System.out.println("File for indices: " + indexFilename);
@@ -66,14 +75,6 @@ public class Main {
 
                 //Compare sample to all profiles and get results as a List of ProfileComparison objects
                 comparisons = sampleProfile.compareToProfiles(profiles);
-
-                //Tell ProfileComparison objects "comparisons" what data to use
-                for(int i=0; i<comparisons.size(); i++){
-                    System.out.println("Main useFreq, jitt, shimm: " + useFreq + useJitter + useShimmer);
-                    comparisons.get(i).setUseFreq(useFreq);
-                    comparisons.get(i).setUseJitter(useJitter);
-                    comparisons.get(i).setUseShimmer(useShimmer);
-                }
 
                 //Put sum of diffs values into sumsOfDiffs
                 for (ProfileComparison tempComparison : comparisons) {
@@ -384,9 +385,9 @@ public class Main {
     public static void setUseShimmer(boolean useIt){ useShimmer = useIt; }
 
     //Check data to be used
-    private static void checkUseFreq(){}
-    private static void checkUseJitter(){}
-    private static void checkUseShimmer(){}
+    private static void shouldUseFreq(){ useFreq = SettingsGUI.checkUseFreq();}
+    private static void shouldUseJitter(){ useJitter = SettingsGUI.checkUseJitter(); }
+    private static void shouldUseShimmer(){ useShimmer = SettingsGUI.checkUseShimmer(); }
 
     //Set start parameter (used by GUI)
     public static void setStart(boolean start){ startProgram = start; }
