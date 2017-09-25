@@ -7,10 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/Research/MenuGUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/CSVReader.java" afterPath="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/DataVault.java" afterPath="$PROJECT_DIR$/src/com/Research/DataVault.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
@@ -73,16 +74,6 @@
                 <element signature="method#main#0;class#MenuGUI#0" expanded="false" />
                 <element signature="e#8982#9069#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileReader.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/FileReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -172,7 +163,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSVReader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CSVReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/CSVReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="186">
@@ -213,8 +204,8 @@
       <find>comparisons</find>
       <find>settings</find>
       <find>freqCheckboxActionPerformed</find>
-      <find>freqCheckbox</find>
       <find>setUse</find>
+      <find>freqCheckbox</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -743,12 +734,19 @@
       <option name="project" value="LOCAL" />
       <updated>1506298362502</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added error message for failure to find file">
+      <created>1506299463990</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1506299463990</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -765,7 +763,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -839,7 +837,8 @@
     <MESSAGE value="Fixed up comments" />
     <MESSAGE value="Added DataVault to prevent resetting of checkboxes in settings. NOTE: there are still problems with the changing of data to be used, this is NOT a working model" />
     <MESSAGE value="Fixed usage of different data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed usage of different data" />
+    <MESSAGE value="Added error message for failure to find file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added error message for failure to find file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1314,37 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="423" column="71" lean-forward="false" selection-start-line="423" selection-start-column="71" selection-end-line="423" selection-end-column="71" />
-          <folding>
-            <element signature="docComment;method#initComponents#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="e#731#794#0" expanded="true" />
-            <element signature="e#2880#2881#0" expanded="true" />
-            <element signature="e#2944#2945#0" expanded="true" />
-            <element signature="e#3272#3273#0" expanded="true" />
-            <element signature="e#3338#3339#0" expanded="true" />
-            <element signature="e#3671#3672#0" expanded="true" />
-            <element signature="e#3738#3739#0" expanded="true" />
-            <element signature="class#5186:5373" expanded="false" />
-            <element signature="class#5669:5857" expanded="false" />
-            <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#profileChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#indexChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1363,20 +1331,6 @@
           <folding>
             <element signature="method#setSettingsUseJitter#0;class#DataVault#0" expanded="false" />
             <element signature="method#setSettingsUseShimmer#0;class#DataVault#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="e#2489#2490#0" expanded="true" />
-            <element signature="method#learnMoreButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#MenuGUI#0" expanded="false" />
-            <element signature="method#main#0;class#MenuGUI#0" expanded="false" />
-            <element signature="e#8982#9069#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1415,6 +1369,51 @@
           <caret line="39" column="64" lean-forward="false" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
           <folding>
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="423" column="71" lean-forward="false" selection-start-line="423" selection-start-column="71" selection-end-line="423" selection-end-column="71" />
+          <folding>
+            <element signature="docComment;method#initComponents#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="e#731#794#0" expanded="true" />
+            <element signature="e#2880#2881#0" expanded="true" />
+            <element signature="e#2944#2945#0" expanded="true" />
+            <element signature="e#3272#3273#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3671#3672#0" expanded="true" />
+            <element signature="e#3738#3739#0" expanded="true" />
+            <element signature="class#5186:5373" expanded="false" />
+            <element signature="class#5669:5857" expanded="false" />
+            <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#profileChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#indexChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#2489#2490#0" expanded="true" />
+            <element signature="method#learnMoreButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#MenuGUI#0" expanded="false" />
+            <element signature="method#main#0;class#MenuGUI#0" expanded="false" />
+            <element signature="e#8982#9069#0" expanded="true" />
           </folding>
         </state>
       </provider>
