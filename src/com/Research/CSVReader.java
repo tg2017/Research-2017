@@ -1,4 +1,5 @@
 package com.Research;
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +34,12 @@ public class CSVReader {
     private void read() {
         String line = "";
         try {
-            br = new BufferedReader(new FileReader(csvFile));
-
+            try {
+                br = new BufferedReader(new FileReader(csvFile));
+            } catch (FileNotFoundException ex) {
+                JOptionPane.showMessageDialog(null, "The file:\n" + csvFile + "\ncannot be found by the system. \n\nPlease revise this filename in the settings and try again.", "File Not Found Error", JOptionPane.ERROR_MESSAGE);
+                Main.createGUI();
+            }
             //If splitting by new line...
             if(csvSplitBy.equalsIgnoreCase("new line")){
 
