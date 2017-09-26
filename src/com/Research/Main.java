@@ -9,6 +9,8 @@ import java.util.*;
 
 public class Main {
 
+    //TODO: (in general, not at this spot): make output message describing what data was used
+
     //***************
     //*** Methods ***
     //***************
@@ -118,12 +120,15 @@ public class Main {
             //Compare sample to all profiles and get results as a List of ProfileComparison objects
             comparisons = sampleProfile.compareToProfiles(profiles);
 
-            //Tell ProfileComparison objects "comparisons" what data to use
-            for(int i=0; i<comparisons.size(); i++){
-                comparisons.get(i).setUseFreq(useFreq);
-                comparisons.get(i).setUseJitter(useJitter);
-                comparisons.get(i).setUseShimmer(useShimmer);
-            }
+            /*Tell ProfileComparison objects "comparisons" what data to use
+
+            NOTE: Not used
+
+            for (ProfileComparison comparison : comparisons) {
+                comparison.setUseFreq(useFreq);
+                comparison.setUseJitter(useJitter);
+                comparison.setUseShimmer(useShimmer);
+            }*/
 
             //Put sum of diffs values into sumsOfDiffs
             for (ProfileComparison tempComparison : comparisons) {
@@ -237,6 +242,7 @@ public class Main {
             System.out.println();
         }
 
+        //NOTE: the following commented-out lines of code were used for testing, no longer needed
         //Print test values
         //Print temp values
         //System.out.println("Temp Values ArrayList:\n" + tempValues);
@@ -252,6 +258,7 @@ public class Main {
         //Print final values
         System.out.println("Final Values ArrayList:\n" + finalValues);
 
+        //NOTE: the following commented-out lines of code were used for testing, no longer needed
         //Example use:
         //To print the 2nd array
         //System.out.println("\nThe 2nd array:\n" + finalValues.get(1));
