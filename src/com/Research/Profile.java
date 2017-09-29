@@ -37,6 +37,10 @@ public class Profile {
     private double jitter;
     private double shimmer;
 
+    private static boolean useFreq;
+    private static boolean useJitter;
+    private static boolean useShimmer;
+
 
     //Frequency Only constructor: Takes in a List ("array") that contains values to be stored, and a List<Integer> that contains the indices
     public Profile(List array, List<Integer> arrayOfIndices){
@@ -66,12 +70,18 @@ public class Profile {
     //Returns profile data summary as a String
     public String toString(){
         String output;
-        output = "Name: " + name +
-                "\nMaximum Frequency: " + maxFrequency + " Hz" +
-                "\nMinimum Frequency: " + minFrequency + " Hz" +
-                "\nAverage Frequency: " + avgFrequency + " Hz" +
-                "\nJitter Ratio:      " + jitter +
-                "\nShimmer:           " + shimmer;
+        output = "Name: " + name;
+        if(useFreq) {
+            output += "\nMaximum Frequency: " + maxFrequency + " Hz";
+            output += "\nMinimum Frequency: " + minFrequency + " Hz";
+            output += "\nAverage Frequency: " + avgFrequency + " Hz";
+        }
+        if(useJitter) {
+            output += "\nJitter Ratio:      " + jitter;
+        }
+        if(useShimmer) {
+            output += "\nShimmer:           " + shimmer;
+        }
         return output;
     }
 
@@ -80,7 +90,7 @@ public class Profile {
         System.out.println(this.toString());
     }
 
-    //"Get" methods
+    //Getter methods
     public String getName() {
         return name;
     }
@@ -95,6 +105,18 @@ public class Profile {
     }
     public double getJitter() { return jitter; }
     public double getShimmer() { return shimmer; }
+
+    //Setter methods
+    public static void setUseFreq(boolean useIt){
+        useFreq = useIt;
+    }
+    public static void setUseJitter(boolean useIt){
+        useJitter = useIt;
+    }
+    public static void setUseShimmer(boolean useIt){
+        useShimmer = useIt;
+    }
+
 
     //Method that compares two profiles, and returns a ProfileComparison object
     public ProfileComparison compareToProfile(Profile otherProfile){

@@ -69,15 +69,12 @@ public class ProfileComparison {
         return sumOfDiffs;
     }
 
-    //TODO: make setters for useFreq, useJitter, useShimmer
     public static void setUseFreq(boolean useIt){
         useFreq = useIt;
     }
-
     public static void setUseJitter(boolean useIt){
         useJitter = useIt;
     }
-
     public static void setUseShimmer(boolean useIt){
         useShimmer = useIt;
     }

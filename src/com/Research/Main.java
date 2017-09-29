@@ -34,9 +34,18 @@ public class Main {
         shouldUseJitter();
         shouldUseShimmer();
 
+        //Determine what form of report should be used
+        shouldUseDescriptive();
+
+        System.out.println(useDescriptive);
+
         ProfileComparison.setUseFreq(useFreq);
         ProfileComparison.setUseJitter(useJitter);
         ProfileComparison.setUseShimmer(useShimmer);
+
+        Profile.setUseFreq(useFreq);
+        Profile.setUseJitter(useJitter);
+        Profile.setUseShimmer(useShimmer);
 
         //Print filenames
         System.out.println("File for profiles: " + profileFilename);
@@ -396,11 +405,12 @@ public class Main {
     private static void shouldUseFreq(){ useFreq = SettingsGUI.checkUseFreq();}
     private static void shouldUseJitter(){ useJitter = SettingsGUI.checkUseJitter(); }
     private static void shouldUseShimmer(){ useShimmer = SettingsGUI.checkUseShimmer(); }
+    private static void shouldUseDescriptive(){ useDescriptive = SettingsGUI.checkUseDescriptive(); }
 
     //Set start parameter (used by GUI)
     public static void setStart(boolean start){ startProgram = start; }
 
-    //Set if program is finished (used by GUI) (NOTE: This is just a precaution, the GUI calls the System.exit method itself
+    //Set if program is finished (used by GUI) (NOTE: This is just a precaution, the GUI calls the System.exit method itself)
     public static void setFinished(boolean done){ finished = done; }
 
     //Sets value that determines whether the GUI has already been created or not
@@ -504,31 +514,31 @@ public class Main {
     public static final int SAMPLEFILENAMEINDEX = 2;
     public static final int REPORTFILENAMEINDEX = 3;
 
-    static String profileFilename; //File location of csv file for profiles
-    static String indexFilename; //File location of indices csv file
-    static String thisDirectory ;//Stores directory of this class as a String. Used only by filenamesFilename (below)
+    private static String profileFilename; //File location of csv file for profiles
+    private static String indexFilename; //File location of indices csv file
+    private static String thisDirectory ;//Stores directory of this class as a String. Used only by filenamesFilename (below)
 
-    static String filenamesFilename;/*File location of txt file that contains the filenames of other files
+    private static String filenamesFilename;/*File location of txt file that contains the filenames of other files
         ***NOTE: The file to which this variable relates MUST be stored in the same folder as the rest of the project,
         otherwise the program will have issues. See initialization in Main method (uses thisDirectory (above))*/
 
-    static CSVReader filenameReader; //Reads in the filenames for other Readers
-    static CSVReader cr; //Reads in data from csv file for profiles
-    static CSVReader indexReader; //Reads in indices from indices csv file
+    private static CSVReader filenameReader; //Reads in the filenames for other Readers
+    private static CSVReader cr; //Reads in data from csv file for profiles
+    private static CSVReader indexReader; //Reads in indices from indices csv file
 
     //Objects pertaining to the storing of data from the csv files
-    static String[] initialArray; //Stores data for profiles from csv as Strings
-    static String[] initialIndices; //Stores indices from indices csv file as Strings
+    private static String[] initialArray; //Stores data for profiles from csv as Strings
+    private static String[] initialIndices; //Stores indices from indices csv file as Strings
 
     //Lists for storing data
-    static List<List> tempValues = new ArrayList<>(); //Temporarily stores data for profiles in a List of Lists
-    static List<List> finalValues = new ArrayList<>(); //Stores final, processed (formatted) data for profiles in a List of Lists
-    static List<String> sampleList = new ArrayList<>(); //Stores sample values as Strings
-    static List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
-    static List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
-    static List<ProfileComparison> comparisons = new ArrayList<>(); //List of ProfileComparison objects that store the data from each of the comparisons between the sample and the known profiles
-    static List<Double> sumsOfDiffs = new ArrayList<>(); //List that contains all of the sums of differences of the ProfileComparisons in the comparisons list
-    static List<Profile> samples = new ArrayList<>(); //Array of samples stored in the program - data is accessed from the csv file WHEN DATA IS ENTERED AUTOMATICALLY
+    private static List<List> tempValues = new ArrayList<>(); //Temporarily stores data for profiles in a List of Lists
+    private static List<List> finalValues = new ArrayList<>(); //Stores final, processed (formatted) data for profiles in a List of Lists
+    private static List<String> sampleList = new ArrayList<>(); //Stores sample values as Strings
+    private static List<Integer> finalIndices = new ArrayList<>(); // Stores indices values from indices.csv, as Integer objects
+    private static List<Profile> profiles = new ArrayList<>(); //Array of profiles stored in the program - data is accessed from the csv file
+    private static List<ProfileComparison> comparisons = new ArrayList<>(); //List of ProfileComparison objects that store the data from each of the comparisons between the sample and the known profiles
+    private static List<Double> sumsOfDiffs = new ArrayList<>(); //List that contains all of the sums of differences of the ProfileComparisons in the comparisons list
+    private static List<Profile> samples = new ArrayList<>(); //Array of samples stored in the program - data is accessed from the csv file WHEN DATA IS ENTERED AUTOMATICALLY
 
     //Data for Sample
     private static String sampleName;
@@ -540,12 +550,13 @@ public class Main {
     private static Profile sampleProfile;
 
     //Objects regarding the closest match
-    static int indexOfLowest; //Stores the index of the lowest sumOfDiffs in the sumsOfDiffs list
-    static ProfileComparison closestMatch; //Stores the comparison object of the closest match to the sample
+    private static int indexOfLowest; //Stores the index of the lowest sumOfDiffs in the sumsOfDiffs list
+    private static ProfileComparison closestMatch; //Stores the comparison object of the closest match to the sample
 
     //Objects for writing data to report file
-    static String reportFilename;
-    static String reportOutput;
+    private static String reportFilename;
+    private static String reportOutput;
+    private static boolean useDescriptive;
 
     //Objects pertaining to the use of automatic data entry
     private static String samplesFilename;
@@ -560,14 +571,14 @@ public class Main {
     private static boolean useShimmer = true;
 
     //Variables pertaining to the creation and use of GUI
-    static  MenuGUI menu = new MenuGUI();
-    static boolean finished = false;
-    static boolean GUICreated = false;
-    static boolean startProgram = false;
+    private static  MenuGUI menu = new MenuGUI();
+    private static boolean finished = false;
+    private static boolean GUICreated = false;
+    private static boolean startProgram = false;
 
     //Variables pertaining to the maintenance of the "engine" loop
-    static int timesRun = 0;
-    static int timesWrittenMessage = 0;
+    private static int timesRun = 0;
+    private static int timesWrittenMessage = 0;
 
 
 

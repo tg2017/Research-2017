@@ -6,8 +6,12 @@
 package com.Research;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
-import javax.swing.JFileChooser;
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 /**
  *
@@ -39,146 +43,314 @@ public class SettingsGUI extends javax.swing.JFrame {
         reportFilename = Main.getReportFilename();
 
         //Their Variables (NetBeans)
-        freqCheckbox = new javax.swing.JCheckBox();
-        jitterCheckbox = new javax.swing.JCheckBox();
-        shimmerCheckbox = new javax.swing.JCheckBox();
-        settingsBackButton = new javax.swing.JButton();
-        settingsTitle = new javax.swing.JLabel();
-        dataCheckboxTitle = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        profileFileNameTextbox = new javax.swing.JTextPane();
-        profileFileNameLabel = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        indexFileNameTextbox = new javax.swing.JTextPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        sampleFileNameTextbox = new javax.swing.JTextPane();
-        indexFileNameLabel = new javax.swing.JLabel();
-        sampleFileNameLabel = new javax.swing.JLabel();
-        settingsExitButton = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        reportFileNameTextbox = new javax.swing.JTextPane();
-        reportFileNameLabel = new javax.swing.JLabel();
-        profileChangeButton = new javax.swing.JButton();
-        indexChangeButton = new javax.swing.JButton();
-        sampleChangeButton = new javax.swing.JButton();
-        reportChangeButton = new javax.swing.JButton();
-        autoSampleCheckbox = new javax.swing.JCheckBox();
+        freqCheckbox = new JCheckBox();
+        jitterCheckbox = new JCheckBox();
+        shimmerCheckbox = new JCheckBox();
+        settingsBackButton = new JButton();
+        settingsTitle = new JLabel();
+        dataCheckboxTitle = new JLabel();
+        jScrollPane1 = new JScrollPane();
+        profileFileNameTextbox = new JTextPane();
+        profileFileNameLabel = new JLabel();
+        jScrollPane2 = new JScrollPane();
+        indexFileNameTextbox = new JTextPane();
+        jScrollPane3 = new JScrollPane();
+        sampleFileNameTextbox = new JTextPane();
+        indexFileNameLabel = new JLabel();
+        sampleFileNameLabel = new JLabel();
+        settingsExitButton = new JButton();
+        jScrollPane4 = new JScrollPane();
+        reportFileNameTextbox = new JTextPane();
+        reportFileNameLabel = new JLabel();
+        profileChangeButton = new JButton();
+        indexChangeButton = new JButton();
+        sampleChangeButton = new JButton();
+        reportChangeButton = new JButton();
+        autoSampleCheckbox = new JCheckBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        profileOpenButton = new JButton();
+        indicesOpenButton = new JButton();
+        samplesOpenButton = new JButton();
+        reportOpenButton = new JButton();
+        jPanel2 = new JPanel();
+        dataPanel = new JPanel();
+        reportTypeTitle = new JLabel();
+        summaryRadio = new JRadioButton();
+        descriptiveRadio = new JRadioButton();
+        dataPanel1 = new JPanel();
+        dataCheckboxTitle1 = new JLabel();
+        freqCheckbox = new JCheckBox();
+        jitterCheckbox = new JCheckBox();
+        shimmerCheckbox = new JCheckBox();
+        jSeparator1 = new JSeparator();
+
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Settings");
+        setSize(578,517);
 
-        freqCheckbox.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        freqCheckbox.setFont(new Font("Tahoma", 0, 15)); // NOI18N
         freqCheckbox.setSelected(true);
         freqCheckbox.setText("Frequency");
-        freqCheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        freqCheckbox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 freqCheckboxActionPerformed(evt);
             }
         });
 
-        jitterCheckbox.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jitterCheckbox.setFont(new Font("Tahoma", 0, 15)); // NOI18N
         jitterCheckbox.setSelected(true);
         jitterCheckbox.setText("Jitter");
-        jitterCheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jitterCheckbox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 jitterCheckboxActionPerformed(evt);
             }
         });
 
-        shimmerCheckbox.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        shimmerCheckbox.setFont(new Font("Tahoma", 0, 15)); // NOI18N
         shimmerCheckbox.setSelected(true);
         shimmerCheckbox.setText("Shimmer");
-        shimmerCheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        shimmerCheckbox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 shimmerCheckboxActionPerformed(evt);
             }
         });
 
-        settingsBackButton.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        settingsBackButton.setFont(new Font("Tahoma", 0, 13)); // NOI18N
         settingsBackButton.setText("Back");
-        settingsBackButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        settingsBackButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 settingsBackButtonActionPerformed(evt);
             }
         });
 
-        settingsTitle.setFont(new java.awt.Font("Tahoma", 1, 25)); // NOI18N
+        settingsTitle.setFont(new Font("Tahoma", 1, 25)); // NOI18N
+        settingsTitle.setHorizontalAlignment(SwingConstants.CENTER);
         settingsTitle.setText("Settings");
 
-        dataCheckboxTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        dataCheckboxTitle.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         dataCheckboxTitle.setText("Data to Test For:");
 
         profileFileNameTextbox.setText(Main.getProfileFilename());
+        profileFileNameTextbox.setEditable(false);
         jScrollPane1.setViewportView(profileFileNameTextbox);
+
+        profileFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
 
         profileFileNameLabel.setText("Profiles CSV File Location:");
 
         indexFileNameTextbox.setText(Main.getIndexFilename());
+        indexFileNameTextbox.setEditable(false);
         jScrollPane2.setViewportView(indexFileNameTextbox);
 
         sampleFileNameTextbox.setText(Main.getSampleFilename());
+        sampleFileNameTextbox.setEditable(false);
         jScrollPane3.setViewportView(sampleFileNameTextbox);
+
+        indexFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
 
         indexFileNameLabel.setText("Indices CSV File Location:");
         indexFileNameLabel.setToolTipText("");
 
+        sampleFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+
         sampleFileNameLabel.setText("Samples CSV File Location:");
 
-        settingsExitButton.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        settingsExitButton.setFont(new Font("Tahoma", 0, 13)); // NOI18N
         settingsExitButton.setText("Exit");
-        settingsExitButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        settingsExitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 settingsExitButtonActionPerformed(evt);
             }
         });
 
         reportFileNameTextbox.setText(Main.getReportFilename());
+        reportFileNameTextbox.setEditable(false);
         jScrollPane4.setViewportView(reportFileNameTextbox);
+
+        reportFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
 
         reportFileNameLabel.setText("Report Text File Location:");
 
         profileChangeButton.setText("Change");
-        profileChangeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        profileChangeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 profileChangeButtonActionPerformed(evt);
             }
         });
 
         indexChangeButton.setText("Change");
-        indexChangeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        indexChangeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 indexChangeButtonActionPerformed(evt);
             }
         });
 
         sampleChangeButton.setText("Change");
-        sampleChangeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        sampleChangeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 sampleChangeButtonActionPerformed(evt);
             }
         });
 
         reportChangeButton.setText("Change");
-        reportChangeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        reportChangeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 reportChangeButtonActionPerformed(evt);
             }
         });
 
-        autoSampleCheckbox.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        autoSampleCheckbox.setFont(new Font("Tahoma", 0, 13)); // NOI18N
+        autoSampleCheckbox.setSelected(true);
         autoSampleCheckbox.setText("Check Samples Automatically");
-        autoSampleCheckbox.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+        autoSampleCheckbox.addChangeListener(new ChangeListener() {
+            public void stateChanged(ChangeEvent evt) {
                 autoSampleCheckboxStateChanged(evt);
             }
         });
-        autoSampleCheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        autoSampleCheckbox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 autoSampleCheckboxActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        profileOpenButton.setText("Open");
+        indicesOpenButton.setText("Open");
+        indicesOpenButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                indicesOpenButtonActionPerformed(evt);
+            }
+        });
+
+        samplesOpenButton.setText("Open");
+
+        reportOpenButton.setText("Open");
+        reportOpenButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                reportOpenButtonActionPerformed(evt);
+            }
+        });
+
+        dataPanel.setPreferredSize(new Dimension(175, 123));
+
+        reportTypeTitle.setFont(new Font("Tahoma", 0, 18)); // NOI18N
+        reportTypeTitle.setText("Select Report Type:");
+
+        summaryRadio.setFont(new Font("Tahoma", 0, 15)); // NOI18N
+        summaryRadio.setSelected(true);
+        summaryRadio.setText("Summary");
+
+        descriptiveRadio.setFont(new Font("Tahoma", 0, 15)); // NOI18N
+        descriptiveRadio.setText("Descriptive");
+
+        GroupLayout dataPanelLayout = new GroupLayout(dataPanel);
+        dataPanel.setLayout(dataPanelLayout);
+        dataPanelLayout.setHorizontalGroup(
+                dataPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(dataPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(dataPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(reportTypeTitle)
+                                        .addGroup(dataPanelLayout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addGroup(dataPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                                        .addComponent(descriptiveRadio)
+                                                        .addComponent(summaryRadio))))
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        dataPanelLayout.setVerticalGroup(
+                dataPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(dataPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(reportTypeTitle)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(summaryRadio)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(descriptiveRadio)
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        dataPanel1.setPreferredSize(new Dimension(175, 123));
+
+        dataCheckboxTitle1.setFont(new Font("Tahoma", 0, 18)); // NOI18N
+        dataCheckboxTitle1.setText("Data to Test For:");
+
+        freqCheckbox.setFont(new Font("Tahoma", 0, 15)); // NOI18N
+        freqCheckbox.setSelected(true);
+        freqCheckbox.setText("Frequency");
+        freqCheckbox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                freqCheckboxActionPerformed(evt);
+            }
+        });
+
+        jitterCheckbox.setFont(new Font("Tahoma", 0, 15)); // NOI18N
+        jitterCheckbox.setSelected(true);
+        jitterCheckbox.setText("Jitter");
+
+        shimmerCheckbox.setFont(new Font("Tahoma", 0, 15)); // NOI18N
+        shimmerCheckbox.setSelected(true);
+        shimmerCheckbox.setText("Shimmer");
+
+        GroupLayout dataPanel1Layout = new GroupLayout(dataPanel1);
+        dataPanel1.setLayout(dataPanel1Layout);
+        dataPanel1Layout.setHorizontalGroup(
+                dataPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(dataPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(dataPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(dataCheckboxTitle1)
+                                        .addGroup(dataPanel1Layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addGroup(dataPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jitterCheckbox)
+                                                        .addComponent(freqCheckbox)
+                                                        .addComponent(shimmerCheckbox))))
+                                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        dataPanel1Layout.setVerticalGroup(
+                dataPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(dataPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(dataCheckboxTitle1)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(freqCheckbox)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jitterCheckbox)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(shimmerCheckbox)
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jSeparator1.setOrientation(SwingConstants.VERTICAL);
+
+        GroupLayout jPanel2Layout = new GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+                jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addContainerGap(53, Short.MAX_VALUE)
+                                .addComponent(dataPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addGap(49, 49, 49)
+                                .addComponent(jSeparator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addGap(49, 49, 49)
+                                .addComponent(dataPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+                jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addComponent(dataPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(dataPanel1, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jSeparator1, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24))
+        );
+
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,83 +362,93 @@ public class SettingsGUI extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(settingsExitButton))
                                         .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(autoSampleCheckbox)
                                                         .addGroup(layout.createSequentialGroup()
-                                                                .addGap(10, 10, 10)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
+                                                                        .addComponent(jScrollPane3)
+                                                                        .addComponent(jScrollPane4)
+                                                                        .addComponent(jScrollPane1)
+                                                                        .addComponent(profileFileNameLabel)
+                                                                        .addComponent(indexFileNameLabel)
+                                                                        .addComponent(sampleFileNameLabel)
+                                                                        .addComponent(reportFileNameLabel))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(autoSampleCheckbox)
                                                                         .addGroup(layout.createSequentialGroup()
-                                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
-                                                                                        .addComponent(jScrollPane3)
-                                                                                        .addComponent(jScrollPane4)
-                                                                                        .addComponent(jScrollPane1)
-                                                                                        .addComponent(profileFileNameLabel)
-                                                                                        .addComponent(indexFileNameLabel)
-                                                                                        .addComponent(sampleFileNameLabel)
-                                                                                        .addComponent(reportFileNameLabel))
+                                                                                .addComponent(indexChangeButton)
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                        .addComponent(profileChangeButton)
-                                                                                        .addComponent(indexChangeButton)
-                                                                                        .addComponent(sampleChangeButton)
-                                                                                        .addComponent(reportChangeButton)))))
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                .addComponent(settingsTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGroup(layout.createSequentialGroup()
-                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addComponent(dataCheckboxTitle)
-                                                                                .addGroup(layout.createSequentialGroup()
-                                                                                        .addGap(10, 10, 10)
-                                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                                .addComponent(jitterCheckbox)
-                                                                                                .addComponent(freqCheckbox)
-                                                                                                .addComponent(shimmerCheckbox))))
-                                                                        .addGap(32, 32, 32))))
-                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                                                                .addComponent(indicesOpenButton))
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(sampleChangeButton)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addComponent(samplesOpenButton))
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(reportChangeButton)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addComponent(reportOpenButton))
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(profileChangeButton)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addComponent(profileOpenButton)))))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(settingsTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addContainerGap())
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(settingsTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(settingsTitle)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(dataCheckboxTitle)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(freqCheckbox)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jitterCheckbox)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(shimmerCheckbox)
-                                .addGap(25, 25, 25)
+
+
+
+
+
+
+
+
                                 .addComponent(profileFileNameLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(profileChangeButton))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                .addComponent(profileChangeButton)
+                                                .addComponent(profileOpenButton)))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(indexFileNameLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(indexChangeButton))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                .addComponent(indexChangeButton)
+                                                .addComponent(indicesOpenButton)))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(sampleFileNameLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(sampleChangeButton))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                .addComponent(sampleChangeButton)
+                                                .addComponent(samplesOpenButton)))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(reportFileNameLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(reportChangeButton))
-                                .addGap(27, 27, 27)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                .addComponent(reportChangeButton)
+                                                .addComponent(reportOpenButton)))
+                                .addGap(18, 18, 18)
                                 .addComponent(autoSampleCheckbox)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGap(18, 18, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(settingsBackButton)
                                         .addComponent(settingsExitButton))
                                 .addContainerGap())
@@ -274,6 +456,13 @@ public class SettingsGUI extends javax.swing.JFrame {
 
         //IMPORTANT NOTE: I, the creator of the class, have no idea how to follow the above code. The following is my
         //way of overriding the states of the components that I need to change across instances.
+
+        //Make the RadioButtons work
+        ButtonGroup reportTypeGroup = new ButtonGroup();
+        reportTypeGroup.add(summaryRadio);
+        reportTypeGroup.add(descriptiveRadio);
+
+
         if(alreadyUsed) {
             freqCheckbox.setSelected(DataVault.getSettingsUseFreq());
             jitterCheckbox.setSelected(DataVault.getSettingsUseJitter());
@@ -343,6 +532,14 @@ public class SettingsGUI extends javax.swing.JFrame {
         changeFilenames();
     }
 
+    private void indicesOpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    private void reportOpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
     private void settingsBackButtonActionPerformed(java.awt.event.ActionEvent evt) {
         //Create new menu GUI after leaving settings menu
         Main.createGUI();
@@ -395,6 +592,7 @@ public class SettingsGUI extends javax.swing.JFrame {
     public static boolean checkUseFreq(){ return freqCheckbox.isSelected(); }
     public static boolean checkUseJitter() { return jitterCheckbox.isSelected(); }
     public static boolean checkUseShimmer() { return shimmerCheckbox.isSelected(); }
+    public static boolean checkUseDescriptive() { return descriptiveRadio.isSelected(); }
 
     //Tells Main class to change filenames to reflect changes made in this class
     public static void changeFilenames(){
@@ -477,29 +675,41 @@ public class SettingsGUI extends javax.swing.JFrame {
     private static boolean alreadyUsed = false;
 
     //Their (NetBeans) Variables
+    private javax.swing.JLabel dataCheckboxTitle1;
+    private javax.swing.JPanel dataPanel;
+    private javax.swing.JPanel dataPanel1;
+    private static javax.swing.JRadioButton descriptiveRadio;
     private static javax.swing.JCheckBox autoSampleCheckbox;
     private javax.swing.JLabel dataCheckboxTitle;
     private static javax.swing.JCheckBox freqCheckbox;
     private javax.swing.JButton indexChangeButton;
     private javax.swing.JLabel indexFileNameLabel;
     private static javax.swing.JTextPane indexFileNameTextbox;
+    private javax.swing.JButton indicesOpenButton;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JSeparator jSeparator1;
     private static javax.swing.JCheckBox jitterCheckbox;
     private javax.swing.JButton profileChangeButton;
     private javax.swing.JLabel profileFileNameLabel;
     private static javax.swing.JTextPane profileFileNameTextbox;
+    private javax.swing.JButton profileOpenButton;
     private javax.swing.JButton reportChangeButton;
     private javax.swing.JLabel reportFileNameLabel;
     private static javax.swing.JTextPane reportFileNameTextbox;
+    private javax.swing.JButton reportOpenButton;
+    private javax.swing.JLabel reportTypeTitle;
     private javax.swing.JButton sampleChangeButton;
     private javax.swing.JLabel sampleFileNameLabel;
     private static javax.swing.JTextPane sampleFileNameTextbox;
+    private javax.swing.JButton samplesOpenButton;
     private javax.swing.JButton settingsBackButton;
     private javax.swing.JButton settingsExitButton;
     private javax.swing.JLabel settingsTitle;
     private static javax.swing.JCheckBox shimmerCheckbox;
+    private javax.swing.JRadioButton summaryRadio;
     // End of variables declaration
 }
