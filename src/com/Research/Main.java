@@ -1,11 +1,11 @@
 package com.Research;
 
 import javax.swing.*;
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.awt.*;
+import java.io.*;
+import java.text.NumberFormat;
 import java.util.*;
+import java.util.List;
 
 public class Main {
 
@@ -101,7 +101,7 @@ public class Main {
                 System.out.println("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
 
                 //Print data to report
-                printToReport("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
+                writeReport();
 
                 //Determine if program was correct. If so, increment "correct" counter by one. If not, increment "incorrect" counter by one.
                 if (!closestMatch.getNameDiff()) { //If the names are NOT DIFFERENT, program was correct
@@ -113,12 +113,36 @@ public class Main {
             //Determine percentage of times the program was correct
             if ((timesCorrect + timesIncorrect) != samples.size()) {
                 System.out.println("ERROR. Something went wrong while determining percentage correct.");
-                JOptionPane.showMessageDialog(null,"ERROR. Something went wrong while determining percentage correct.");
+                JOptionPane.showMessageDialog(null,"ERROR. Something went wrong while determining percentage correct.", "ERROR", JOptionPane.ERROR_MESSAGE);
             } else {
                 percentCorrect = (timesCorrect / samples.size()) * 100;
                 System.out.println("\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.");
                 System.out.println("The program was correct " + percentCorrect + "% of the time.");
-                printToReport("\n\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.\nThe program was correct " + percentCorrect + "% of the time.\n\n**********************************************************************");
+
+                //Write footer data to report file
+                String tempOutput = "";
+                NumberFormat percent = NumberFormat.getNumberInstance();
+                percent.setMaximumFractionDigits(2);
+
+                tempOutput += "\n\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples, \nusing ";
+                if(useFreq) {
+                    tempOutput += "frequency ";
+                }
+                if(useFreq && useJitter || useFreq && useShimmer){
+                    tempOutput += "& ";
+                }
+                if(useJitter){
+                    tempOutput += "jitter ";
+                }
+                if(useJitter && useShimmer){
+                    tempOutput += "& ";
+                }
+                if(useShimmer){
+                    tempOutput += "shimmer ";
+                }
+                tempOutput += "data.";
+                tempOutput += "\nThe program was correct " + percent.format(percentCorrect) + "% of the time.\n\n**********************************************************************";
+                printToReport(tempOutput);
             }
 
 
@@ -157,7 +181,7 @@ public class Main {
             System.out.println("\nClosest match summary: " + closestMatch.toString());
 
             //Print data to report
-            printToReport("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
+            writeReport();
         }
 
         //Increment counter to avoid duplication of data in next iteration of "engine" loop
@@ -346,7 +370,7 @@ public class Main {
         }
     }
 
-    //Print data to report file
+    //Print **any** data to report file
     private static void printToReport(String output){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(reportFilename, true))) {
             //Take in String from user (String "output" parameter) and store in repOutputTemp
@@ -379,6 +403,15 @@ public class Main {
         }
     }
 
+    //Write the run summary to the report file
+    private static void writeReport(){
+        if(useDescriptive){
+            printToReport("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
+        } else {
+            printToReport("\n\n**********************************************************************\n\nSample:\n" + sampleProfile.getName() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest).getName() + "\n\nThe overall difference is: " + closestMatch.getSumOfDiffs());
+        }
+    }
+
     //Getters: Return filenames (used by GUI)
     public static String getProfileFilename(){ return profileFilename; }
     public static String getIndexFilename(){ return indexFilename; }
@@ -406,6 +439,70 @@ public class Main {
     private static void shouldUseJitter(){ useJitter = SettingsGUI.checkUseJitter(); }
     private static void shouldUseShimmer(){ useShimmer = SettingsGUI.checkUseShimmer(); }
     private static void shouldUseDescriptive(){ useDescriptive = SettingsGUI.checkUseDescriptive(); }
+
+    //Open files as prompted by Settings
+    public static void openProfileFile(){
+        File file = new File(profileFilename);
+        //first check if Desktop is supported by Platform or not
+        if(!Desktop.isDesktopSupported()){
+            JOptionPane.showMessageDialog(null, "ERROR: Desktop is not supported", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        } else {
+            Desktop desktop = Desktop.getDesktop();
+            if(file.exists()) try {
+                desktop.open(file);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error opening file: " + file.toString(), "Error", JOptionPane.ERROR_MESSAGE);
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void openIndicesFile(){
+        File file = new File(indexFilename);
+        //first check if Desktop is supported by Platform or not
+        if(!Desktop.isDesktopSupported()){
+            JOptionPane.showMessageDialog(null, "ERROR: Desktop is not supported", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        } else {
+            Desktop desktop = Desktop.getDesktop();
+            if(file.exists()) try {
+                desktop.open(file);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error opening file: " + file.toString(), "Error", JOptionPane.ERROR_MESSAGE);
+                e.printStackTrace();
+            }
+        }}
+    public static void openSamplesFile(){
+        File file = new File(samplesFilename);
+        //first check if Desktop is supported by Platform or not
+        if(!Desktop.isDesktopSupported()){
+            JOptionPane.showMessageDialog(null, "ERROR: Desktop is not supported", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        } else {
+            Desktop desktop = Desktop.getDesktop();
+            if(file.exists()) try {
+                desktop.open(file);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error opening file: " + file.toString(), "Error", JOptionPane.ERROR_MESSAGE);
+                e.printStackTrace();
+            }
+        }}
+    public static void openReportFile(){
+        File file = new File(reportFilename);
+        //first check if Desktop is supported by Platform or not
+        if(!Desktop.isDesktopSupported()){
+            JOptionPane.showMessageDialog(null, "ERROR: Desktop is not supported", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        } else {
+            Desktop desktop = Desktop.getDesktop();
+            if(file.exists()) try {
+                desktop.open(file);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error opening file: " + file.toString(), "Error", JOptionPane.ERROR_MESSAGE);
+                e.printStackTrace();
+            }
+        }
+    }
 
     //Set start parameter (used by GUI)
     public static void setStart(boolean start){ startProgram = start; }

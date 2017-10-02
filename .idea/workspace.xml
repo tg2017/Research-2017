@@ -7,7 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/filenames.txt" afterPath="$PROJECT_DIR$/filenames.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" afterPath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,19 +33,26 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+            <state relative-caret-position="208">
+              <caret line="175" column="44" lean-forward="true" selection-start-line="175" selection-start-column="44" selection-end-line="175" selection-end-column="44" />
               <folding>
+                <element signature="method#createGUI#0;class#Main#0" expanded="false" />
                 <element signature="method#main#0;class#Main#0" expanded="false" />
+                <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
                 <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+                <element signature="method#printOutput#0;class#Main#0" expanded="false" />
                 <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
                 <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
                 <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+                <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+                <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+                <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+                <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+                <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
                 <element signature="method#reset#0;class#Main#0" expanded="false" />
                 <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
                 <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
                 <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-                <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -60,10 +71,10 @@
       <file leaf-file-name="MenuGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
+            <state relative-caret-position="1020">
               <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
-                <element signature="e#2489#2490#0" expanded="true" />
+                <element signature="e#2499#2500#0" expanded="true" />
                 <element signature="method#learnMoreButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
                 <element signature="docComment;method#main#0;class#MenuGUI#0" expanded="false" />
                 <element signature="method#main#0;class#MenuGUI#0" expanded="false" />
@@ -73,35 +84,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataVault.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Research/DataVault.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-              <folding>
-                <element signature="method#setSettingsUseJitter#0;class#DataVault#0" expanded="false" />
-                <element signature="method#setSettingsUseShimmer#0;class#DataVault#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SettingsGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="423" column="71" lean-forward="false" selection-start-line="423" selection-start-column="71" selection-end-line="423" selection-end-column="71" />
+            <state relative-caret-position="262">
+              <caret line="572" column="5" lean-forward="true" selection-start-line="572" selection-start-column="5" selection-end-line="572" selection-end-column="5" />
               <folding>
                 <element signature="docComment;method#initComponents#0;class#SettingsGUI#0" expanded="false" />
-                <element signature="e#731#794#0" expanded="true" />
-                <element signature="e#2880#2881#0" expanded="true" />
-                <element signature="e#2944#2945#0" expanded="true" />
-                <element signature="e#3272#3273#0" expanded="true" />
-                <element signature="e#3338#3339#0" expanded="true" />
-                <element signature="e#3671#3672#0" expanded="true" />
-                <element signature="e#3738#3739#0" expanded="true" />
-                <element signature="class#5186:5373" expanded="false" />
-                <element signature="class#5669:5857" expanded="false" />
+                <element signature="e#837#867#0" expanded="true" />
+                <element signature="e#872#935#0" expanded="true" />
+                <element signature="e#8196#8197#0" expanded="true" />
+                <element signature="e#8265#8266#0" expanded="true" />
+                <element signature="e#8447#8448#0" expanded="true" />
+                <element signature="e#8516#8517#0" expanded="true" />
+                <element signature="e#8698#8699#0" expanded="true" />
+                <element signature="e#8767#8768#0" expanded="true" />
+                <element signature="e#8947#8948#0" expanded="true" />
+                <element signature="e#9015#9016#0" expanded="true" />
+                <element signature="e#11780#11781#0" expanded="true" />
+                <element signature="e#11844#11845#0" expanded="true" />
                 <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
@@ -111,6 +112,7 @@
                 <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+                <element signature="method#sampleChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
@@ -119,27 +121,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Research/GetData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-              <folding>
-                <element signature="method#getInt#0;class#GetData#0" expanded="false" />
-                <element signature="method#getDouble#0;class#GetData#0" expanded="false" />
-                <element signature="method#getBoolean#0;class#GetData#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="99" column="67" lean-forward="false" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
+            <state relative-caret-position="884">
+              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
+                <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+                <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+                <element signature="method#toString#0;class#Profile#0" expanded="false" />
                 <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+                <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,8 +140,8 @@
       <file leaf-file-name="ProfileComparison.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="23" column="110" lean-forward="false" selection-start-line="23" selection-start-column="110" selection-end-line="23" selection-end-column="110" />
+            <state relative-caret-position="340">
+              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
                 <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
@@ -161,7 +153,7 @@
       <file leaf-file-name="CSVReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/CSVReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="510">
               <caret line="39" column="64" lean-forward="false" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
               <folding>
                 <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
@@ -201,6 +193,13 @@
       <find>freqCheckboxActionPerformed</find>
       <find>setUse</find>
       <find>freqCheckbox</find>
+      <find>finished</find>
+      <find>jitterCheckbox1</find>
+      <find>shimmerTextbox1</find>
+      <find>shimmerTextbox</find>
+      <find>jSepara</find>
+      <find>indicesOpenButtonActionPerformed</find>
+      <find>printToReport</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -224,13 +223,13 @@
         <option value="$PROJECT_DIR$/src/com/Research/ProjectGUI.form" />
         <option value="$PROJECT_DIR$/src/ProjectGUI.form" />
         <option value="$PROJECT_DIR$/src/com/Research/WaitForGUI.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/Profile.java" />
         <option value="$PROJECT_DIR$/src/com/Research/filenames.txt" />
         <option value="$PROJECT_DIR$/src/com/Research/MenuGUI.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
         <option value="$PROJECT_DIR$/src/com/Research/DataVault.java" />
         <option value="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/Profile.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
       </list>
     </option>
@@ -256,6 +255,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -303,14 +303,13 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Taylor/Desktop/All Files/School/Science Research/2017 Project program/src/com/Research/Main.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Taylor/Desktop/All Files/School/Science Research/2017 Project program/src/com/Research/SettingsGUI.java" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="ToolWindow" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -750,12 +749,19 @@
       <option name="project" value="LOCAL" />
       <updated>1506396853057</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Changed Settings GUI, added options for report type and viewing files">
+      <created>1506653660827</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1506653660827</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -766,19 +772,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.045945946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.036486488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.110625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -788,7 +794,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7662162" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -804,16 +810,17 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22972973" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22837839" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30135134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.027027028" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.031875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.032432433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7662162" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -822,7 +829,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DataProcessor removeBlanks method works" />
     <MESSAGE value="Started Profile class, converted &quot;for&quot; loops to &quot;foreach&quot; loops" />
     <MESSAGE value="Storage of data into Profiles now works; DataProcessor updated with new methods; indices file concept added" />
     <MESSAGE value="Added comments" />
@@ -847,7 +853,8 @@
     <MESSAGE value="Added error message for failure to find file" />
     <MESSAGE value="Added GUIs to Git, because I was unaware that they had not been added in the past" />
     <MESSAGE value="Backup 9/25/17" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backup 9/25/17" />
+    <MESSAGE value="Changed Settings GUI, added options for report type and viewing files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Settings GUI, added options for report type and viewing files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -882,16 +889,23 @@
         <state relative-caret-position="1105">
           <caret line="73" column="100" lean-forward="false" selection-start-line="73" selection-start-column="100" selection-end-line="73" selection-end-column="100" />
           <folding>
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -914,7 +928,11 @@
         <state relative-caret-position="1530">
           <caret line="146" column="8" lean-forward="false" selection-start-line="146" selection-start-column="8" selection-end-line="146" selection-end-column="8" />
           <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
             <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -945,16 +963,23 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -977,7 +1002,11 @@
         <state relative-caret-position="680">
           <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
             <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -997,16 +1026,23 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1029,7 +1065,11 @@
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
             <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1049,16 +1089,23 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1081,7 +1128,11 @@
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
             <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1101,16 +1152,23 @@
         <state relative-caret-position="289">
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1133,7 +1191,11 @@
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
             <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1153,16 +1215,23 @@
         <state relative-caret-position="153">
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1185,7 +1254,11 @@
         <state relative-caret-position="221">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
             <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1205,16 +1278,23 @@
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1288,32 +1368,11 @@
     <entry file="file://$PROJECT_DIR$/src/com/Research/GetData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
           <folding>
             <element signature="method#getInt#0;class#GetData#0" expanded="false" />
             <element signature="method#getDouble#0;class#GetData#0" expanded="false" />
             <element signature="method#getBoolean#0;class#GetData#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="99" column="67" lean-forward="false" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
-          <folding>
-            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="23" column="110" lean-forward="false" selection-start-line="23" selection-start-column="110" selection-end-line="23" selection-end-column="110" />
-          <folding>
-            <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
-            <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1333,13 +1392,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/CSVReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="510">
           <caret line="39" column="64" lean-forward="false" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
           <folding>
             <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
@@ -1347,43 +1405,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="423" column="71" lean-forward="false" selection-start-line="423" selection-start-column="71" selection-end-line="423" selection-end-column="71" />
-          <folding>
-            <element signature="docComment;method#initComponents#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="e#731#794#0" expanded="true" />
-            <element signature="e#2880#2881#0" expanded="true" />
-            <element signature="e#2944#2945#0" expanded="true" />
-            <element signature="e#3272#3273#0" expanded="true" />
-            <element signature="e#3338#3339#0" expanded="true" />
-            <element signature="e#3671#3672#0" expanded="true" />
-            <element signature="e#3738#3739#0" expanded="true" />
-            <element signature="class#5186:5373" expanded="false" />
-            <element signature="class#5669:5857" expanded="false" />
-            <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#profileChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#indexChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
+        <state relative-caret-position="1020">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <element signature="e#2489#2490#0" expanded="true" />
+            <element signature="e#2499#2500#0" expanded="true" />
             <element signature="method#learnMoreButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
             <element signature="docComment;method#main#0;class#MenuGUI#0" expanded="false" />
             <element signature="method#main#0;class#MenuGUI#0" expanded="false" />
@@ -1400,21 +1427,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="572" column="5" lean-forward="true" selection-start-line="572" selection-start-column="5" selection-end-line="572" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;method#initComponents#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="e#837#867#0" expanded="true" />
+            <element signature="e#872#935#0" expanded="true" />
+            <element signature="e#8196#8197#0" expanded="true" />
+            <element signature="e#8265#8266#0" expanded="true" />
+            <element signature="e#8447#8448#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
+            <element signature="e#8698#8699#0" expanded="true" />
+            <element signature="e#8767#8768#0" expanded="true" />
+            <element signature="e#8947#8948#0" expanded="true" />
+            <element signature="e#9015#9016#0" expanded="true" />
+            <element signature="e#11780#11781#0" expanded="true" />
+            <element signature="e#11844#11845#0" expanded="true" />
+            <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#profileChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#indexChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#sampleChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
+            <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        <state relative-caret-position="208">
+          <caret line="175" column="44" lean-forward="true" selection-start-line="175" selection-start-column="44" selection-end-line="175" selection-end-column="44" />
           <folding>
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <marker date="1506396830882" expanded="false" signature="430:515" ph="{...}" />
           </folding>
         </state>
       </provider>

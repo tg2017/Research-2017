@@ -214,6 +214,12 @@ public class SettingsGUI extends javax.swing.JFrame {
         });
 
         profileOpenButton.setText("Open");
+        profileOpenButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                profileOpenButtonActionPerformed(evt);
+            }
+        });
+
         indicesOpenButton.setText("Open");
         indicesOpenButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -222,6 +228,11 @@ public class SettingsGUI extends javax.swing.JFrame {
         });
 
         samplesOpenButton.setText("Open");
+        samplesOpenButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                samplesOpenButtonActionPerformed(evt);
+            }
+        });
 
         reportOpenButton.setText("Open");
         reportOpenButton.addActionListener(new ActionListener() {
@@ -328,7 +339,7 @@ public class SettingsGUI extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
                 jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addContainerGap(53, Short.MAX_VALUE)
+                                .addContainerGap(56, Short.MAX_VALUE)
                                 .addComponent(dataPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(49, 49, 49)
                                 .addComponent(jSeparator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -533,11 +544,19 @@ public class SettingsGUI extends javax.swing.JFrame {
     }
 
     private void indicesOpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        Main.openIndicesFile();
     }
 
     private void reportOpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        Main.openReportFile();
+    }
+
+    private void profileOpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        Main.openProfileFile();
+    }
+
+    private void samplesOpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        Main.openSamplesFile();
     }
 
     private void settingsBackButtonActionPerformed(java.awt.event.ActionEvent evt) {
