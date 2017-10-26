@@ -524,7 +524,7 @@ public class SettingsGUI extends javax.swing.JFrame {
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
         File file = chooser.getSelectedFile();
-        profileFilename = file.getAbsolutePath().replace("\\", "/1112");
+        profileFilename = file.getAbsolutePath().replace("\\", "/");
         profileFileNameTextbox.setText(profileFilename);
         Main.setProfileFilename(profileFilename);
 

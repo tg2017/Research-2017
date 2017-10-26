@@ -1,5 +1,7 @@
 package com.Research;
 
+import java.text.NumberFormat;
+
 /**
  * Created by Taylor on 6/30/2017.
  */
@@ -16,7 +18,9 @@ public class ProfileComparison {
     private double jitterDiff;
     private double shimmerDiff;
     private double sumOfDiffs = 0.0;
-    private static  boolean useFreq = true, useJitter = true, useShimmer = true;
+    private double percentMatch = -1;
+    private static boolean useFreq = true, useJitter = true, useShimmer = true;
+
 
     //Constructor
     //Takes in all data as differences: the difference between data stored in the profile and data given in the sample
@@ -28,6 +32,38 @@ public class ProfileComparison {
         avgFreqDiff = avgFrequencyDifference;
         jitterDiff = jitterDifference;
         shimmerDiff = shimmerDifference;
+
+        if(useFreq){
+            sumOfDiffs += maxFreqDiff + minFreqDiff + avgFreqDiff;
+        }
+        if(useJitter){
+            sumOfDiffs += jitterDiff;
+        }
+        if(useShimmer){
+            sumOfDiffs += shimmerDiff;
+        }
+
+        if (sumOfDiffs == 0.0){
+            if (!nameDiff){
+                isEqual = true;
+                isEqualIgnoreName = true;
+            } else {
+                isEqual = false;
+                isEqualIgnoreName = true;
+            }
+        }
+    }
+
+    //Same as above, but also takes in percentMatch data
+    public ProfileComparison(boolean namesDifferent, double maxFrequencyDifference, double minFrequencyDifference,
+                             double avgFrequencyDifference, double jitterDifference, double shimmerDifference, double percentOfMatch){
+        nameDiff = namesDifferent;
+        maxFreqDiff = maxFrequencyDifference;
+        minFreqDiff = minFrequencyDifference;
+        avgFreqDiff = avgFrequencyDifference;
+        jitterDiff = jitterDifference;
+        shimmerDiff = shimmerDifference;
+        percentMatch = percentOfMatch;
 
         if(useFreq){
             sumOfDiffs += maxFreqDiff + minFreqDiff + avgFreqDiff;
@@ -69,6 +105,10 @@ public class ProfileComparison {
         return sumOfDiffs;
     }
 
+    public double getPercentMatch(){
+        return percentMatch;
+    }
+
     public static void setUseFreq(boolean useIt){
         useFreq = useIt;
     }
@@ -80,6 +120,11 @@ public class ProfileComparison {
     }
 
     public String toString(){
+
+        //To format percentMatch part
+        NumberFormat percent = NumberFormat.getNumberInstance();
+        percent.setMaximumFractionDigits(2);
+
         //Initialize output message with Error message, to be overwritten later
         String output = "ERROR";
 
@@ -113,6 +158,7 @@ public class ProfileComparison {
             }
 
             output += "\nThe overall difference is: " + sumOfDiffs;
+            output += "\nThe sample matches the profile by " + percent.format(percentMatch) + "%";
         }
 
         return output;

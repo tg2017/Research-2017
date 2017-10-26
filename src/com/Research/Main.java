@@ -412,34 +412,6 @@ public class Main {
         }
     }
 
-    //Getters: Return filenames (used by GUI)
-    public static String getProfileFilename(){ return profileFilename; }
-    public static String getIndexFilename(){ return indexFilename; }
-    public static String getReportFilename(){ return reportFilename; }
-    public static String getSampleFilename(){ return samplesFilename; }
-
-    //Setters: Set filenames (used by GUI)
-    public static void setProfileFilename(String newFilename) { profileFilename = newFilename; }
-    public static void setIndexFilename(String newIndexFilename) { indexFilename = newIndexFilename; }
-    public static void setReportFilename(String newReportFilename) { reportFilename = newReportFilename; }
-    public static void setSampleFilename(String newSampleFilename) { samplesFilename = newSampleFilename; }
-
-    //Set automatic input (used by GUI)
-    public static void setAutoInput(boolean autoIn){
-        useAuto = autoIn;
-    }
-
-    //Set data to use (used by GUI)
-    public static void setUseFrequency(boolean useIt){ useFreq = useIt; }
-    public static void setUseJitter(boolean useIt){ useJitter = useIt; }
-    public static void setUseShimmer(boolean useIt){ useShimmer = useIt; }
-
-    //Check data to be used
-    private static void shouldUseFreq(){ useFreq = SettingsGUI.checkUseFreq();}
-    private static void shouldUseJitter(){ useJitter = SettingsGUI.checkUseJitter(); }
-    private static void shouldUseShimmer(){ useShimmer = SettingsGUI.checkUseShimmer(); }
-    private static void shouldUseDescriptive(){ useDescriptive = SettingsGUI.checkUseDescriptive(); }
-
     //Open files as prompted by Settings
     public static void openProfileFile(){
         File file = new File(profileFilename);
@@ -503,6 +475,34 @@ public class Main {
             }
         }
     }
+
+    //Getters: Return filenames (used by GUI)
+    public static String getProfileFilename(){ return profileFilename; }
+    public static String getIndexFilename(){ return indexFilename; }
+    public static String getReportFilename(){ return reportFilename; }
+    public static String getSampleFilename(){ return samplesFilename; }
+
+    //Setters: Set filenames (used by GUI)
+    public static void setProfileFilename(String newFilename) { profileFilename = newFilename; }
+    public static void setIndexFilename(String newIndexFilename) { indexFilename = newIndexFilename; }
+    public static void setReportFilename(String newReportFilename) { reportFilename = newReportFilename; }
+    public static void setSampleFilename(String newSampleFilename) { samplesFilename = newSampleFilename; }
+
+    //Set automatic input (used by GUI)
+    public static void setAutoInput(boolean autoIn){
+        useAuto = autoIn;
+    }
+
+    //Set data to use (used by GUI)
+    public static void setUseFrequency(boolean useIt){ useFreq = useIt; }
+    public static void setUseJitter(boolean useIt){ useJitter = useIt; }
+    public static void setUseShimmer(boolean useIt){ useShimmer = useIt; }
+
+    //Check data to be used
+    private static void shouldUseFreq(){ useFreq = SettingsGUI.checkUseFreq();}
+    private static void shouldUseJitter(){ useJitter = SettingsGUI.checkUseJitter(); }
+    private static void shouldUseShimmer(){ useShimmer = SettingsGUI.checkUseShimmer(); }
+    private static void shouldUseDescriptive(){ useDescriptive = SettingsGUI.checkUseDescriptive(); }
 
     //Set start parameter (used by GUI)
     public static void setStart(boolean start){ startProgram = start; }

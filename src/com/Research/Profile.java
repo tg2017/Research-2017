@@ -37,6 +37,8 @@ public class Profile {
     private double jitter;
     private double shimmer;
 
+    private double sumOfValues = 0;
+
     private static boolean useFreq;
     private static boolean useJitter;
     private static boolean useShimmer;
@@ -65,6 +67,16 @@ public class Profile {
         avgFrequency = DataProcessor.convertToDouble(initialArray.get(indices.get(AVGFREQINDEX)));
         jitter = DataProcessor.convertToDouble(initialArray.get(indices.get(JITTERINDEX)));
         shimmer = DataProcessor.convertToDouble(initialArray.get(indices.get(SHIMMERINDEX)));
+
+        if(useFreq){
+            sumOfValues = maxFrequency + minFrequency + avgFrequency;
+        }
+        if(useJitter){
+            sumOfValues += jitter;
+        }
+        if(useShimmer){
+            sumOfValues += shimmer;
+        }
     }
 
     //Returns profile data summary as a String
@@ -136,6 +148,7 @@ public class Profile {
         double avgFreqDiff;
         double jitterDiff;
         double shimmerDiff;
+        double percentMatch;
 
         //Determines if profiles are exactly equal, including name
         if(name.equals(otherName)){
@@ -165,8 +178,20 @@ public class Profile {
         jitterDiff = Math.abs(jitter - otherJitter);
         shimmerDiff = Math.abs(shimmer - otherShimmer);
 
-        return new ProfileComparison(nameDiff, maxFreqDiff, minFreqDiff, avgFreqDiff, jitterDiff, shimmerDiff);
+        double sumOfDiffs = 0;
+        if(useFreq){
+            sumOfDiffs += maxFreqDiff + minFreqDiff + avgFreqDiff;
+        }
+        if(useJitter){
+            sumOfDiffs += jitterDiff;
+        }
+        if(useShimmer){
+            sumOfDiffs += shimmerDiff;
+        }
 
+        percentMatch = 100 - ((sumOfDiffs / this.getSumOfValues()) * 100);
+
+        return new ProfileComparison(nameDiff, maxFreqDiff, minFreqDiff, avgFreqDiff, jitterDiff, shimmerDiff, percentMatch);
 
     } //End of method
 
@@ -179,4 +204,7 @@ public class Profile {
         return listOfComparisons;
     }
 
+    public double getSumOfValues() {
+        return sumOfValues;
+    }
 } //End of class
