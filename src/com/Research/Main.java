@@ -110,12 +110,16 @@ public class Main {
                     timesIncorrect++;
                 }
             }
-            //Determine percentage of times the program was correct
+            //Determine percentage of times the program was correct and print data to report file
             if ((timesCorrect + timesIncorrect) != samples.size()) {
                 System.out.println("ERROR. Something went wrong while determining percentage correct.");
                 JOptionPane.showMessageDialog(null,"ERROR. Something went wrong while determining percentage correct.", "ERROR", JOptionPane.ERROR_MESSAGE);
             } else {
                 percentCorrect = (timesCorrect / samples.size()) * 100;
+                opzi = new OnePropZInt(samples.size(), timesCorrect);
+                opziLowerBound = opzi.lowerBound * 100;
+                opziUpperBound = opzi.upperBound * 100;
+
                 System.out.println("\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.");
                 System.out.println("The program was correct " + percentCorrect + "% of the time.");
 
@@ -141,7 +145,9 @@ public class Main {
                     tempOutput += "shimmer ";
                 }
                 tempOutput += "data.";
-                tempOutput += "\nThe program was correct " + percent.format(percentCorrect) + "% of the time.\n\n**********************************************************************";
+                tempOutput += "\nThe program was correct " + percent.format(percentCorrect) + "% of the time.";
+                tempOutput += "\nIt is 95% confident that the program will be correct within " + percent.format(opziLowerBound) + "% and " + percent.format(opziUpperBound) + "% of the time.\n\n**********************************************************************";
+
                 printToReport(tempOutput);
             }
 
@@ -661,6 +667,9 @@ public class Main {
     private static double timesCorrect = 0.0;
     private static double timesIncorrect = 0.0;
     private static double percentCorrect = 0.0;
+    private static OnePropZInt opzi;
+    private static double opziLowerBound = -1;
+    private static double opziUpperBound = -1;
 
     //Variables pertaining to the use of different points of data
     private static boolean useFreq = true;
