@@ -1,7 +1,7 @@
 package com.Research;
 
 /*
- * Created by Taylor on 10/26/2017.
+ * Created by Taylor on 10/26/2017
  */
 public class OnePropZInt {
     private double z = 1.96; //Value for confidence level

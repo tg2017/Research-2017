@@ -9,8 +9,6 @@ import java.util.List;
 
 public class Main {
 
-    //TODO: (in general, not at this spot): make output message describing what data was used
-
     //***************
     //*** Methods ***
     //***************
@@ -56,8 +54,6 @@ public class Main {
         //Initialize CSV Readers with filenames
         cr = new CSVReader(profileFilename);
         indexReader = new CSVReader(indexFilename);
-
-
 
         //"Engine" loop that continues program by returning to GUI Menu after completion:
         if (timesRun < 1) {
@@ -411,10 +407,12 @@ public class Main {
 
     //Write the run summary to the report file
     private static void writeReport(){
+        NumberFormat percent = NumberFormat.getNumberInstance();
+        percent.setMaximumFractionDigits(2);
         if(useDescriptive){
             printToReport("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
         } else {
-            printToReport("\n\n**********************************************************************\n\nSample:\n" + sampleProfile.getName() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest).getName() + "\n\nThe overall difference is: " + closestMatch.getSumOfDiffs());
+            printToReport("\n\n**********************************************************************\n\nSample:\n" + sampleProfile.getName() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest).getName() + "\n\nThe sample matches the profile by " + percent.format(closestMatch.getPercentMatch()) + "%");
         }
     }
 
