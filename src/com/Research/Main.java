@@ -9,9 +9,9 @@ import java.util.List;
 
 public class Main {
 
-    //***************
-    //*** Methods ***
-    //***************
+    //*******************
+    //***** Methods *****
+    //*******************
 
     //Creates GUI Menu
     public static void createGUI(){
@@ -93,6 +93,10 @@ public class Main {
                 indexOfLowest = sumsOfDiffs.indexOf(Collections.min(sumsOfDiffs));
                 closestMatch = comparisons.get(indexOfLowest);
 
+                //Update values for calculation of average and standard deviation
+                sumOfPercents += closestMatch.getPercentMatch();
+                percentMatches.add(closestMatch.getPercentMatch());
+
                 //Print results to console
                 System.out.println("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
 
@@ -109,13 +113,36 @@ public class Main {
             //Determine percentage of times the program was correct and print data to report file
             if ((timesCorrect + timesIncorrect) != samples.size()) {
                 System.out.println("ERROR. Something went wrong while determining percentage correct.");
-                JOptionPane.showMessageDialog(null,"ERROR. Something went wrong while determining percentage correct.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "ERROR. Something went wrong while determining percentage correct.", "ERROR", JOptionPane.ERROR_MESSAGE);
             } else {
                 percentCorrect = (timesCorrect / samples.size()) * 100;
-                opzi = new OnePropZInt(samples.size(), timesCorrect);
-                opziLowerBound = opzi.lowerBound * 100;
-                opziUpperBound = opzi.upperBound * 100;
 
+                //Calculate One Proportional Z Interval
+                boolean opziParametersMet = true;
+                try {
+                    opzi = new OnePropZInt(samples.size(), timesCorrect);
+                } catch(ParameterNotMetException ex){
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Something went wrong while calculating the One Proportional Z Interval.\nCheck parameters and try again.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    opziParametersMet = false;
+                    opziLowerBound = -999;
+                    opziUpperBound = -999;
+                }
+                if(opziParametersMet) {
+                    opziLowerBound = opzi.lowerBound * 100;
+                    opziUpperBound = opzi.upperBound * 100;
+                }
+
+                average = sumOfPercents / samples.size();
+
+                //Sum up the value for the numerator in the
+                double sumOfXPlusMean2 = 0; //This is the value that goes in the numerator in the Standard Deviation equation, sigma(x - mean)^2
+                for(int sumCount = 0; sumCount < samples.size(); sumCount++){
+                    sumOfXPlusMean2 += Math.pow((Math.abs(percentMatches.get(sumCount) - average)), 2);
+                }
+                standardDeviation = Math.sqrt(sumOfXPlusMean2 / (samples.size() - 1));
+
+                //Print out (some of) the calculations
                 System.out.println("\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.");
                 System.out.println("The program was correct " + percentCorrect + "% of the time.");
 
@@ -145,6 +172,8 @@ public class Main {
                 tempOutput += "\nIt is 95% confident that the program will be correct within " + percent.format(opziLowerBound) + "% and " + percent.format(opziUpperBound) + "% of the time.\n\n**********************************************************************";
 
                 printToReport(tempOutput);
+
+                makeBellCurve(600, 400, 0, 100, 0, 1, average, standardDeviation);
             }
 
 
@@ -388,15 +417,14 @@ public class Main {
 
             //Display "Successfully Written" message if auto-input is chosen and finished
             if(useAuto) {
-                if (timesWrittenMessage == (samples.size()-1)) {
+                if (timesWrittenMessage == (samples.size())) {
                     JOptionPane.showMessageDialog(null, "Successfully wrote data to file: " + reportFilename);
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Successfully wrote data to file: " + reportFilename);
             }
             timesWrittenMessage++;
-            System.out.println("Number of samples written to file in this runthrough: " + timesWrittenMessage);
-
+            System.out.println("Number of samples written to file in this run-through: " + timesWrittenMessage);
         } catch (IOException e) {
             //Print error message if exception is caught
             e.printStackTrace();
@@ -600,13 +628,20 @@ public class Main {
 
     }
 
+    //Makes a Bell Curve based on data
+    private static void makeBellCurve(int canvasWidth, int canvasHeight, int xScaleMin, int xScaleMax, int yScaleMin, int yScaleMax, double mu, double sigma){
+        BellCurve.plot(canvasWidth, canvasHeight, xScaleMin, xScaleMax, yScaleMin, yScaleMax, mu, sigma);
+        System.out.println(mu + " , " + sigma);
+    }
+
+
 
 
 //**********************************************************************************************************************
 
-    //****************************
-    //*** Variable Declaration ***
-    //****************************
+    //********************************
+    //***** Variable Declaration *****
+    //********************************
 
     //Objects pertaining to the accessing of data from csv files
     //Final variables that determine the location of each filename within the "tempFilenames" array in the "fetchFilenamesFromFile()" method
@@ -668,6 +703,12 @@ public class Main {
     private static OnePropZInt opzi;
     private static double opziLowerBound = -1;
     private static double opziUpperBound = -1;
+
+    //Objects pertaining to the creation of the Bell Curve
+    private static double sumOfPercents = 0;
+    private static double average = 0;
+    private static double standardDeviation = -1;
+    private static ArrayList<Double> percentMatches = new ArrayList<>();
 
     //Variables pertaining to the use of different points of data
     private static boolean useFreq = true;
