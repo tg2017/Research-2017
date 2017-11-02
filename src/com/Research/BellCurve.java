@@ -18,16 +18,25 @@ public class BellCurve {
         }
     }
 
-    public static void plot(int canvasWidth, int canvasHeight, int xScaleMin, int xScaleMax, int yScaleMin, int yScaleMax, double mu, double sigma) {
+    public static void plot(int canvasWidth, int canvasHeight, double xScaleMin, double xScaleMax, double yScaleMin, double yScaleMax, double mu, double sigma) {
         StdDraw.setCanvasSize(canvasWidth, canvasHeight);
         StdDraw.setXscale(xScaleMin, xScaleMax);
         StdDraw.setYscale(yScaleMin, yScaleMax);
         //Plot scale points
-        for(int scaleCount = xScaleMin; scaleCount <= xScaleMax; scaleCount += 10){
-            for(double y = yScaleMin; y <= 1; y += .01){
-                StdDraw.point(scaleCount, y);
+        StdDraw.setPenColor(StdDraw.BLACK);
+        for(double scaleCount = xScaleMin; scaleCount <= xScaleMax; scaleCount += 10){
+            if(scaleCount % 10 == 0) {
+                for (double y = yScaleMin; y <= .01; y += 0.001) {
+                    StdDraw.point(scaleCount, y);
+                }
             }
         }
+        for(double sd = xScaleMin; sd <= xScaleMax; sd += sigma){
+            for(double y = yScaleMin; y <= yScaleMax; y += 0.01){
+                StdDraw.point(sd,y);
+            }
+        }
+        StdDraw.setPenColor(StdDraw.CYAN);
         for (double x = xScaleMin; x <= xScaleMax; x += 0.01) {
             StdDraw.point(x, Gaussian.pdf(x, mu, sigma));
         }

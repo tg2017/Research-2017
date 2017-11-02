@@ -9,6 +9,7 @@
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/BellCurve.java" afterPath="$PROJECT_DIR$/src/com/Research/BellCurve.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,14 +28,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="629" column="0" lean-forward="true" selection-start-line="629" selection-start-column="0" selection-end-line="629" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="631" column="161" lean-forward="false" selection-start-line="631" selection-start-column="161" selection-end-line="631" selection-end-column="161" />
               <folding>
                 <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-                <element signature="method#runTheProgram#0;class#Main#0" expanded="false" />
                 <element signature="method#main#0;class#Main#0" expanded="false" />
                 <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
                 <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BellCurve.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BellCurve.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+            <state relative-caret-position="102">
+              <caret line="20" column="133" lean-forward="true" selection-start-line="20" selection-start-column="123" selection-end-line="20" selection-end-column="133" />
               <folding>
                 <element signature="method#plot#0;class#BellCurve#0" expanded="false" />
               </folding>
@@ -195,9 +195,9 @@
         <option value="$PROJECT_DIR$/src/com/Research/StdDraw.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Gaussian.java" />
         <option value="$PROJECT_DIR$/src/com/Research/DataProcessor.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
         <option value="$PROJECT_DIR$/src/com/Research/StdOut.java" />
         <option value="$PROJECT_DIR$/src/com/Research/BellCurve.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
       </list>
     </option>
   </component>
@@ -766,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509572684384</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added scale lines on bell curve">
+      <created>1509582892630</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1509582892630</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -839,7 +846,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added method for obtaining sample data from user, and class for getting data (GetData.java)" />
     <MESSAGE value="Added compareToProfiles mthod" />
     <MESSAGE value="Added code that determines and prints the profile which most closely matches the sample" />
     <MESSAGE value="Before removing VOLUME" />
@@ -864,7 +870,8 @@
     <MESSAGE value="Added 1-Proportional Z Interval test" />
     <MESSAGE value="11-1-17" />
     <MESSAGE value="Added OPZI parameters and Bell Curve" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added OPZI parameters and Bell Curve" />
+    <MESSAGE value="Added scale lines on bell curve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added scale lines on bell curve" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -919,7 +926,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#runTheProgram#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
@@ -976,7 +982,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#runTheProgram#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
@@ -1033,7 +1038,6 @@
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#runTheProgram#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
@@ -1090,7 +1094,6 @@
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#runTheProgram#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
@@ -1147,7 +1150,6 @@
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#runTheProgram#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
@@ -1399,13 +1401,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/StdDraw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="987" column="0" lean-forward="true" selection-start-line="987" selection-start-column="0" selection-end-line="987" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#25041#25052#0" expanded="true" />
+            <element signature="e#25162#25171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="20" column="133" lean-forward="true" selection-start-line="20" selection-start-column="123" selection-end-line="20" selection-end-column="133" />
+          <folding>
+            <element signature="method#plot#0;class#BellCurve#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="629" column="0" lean-forward="true" selection-start-line="629" selection-start-column="0" selection-end-line="629" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="631" column="161" lean-forward="false" selection-start-line="631" selection-start-column="161" selection-end-line="631" selection-end-column="161" />
           <folding>
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#runTheProgram#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
@@ -1423,28 +1446,6 @@
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#makeBellCurve#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/StdDraw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="987" column="0" lean-forward="true" selection-start-line="987" selection-start-column="0" selection-end-line="987" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#25041#25052#0" expanded="true" />
-            <element signature="e#25162#25171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="method#plot#0;class#BellCurve#0" expanded="false" />
           </folding>
         </state>
       </provider>
