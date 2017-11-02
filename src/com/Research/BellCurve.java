@@ -22,6 +22,7 @@ public class BellCurve {
         StdDraw.setCanvasSize(canvasWidth, canvasHeight);
         StdDraw.setXscale(xScaleMin, xScaleMax);
         StdDraw.setYscale(yScaleMin, yScaleMax);
+
         //Plot scale points
         StdDraw.setPenColor(StdDraw.BLACK);
         for(double scaleCount = xScaleMin; scaleCount <= xScaleMax; scaleCount += 10){
@@ -31,11 +32,20 @@ public class BellCurve {
                 }
             }
         }
-        for(double sd = xScaleMin; sd <= xScaleMax; sd += sigma){
+
+        //Plot Standard Deviation lines
+        for(double sd = mu; sd <= xScaleMax; sd += sigma){
             for(double y = yScaleMin; y <= yScaleMax; y += 0.01){
                 StdDraw.point(sd,y);
             }
         }
+        for(double sd = mu; sd >= xScaleMin; sd -= sigma){
+            for(double y = yScaleMin; y <= yScaleMax; y += 0.01){
+                StdDraw.point(sd,y);
+            }
+        }
+
+        //Plot bell curve
         StdDraw.setPenColor(StdDraw.CYAN);
         for (double x = xScaleMin; x <= xScaleMax; x += 0.01) {
             StdDraw.point(x, Gaussian.pdf(x, mu, sigma));

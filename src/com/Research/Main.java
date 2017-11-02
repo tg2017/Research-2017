@@ -173,7 +173,7 @@ public class Main {
 
                 printToReport(tempOutput);
 
-                makeBellCurve(600, 400, 0, 100, 0, .5, average, standardDeviation);
+                makeBellCurve(600, 400, 70, 100, 0, .5, average, standardDeviation);
             }
 
 
