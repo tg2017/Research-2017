@@ -22,6 +22,12 @@ public class BellCurve {
         StdDraw.setCanvasSize(canvasWidth, canvasHeight);
         StdDraw.setXscale(xScaleMin, xScaleMax);
         StdDraw.setYscale(yScaleMin, yScaleMax);
+        //Plot scale points
+        for(int scaleCount = xScaleMin; scaleCount <= xScaleMax; scaleCount += 10){
+            for(double y = yScaleMin; y <= 1; y += .01){
+                StdDraw.point(scaleCount, y);
+            }
+        }
         for (double x = xScaleMin; x <= xScaleMax; x += 0.01) {
             StdDraw.point(x, Gaussian.pdf(x, mu, sigma));
         }
