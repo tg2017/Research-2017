@@ -169,7 +169,13 @@ public class Main {
 
                 printToReport(tempOutput);
 
-                makeBellCurve(600, 400, 0, 100, 0, .5, average, standardDeviation);
+                StdDraw.setCanvasSize(600, 400);
+                StdDraw.setXscale(0, 100);
+                StdDraw.setYscale(0, .5);
+
+                BellCurve.plot(0,100,0,.5,average, standardDeviation);
+                System.out.println(average + " , " + standardDeviation);
+                //makeBellCurve(600, 400, 0, 100, 0, .5, average, standardDeviation);
             }
 
 
@@ -626,9 +632,7 @@ public class Main {
 
     //Makes a Bell Curve based on data
     private static void makeBellCurve(int canvasWidth, int canvasHeight, int xScaleMin, int xScaleMax, int yScaleMin, double yScaleMax, double mu, double sigma){
-       BellCurve.updateProgressBar();
-        /*BellCurve.plot(canvasWidth, canvasHeight, xScaleMin, xScaleMax, yScaleMin, yScaleMax, mu, sigma);
-        System.out.println(mu + " , " + sigma);*/
+
     }
 
 
