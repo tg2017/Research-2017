@@ -72,14 +72,14 @@ public class Main {
         useAuto = SettingsGUI.checkUseAuto();
         if (useAuto) { //If user chooses to enter data automatically, do so...
             autoSampleIn();
-            for (int autoCounter = 0; autoCounter < samples.size(); autoCounter++) {
+            for (Profile currentSample : samples) {
 
                 //Reset List values
                 comparisons = new ArrayList<>();
                 sumsOfDiffs = new ArrayList<>();
 
                 //Change sample to be compared
-                sampleProfile = samples.get(autoCounter);
+                sampleProfile = currentSample;
 
                 //Compare sample to all profiles and get results as a List of ProfileComparison objects
                 comparisons = sampleProfile.compareToProfiles(profiles);
@@ -104,9 +104,9 @@ public class Main {
                 writeReport();
 
                 //Determine if program was correct. If so, increment "correct" counter by one. If not, increment "incorrect" counter by one.
-                if (!closestMatch.getNameDiff()) { //If the names are NOT DIFFERENT, program was correct
+                if (!closestMatch.getNameDiff() && closestMatch.getPercentMatch() >= MINPERCENTFORMATCH) { //If the names are NOT DIFFERENT, AND percent match is within values, then program was correct
                     timesCorrect++;
-                } else if (closestMatch.getNameDiff()) { //If names are DIFFERENT, program was incorrect
+                } else if (closestMatch.getNameDiff() || closestMatch.getPercentMatch() < MINPERCENTFORMATCH) { //If names are DIFFERENT, program was incorrect
                     timesIncorrect++;
                 }
             }
@@ -118,17 +118,13 @@ public class Main {
                 percentCorrect = (timesCorrect / samples.size()) * 100;
 
                 //Calculate One Proportional Z Interval
-                boolean opziParametersMet = true;
                 try {
                     opzi = new OnePropZInt(samples.size(), timesCorrect);
                 } catch(ParameterNotMetException ex){
                     ex.printStackTrace();
-                    JOptionPane.showMessageDialog(null, "Something went wrong while calculating the One Proportional Z Interval.\nCheck parameters and try again.", "ERROR", JOptionPane.ERROR_MESSAGE);
-                    opziParametersMet = false;
-                    opziLowerBound = -999;
-                    opziUpperBound = -999;
-                }
-                if(opziParametersMet) {
+                    //JOptionPane.showMessageDialog(null, "Something went wrong while calculating the One Proportional Z Interval.\nCheck parameters and try again.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Warning: \"One Proportional Z Interval\" parameter(s) not met.\nResults may be illogical.", "One Proportinal Z Interval Error", JOptionPane.ERROR_MESSAGE);
+                } finally {
                     opziLowerBound = opzi.lowerBound * 100;
                     opziUpperBound = opzi.upperBound * 100;
                 }
@@ -173,7 +169,7 @@ public class Main {
 
                 printToReport(tempOutput);
 
-                makeBellCurve(600, 400, 70, 100, 0, .5, average, standardDeviation);
+                makeBellCurve(600, 400, 0, 100, 0, .5, average, standardDeviation);
             }
 
 
@@ -629,9 +625,10 @@ public class Main {
     }
 
     //Makes a Bell Curve based on data
-    private static void makeBellCurve(int canvasWidth, int canvasHeight, double xScaleMin, double xScaleMax, double yScaleMin, double yScaleMax, double mu, double sigma){
-        BellCurve.plot(canvasWidth, canvasHeight, xScaleMin, xScaleMax, yScaleMin, yScaleMax, mu, sigma);
-        System.out.println(mu + " , " + sigma);
+    private static void makeBellCurve(int canvasWidth, int canvasHeight, int xScaleMin, int xScaleMax, int yScaleMin, double yScaleMax, double mu, double sigma){
+       BellCurve.updateProgressBar();
+        /*BellCurve.plot(canvasWidth, canvasHeight, xScaleMin, xScaleMax, yScaleMin, yScaleMax, mu, sigma);
+        System.out.println(mu + " , " + sigma);*/
     }
 
 
@@ -649,6 +646,8 @@ public class Main {
     public static final int INDEXFILENAMEINDEX = 1;
     public static final int SAMPLEFILENAMEINDEX = 2;
     public static final int REPORTFILENAMEINDEX = 3;
+
+    public static final double MINPERCENTFORMATCH = 85.0; //Determines minimum percent to be considered a match
 
     private static String profileFilename; //File location of csv file for profiles
     private static String indexFilename; //File location of indices csv file
