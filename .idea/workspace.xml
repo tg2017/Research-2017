@@ -8,11 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/filenames.txt" afterPath="$PROJECT_DIR$/filenames.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/CSVReader.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Profile.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Profile.class" />
-      <change beforePath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" afterPath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,18 +40,18 @@
       <file leaf-file-name="SettingsGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+            <state relative-caret-position="269">
+              <caret line="544" column="0" lean-forward="true" selection-start-line="544" selection-start-column="0" selection-end-line="544" selection-end-column="0" />
               <folding>
                 <element signature="e#0#36766#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#584#585#0" expanded="true" />
                 <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#872#935#0" expanded="true" />
                 <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#profileChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-                <element signature="method#indexChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
@@ -219,11 +214,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Taylor\Desktop\All Files\School\Science Research\2017 Project program" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Taylor\Desktop\All Files\School\Science Research\2017 Project program\src\com\Research" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Taylor\Desktop\All Files\School\Science Research\2017 Project program" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -763,7 +758,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515558361350</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Changed &quot;Exit&quot; button to &quot;Advanced&quot; and switched visual locations of indices and samples textboxes in SettingsGUI">
+      <created>1515559608040</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1515559608040</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -778,12 +780,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1922652" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1922652" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06614583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4044199" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -798,7 +801,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7662162" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -836,7 +838,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Read data from CSV based on new line" />
     <MESSAGE value="Now writes data to report txt file" />
     <MESSAGE value="Added &quot;automatic sample entry&quot; function" />
     <MESSAGE value="Before addition of Jitter and Shimmer" />
@@ -861,17 +862,11 @@
     <MESSAGE value="11-2-17" />
     <MESSAGE value="11-14-17" />
     <MESSAGE value="Before changes to SettingsGUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before changes to SettingsGUI" />
+    <MESSAGE value="Changed &quot;Exit&quot; button to &quot;Advanced&quot; and switched visual locations of indices and samples textboxes in SettingsGUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed &quot;Exit&quot; button to &quot;Advanced&quot; and switched visual locations of indices and samples textboxes in SettingsGUI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java</url>
-          <properties />
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
@@ -1212,18 +1207,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        <state relative-caret-position="269">
+          <caret line="544" column="0" lean-forward="true" selection-start-line="544" selection-start-column="0" selection-end-line="544" selection-end-column="0" />
           <folding>
             <element signature="e#0#36766#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#584#585#0" expanded="true" />
             <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#872#935#0" expanded="true" />
             <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#profileChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#indexChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
