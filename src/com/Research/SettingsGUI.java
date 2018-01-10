@@ -53,7 +53,7 @@ public class SettingsGUI extends javax.swing.JFrame {
         profileFileNameTextbox = new JTextPane();
         profileFileNameLabel = new JLabel();
         jScrollPane2 = new JScrollPane();
-        indexFileNameTextbox = new JTextPane();
+        //indexFileNameTextbox = new JTextPane();
         jScrollPane3 = new JScrollPane();
         sampleFileNameTextbox = new JTextPane();
         indexFileNameLabel = new JLabel();
@@ -142,15 +142,6 @@ public class SettingsGUI extends javax.swing.JFrame {
         sampleFileNameTextbox.setEditable(false);
         jScrollPane2.setViewportView(sampleFileNameTextbox);
 
-        indexFileNameTextbox.setText(Main.getIndexFilename());
-        indexFileNameTextbox.setEditable(false);
-        jScrollPane3.setViewportView(indexFileNameTextbox);
-
-        indexFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
-
-        indexFileNameLabel.setText("Indices CSV File Location:");
-        indexFileNameLabel.setToolTipText("");
-
         sampleFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
 
         sampleFileNameLabel.setText("Samples CSV File Location:");
@@ -178,12 +169,6 @@ public class SettingsGUI extends javax.swing.JFrame {
             }
         });
 
-        indexChangeButton.setText("Change");
-        indexChangeButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                indexChangeButtonActionPerformed(evt);
-            }
-        });
 
         sampleChangeButton.setText("Change");
         sampleChangeButton.addActionListener(new ActionListener() {
@@ -217,13 +202,6 @@ public class SettingsGUI extends javax.swing.JFrame {
         profileOpenButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 profileOpenButtonActionPerformed(evt);
-            }
-        });
-
-        indicesOpenButton.setText("Open");
-        indicesOpenButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                indicesOpenButtonActionPerformed(evt);
             }
         });
 
@@ -379,11 +357,9 @@ public class SettingsGUI extends javax.swing.JFrame {
                                                         .addGroup(layout.createSequentialGroup()
                                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                                         .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
-                                                                        .addComponent(jScrollPane3)
                                                                         .addComponent(jScrollPane4)
                                                                         .addComponent(jScrollPane1)
                                                                         .addComponent(profileFileNameLabel)
-                                                                        .addComponent(indexFileNameLabel)
                                                                         .addComponent(sampleFileNameLabel)
                                                                         .addComponent(reportFileNameLabel))
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -392,10 +368,6 @@ public class SettingsGUI extends javax.swing.JFrame {
                                                                                 .addComponent(sampleChangeButton)
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(samplesOpenButton))
-                                                                        .addGroup(layout.createSequentialGroup()
-                                                                                .addComponent(indexChangeButton)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addComponent(indicesOpenButton))
                                                                         .addGroup(layout.createSequentialGroup()
                                                                                 .addComponent(reportChangeButton)
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -440,14 +412,6 @@ public class SettingsGUI extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                                 .addComponent(sampleChangeButton)
                                                 .addComponent(samplesOpenButton)))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(indexFileNameLabel)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                                .addComponent(indexChangeButton)
-                                                .addComponent(indicesOpenButton)))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(reportFileNameLabel)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -529,22 +493,6 @@ public class SettingsGUI extends javax.swing.JFrame {
         Main.setProfileFilename(profileFilename);
 
         changeFilenames();
-    }
-
-    private void indexChangeButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        //Sets text in textbox to reflect change
-        JFileChooser chooser = new JFileChooser();
-        chooser.showOpenDialog(null);
-        File file = chooser.getSelectedFile();
-        indexFilename = file.getAbsolutePath().replace("\\", "/");;
-        indexFileNameTextbox.setText(indexFilename);
-        Main.setIndexFilename(indexFilename);
-
-        changeFilenames();
-    }
-
-    private void indicesOpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        Main.openIndicesFile();
     }
 
     private void reportOpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -632,7 +580,7 @@ public class SettingsGUI extends javax.swing.JFrame {
     //Changes textboxes to reflect filenames. Note: Changes data in THIS CLASS, not Main class
     public static void setFilenames(String filenameProfiles, String filenameIndices, String filenameSamples, String filenameReport) {
         profileFileNameTextbox.setText(filenameProfiles);
-        indexFileNameTextbox.setText(filenameIndices);
+        //indexFileNameTextbox.setText(filenameIndices);
         sampleFileNameTextbox.setText(filenameSamples);
         reportFileNameTextbox.setText(filenameReport);
     }
@@ -708,7 +656,6 @@ public class SettingsGUI extends javax.swing.JFrame {
     private static javax.swing.JCheckBox freqCheckbox;
     private javax.swing.JButton indexChangeButton;
     private javax.swing.JLabel indexFileNameLabel;
-    private static javax.swing.JTextPane indexFileNameTextbox;
     private javax.swing.JButton indicesOpenButton;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

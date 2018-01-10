@@ -8,6 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/filenames.txt" afterPath="$PROJECT_DIR$/filenames.txt" />
+      <change beforePath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" afterPath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,10 +42,10 @@
       <file leaf-file-name="SettingsGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="544" column="0" lean-forward="true" selection-start-line="544" selection-start-column="0" selection-end-line="544" selection-end-column="0" />
+            <state relative-caret-position="403">
+              <caret line="582" column="56" lean-forward="true" selection-start-line="582" selection-start-column="56" selection-end-line="582" selection-end-column="56" />
               <folding>
-                <element signature="e#0#36766#0" expanded="true" />
+                <element signature="e#0#33785#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#584#585#0" expanded="true" />
                 <element signature="e#616#617#0" expanded="true" />
@@ -57,8 +59,6 @@
                 <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#sampleChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-                <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
-                <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#main#0;class#SettingsGUI#0" expanded="false" />
               </folding>
@@ -77,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>resiza</find>
       <find>checkpoint</find>
       <find>sumOfDiffs</find>
       <find>comparisons</find>
@@ -105,8 +104,9 @@
       <find>main</find>
       <find>&quot;settings</find>
       <find>indices</find>
-      <find>index</find>
       <find>indexFileNameT</find>
+      <find>ind</find>
+      <find>index</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,8 +149,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="802" />
-    <option name="y" value="-15" />
+    <option name="x" value="2968" />
+    <option name="y" value="254" />
     <option name="width" value="790" />
     <option name="height" value="867" />
   </component>
@@ -765,11 +765,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515559608040</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Backup before attempted removal of indices selection textbox">
+      <created>1515561724365</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1515561724365</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="2391" y="267" width="1618" height="1248" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -780,13 +787,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1922652" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15746607" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06614583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4044199" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.079375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09723757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -838,7 +845,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Now writes data to report txt file" />
     <MESSAGE value="Added &quot;automatic sample entry&quot; function" />
     <MESSAGE value="Before addition of Jitter and Shimmer" />
     <MESSAGE value="Fixed up GUI" />
@@ -863,7 +869,8 @@
     <MESSAGE value="11-14-17" />
     <MESSAGE value="Before changes to SettingsGUI" />
     <MESSAGE value="Changed &quot;Exit&quot; button to &quot;Advanced&quot; and switched visual locations of indices and samples textboxes in SettingsGUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed &quot;Exit&quot; button to &quot;Advanced&quot; and switched visual locations of indices and samples textboxes in SettingsGUI" />
+    <MESSAGE value="Backup before attempted removal of indices selection textbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backup before attempted removal of indices selection textbox" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -880,6 +887,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -904,6 +914,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -911,6 +926,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="68" column="31" lean-forward="false" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+          <folding>
+            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -935,6 +953,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -942,6 +965,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -966,6 +992,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -973,6 +1004,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -997,6 +1031,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,6 +1043,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,6 +1070,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,6 +1106,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,6 +1125,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="39" column="64" lean-forward="false" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+          <folding>
+            <element signature="method#getLength#0;class#CSVReader#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,6 +1172,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="74" column="38" lean-forward="false" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
+          <folding>
+            <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1133,6 +1189,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,6 +1217,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,10 +1265,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="544" column="0" lean-forward="true" selection-start-line="544" selection-start-column="0" selection-end-line="544" selection-end-column="0" />
+        <state relative-caret-position="403">
+          <caret line="582" column="56" lean-forward="true" selection-start-line="582" selection-start-column="56" selection-end-line="582" selection-end-column="56" />
           <folding>
-            <element signature="e#0#36766#0" expanded="true" />
+            <element signature="e#0#33785#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#584#585#0" expanded="true" />
             <element signature="e#616#617#0" expanded="true" />
@@ -1224,8 +1282,6 @@
             <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#sampleChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
             <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
             <element signature="method#main#0;class#SettingsGUI#0" expanded="false" />
           </folding>
