@@ -58,7 +58,7 @@ public class SettingsGUI extends javax.swing.JFrame {
         sampleFileNameTextbox = new JTextPane();
         indexFileNameLabel = new JLabel();
         sampleFileNameLabel = new JLabel();
-        settingsExitButton = new JButton();
+        advancedSettingsButton = new JButton();
         jScrollPane4 = new JScrollPane();
         reportFileNameTextbox = new JTextPane();
         reportFileNameLabel = new JLabel();
@@ -138,13 +138,13 @@ public class SettingsGUI extends javax.swing.JFrame {
 
         profileFileNameLabel.setText("Profiles CSV File Location:");
 
-        indexFileNameTextbox.setText(Main.getIndexFilename());
-        indexFileNameTextbox.setEditable(false);
-        jScrollPane2.setViewportView(indexFileNameTextbox);
-
         sampleFileNameTextbox.setText(Main.getSampleFilename());
         sampleFileNameTextbox.setEditable(false);
-        jScrollPane3.setViewportView(sampleFileNameTextbox);
+        jScrollPane2.setViewportView(sampleFileNameTextbox);
+
+        indexFileNameTextbox.setText(Main.getIndexFilename());
+        indexFileNameTextbox.setEditable(false);
+        jScrollPane3.setViewportView(indexFileNameTextbox);
 
         indexFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
 
@@ -155,11 +155,11 @@ public class SettingsGUI extends javax.swing.JFrame {
 
         sampleFileNameLabel.setText("Samples CSV File Location:");
 
-        settingsExitButton.setFont(new Font("Tahoma", 0, 13)); // NOI18N
-        settingsExitButton.setText("Exit");
-        settingsExitButton.addActionListener(new ActionListener() {
+        advancedSettingsButton.setFont(new Font("Tahoma", 0, 13)); // NOI18N
+        advancedSettingsButton.setText("Advanced...");
+        advancedSettingsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                settingsExitButtonActionPerformed(evt);
+                advancedSettingsButtonActionPerformed(evt);
             }
         });
 
@@ -371,7 +371,7 @@ public class SettingsGUI extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                                 .addComponent(settingsBackButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(settingsExitButton))
+                                                .addComponent(advancedSettingsButton))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(10, 10, 10)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -389,13 +389,13 @@ public class SettingsGUI extends javax.swing.JFrame {
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                         .addGroup(layout.createSequentialGroup()
-                                                                                .addComponent(indexChangeButton)
-                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                .addComponent(indicesOpenButton))
-                                                                        .addGroup(layout.createSequentialGroup()
                                                                                 .addComponent(sampleChangeButton)
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                 .addComponent(samplesOpenButton))
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(indexChangeButton)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addComponent(indicesOpenButton))
                                                                         .addGroup(layout.createSequentialGroup()
                                                                                 .addComponent(reportChangeButton)
                                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -433,21 +433,21 @@ public class SettingsGUI extends javax.swing.JFrame {
                                                 .addComponent(profileChangeButton)
                                                 .addComponent(profileOpenButton)))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(indexFileNameLabel)
+                                .addComponent(sampleFileNameLabel)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addComponent(jScrollPane2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                                .addComponent(indexChangeButton)
-                                                .addComponent(indicesOpenButton)))
+                                                .addComponent(sampleChangeButton)
+                                                .addComponent(samplesOpenButton)))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(sampleFileNameLabel)
+                                .addComponent(indexFileNameLabel)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addComponent(jScrollPane3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                                .addComponent(sampleChangeButton)
-                                                .addComponent(samplesOpenButton)))
+                                                .addComponent(indexChangeButton)
+                                                .addComponent(indicesOpenButton)))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(reportFileNameLabel)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -461,7 +461,7 @@ public class SettingsGUI extends javax.swing.JFrame {
                                 .addGap(18, 18, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(settingsBackButton)
-                                        .addComponent(settingsExitButton))
+                                        .addComponent(advancedSettingsButton))
                                 .addContainerGap())
         );
 
@@ -515,8 +515,8 @@ public class SettingsGUI extends javax.swing.JFrame {
         }
     }
 
-    private void settingsExitButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        System.exit(2);
+    private void advancedSettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        openAdvanced();
     }
 
     private void profileChangeButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -640,6 +640,11 @@ public class SettingsGUI extends javax.swing.JFrame {
     //Ensures that initialization by Main class does not reset checkboxes
     public static void setAlreadyUsed(boolean used){alreadyUsed = used;}
 
+    //Open advanced settings window
+    public static void openAdvanced(){
+
+    }
+
 
     /**
      * @param args the command line arguments
@@ -726,7 +731,7 @@ public class SettingsGUI extends javax.swing.JFrame {
     private static javax.swing.JTextPane sampleFileNameTextbox;
     private javax.swing.JButton samplesOpenButton;
     private javax.swing.JButton settingsBackButton;
-    private javax.swing.JButton settingsExitButton;
+    private javax.swing.JButton advancedSettingsButton;
     private javax.swing.JLabel settingsTitle;
     private static javax.swing.JCheckBox shimmerCheckbox;
     private javax.swing.JRadioButton summaryRadio;
