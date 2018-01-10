@@ -230,6 +230,29 @@ public class Main {
     //Main method
     public static void main(String[] args) {
 
+        /* Set the Windows look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
         //Initialize thisDirectory and filenamesFilename
         thisDirectory = System.getProperty("user.dir");
         filenamesFilename = thisDirectory + "\\filenames.txt";
@@ -406,11 +429,8 @@ public class Main {
     //Print **any** data to report file
     private static void printToReport(String output){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(reportFilename, true))) {
-            //Take in String from user (String "output" parameter) and store in repOutputTemp
-            String repOutputTemp = output;
-
-            //Replace '\n' escape sequence with '\r\n', which writes to a new line IN FILE
-            reportOutput = repOutputTemp.replaceAll("\n", "\r\n");
+              //Replace '\n' escape sequence with '\r\n', which writes to a new line IN FILE
+            reportOutput = output.replaceAll("\n", "\r\n");
 
             //Write data to file
             bw.write(reportOutput);
@@ -452,7 +472,6 @@ public class Main {
         //first check if Desktop is supported by Platform or not
         if(!Desktop.isDesktopSupported()){
             JOptionPane.showMessageDialog(null, "ERROR: Desktop is not supported", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
         } else {
             Desktop desktop = Desktop.getDesktop();
             if(file.exists()) try {
@@ -468,7 +487,6 @@ public class Main {
         //first check if Desktop is supported by Platform or not
         if(!Desktop.isDesktopSupported()){
             JOptionPane.showMessageDialog(null, "ERROR: Desktop is not supported", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
         } else {
             Desktop desktop = Desktop.getDesktop();
             if(file.exists()) try {
@@ -483,7 +501,6 @@ public class Main {
         //first check if Desktop is supported by Platform or not
         if(!Desktop.isDesktopSupported()){
             JOptionPane.showMessageDialog(null, "ERROR: Desktop is not supported", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
         } else {
             Desktop desktop = Desktop.getDesktop();
             if(file.exists()) try {
@@ -498,7 +515,6 @@ public class Main {
         //first check if Desktop is supported by Platform or not
         if(!Desktop.isDesktopSupported()){
             JOptionPane.showMessageDialog(null, "ERROR: Desktop is not supported", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
         } else {
             Desktop desktop = Desktop.getDesktop();
             if(file.exists()) try {
