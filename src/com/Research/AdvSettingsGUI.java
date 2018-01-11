@@ -11,6 +11,7 @@
 package com.Research;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 
 public class AdvSettingsGUI extends javax.swing.JFrame {
@@ -93,7 +94,7 @@ public class AdvSettingsGUI extends javax.swing.JFrame {
 
         indicesFileNameTextbox.setEditable(false);
         indicesFileNameTextbox.setBackground(new java.awt.Color(255, 255, 255));
-        indicesFileNameTextbox.setText("Indices file name");
+        indicesFileNameTextbox.setText(Main.getIndexFilename());
         indicesFileNameTextbox.setToolTipText("");
 
         indicesFileNameLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -223,6 +224,10 @@ public class AdvSettingsGUI extends javax.swing.JFrame {
         );
 
         pack();
+        //Center the jFrame on screen
+        setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }// </editor-fold>
 
     private void advBackButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,6 +246,8 @@ public class AdvSettingsGUI extends javax.swing.JFrame {
         indicesFileNameTextbox.setText(indicesFilename);
         Main.setIndexFilename(indicesFilename);
 
+        //Tell SettingsGUI about changes
+        SettingsGUI.setIndexFilename(indicesFilename);
         SettingsGUI.changeFilenames();
     }
 
