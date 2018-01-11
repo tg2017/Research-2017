@@ -7,10 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/data.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/indices.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/filenames.txt" afterPath="$PROJECT_DIR$/filenames.txt" />
-      <change beforePath="$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java" afterPath="$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/Research/OnePropZInt.java" afterPath="$PROJECT_DIR$/src/com/Research/OnePropZInt.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -277,8 +276,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="528" />
-    <option name="y" value="-21" />
+    <option name="x" value="332" />
+    <option name="y" value="-30" />
     <option name="width" value="949" />
     <option name="height" value="867" />
   </component>
@@ -928,12 +927,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515648136801</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Changed size of Advanced Settings window; 1/10/18 backup">
+      <created>1515649153649</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1515649153649</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -948,7 +953,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09281768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1011,7 +1016,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed a lot of stuff" />
     <MESSAGE value="9/18/17, backup" />
     <MESSAGE value="Fixed up comments" />
     <MESSAGE value="Added DataVault to prevent resetting of checkboxes in settings. NOTE: there are still problems with the changing of data to be used, this is NOT a working model" />
@@ -1036,7 +1040,8 @@
     <MESSAGE value="Made the entry box for &quot;minPercentForMatch&quot; work" />
     <MESSAGE value="Made indices file location selector work" />
     <MESSAGE value="Before attempted size changes to textbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before attempted size changes to textbox" />
+    <MESSAGE value="Changed size of Advanced Settings window; 1/10/18 backup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed size of Advanced Settings window; 1/10/18 backup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
