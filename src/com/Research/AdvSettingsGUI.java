@@ -97,8 +97,8 @@ public class AdvSettingsGUI extends javax.swing.JFrame {
         indicesFileNameTextbox.setText(Main.getIndexFilename());
         indicesFileNameTextbox.setToolTipText("");
 
-        indicesFileNameLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        indicesFileNameLabel.setText("Indices CSV File Location");
+        indicesFileNameLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        indicesFileNameLabel.setText("Indices CSV File Location:");
 
         indexChangeButton.setText("Change");
         indexChangeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +123,7 @@ public class AdvSettingsGUI extends javax.swing.JFrame {
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(indicesFileNameLabel)
                         .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(indicesFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(indicesFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(indexChangeButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -137,14 +137,14 @@ public class AdvSettingsGUI extends javax.swing.JFrame {
                                 .addComponent(indicesFileNameLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(indicesFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(indicesFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(indexChangeButton)
                                         .addComponent(indexOpenButton))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         percentMatchLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        percentMatchLabel.setText("Minimum Percent Match Value(%)");
+        percentMatchLabel.setText("Minimum Percent Match Value (%)");
 
         percentMatchBox.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         percentMatchBox.setText(Main.getMinPercentForMatch().toString());

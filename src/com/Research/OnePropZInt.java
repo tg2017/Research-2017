@@ -28,7 +28,7 @@ public class OnePropZInt {
         System.out.println("n: " + n + " * " + "q: " + q + " = " + n*q);
 
         if(!(n * p >= 10)){ //Check for Parameter 1
-            throw new ParameterNotMetException("n * p < 10");
+            //throw new ParameterNotMetException("n * p < 10");
         } else if(!(n * q >= 10)) { //Check for Parameter 2
             //throw new ParameterNotMetException("n * q < 10");
         }
