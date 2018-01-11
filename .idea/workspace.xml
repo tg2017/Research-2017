@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/filenames.txt" afterPath="$PROJECT_DIR$/filenames.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
       <change beforePath="$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java" afterPath="$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -81,14 +79,13 @@
       <file leaf-file-name="SettingsGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="566" column="30" lean-forward="false" selection-start-line="566" selection-start-column="26" selection-end-line="566" selection-end-column="30" />
+            <state relative-caret-position="294">
+              <caret line="360" column="139" lean-forward="true" selection-start-line="360" selection-start-column="139" selection-end-line="360" selection-end-column="139" />
               <folding>
                 <element signature="e#0#34607#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#584#585#0" expanded="true" />
                 <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#872#935#0" expanded="true" />
                 <element signature="e#3401#3402#0" expanded="true" />
                 <element signature="e#3465#3466#0" expanded="true" />
                 <element signature="e#3754#3755#0" expanded="true" />
@@ -141,34 +138,30 @@
       <file leaf-file-name="AdvSettingsGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="252" column="0" lean-forward="true" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="139" column="194" lean-forward="false" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="194" />
               <folding>
-                <element signature="e#0#18313#0" expanded="true" />
+                <element signature="e#0#18316#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#AdvSettingsGUI#0;class#AdvSettingsGUI#0" expanded="false" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
                 <element signature="docComment;method#initComponents#0;class#AdvSettingsGUI#0" expanded="false" />
                 <element signature="e#694#724#0" expanded="true" />
-                <element signature="e#729#792#0" expanded="true" />
                 <element signature="e#2789#2790#0" expanded="true" />
                 <element signature="e#2854#2855#0" expanded="true" />
                 <element signature="e#4510#4511#0" expanded="true" />
                 <element signature="e#4579#4580#0" expanded="true" />
                 <element signature="e#4787#4788#0" expanded="true" />
                 <element signature="e#4854#4855#0" expanded="true" />
-                <element signature="e#7689#7690#0" expanded="true" />
-                <element signature="e#7756#7757#0" expanded="true" />
+                <element signature="e#7692#7693#0" expanded="true" />
+                <element signature="e#7759#7760#0" expanded="true" />
                 <element signature="method#advBackButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
+                <element signature="method#indexChangeButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
                 <element signature="method#percentMatchBoxActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
-                <element signature="e#15728#15729#0" expanded="true" />
-                <element signature="e#15791#15792#0" expanded="true" />
                 <element signature="docComment;method#main#0;class#AdvSettingsGUI#0" expanded="false" />
                 <element signature="method#main#0;class#AdvSettingsGUI#0" expanded="false" />
-                <element signature="e#15952#16039#0" expanded="true" />
-                <element signature="e#17449#17450#0" expanded="true" />
-                <element signature="e#17518#17519#0" expanded="true" />
+                <element signature="e#15955#16042#0" expanded="true" />
+                <element signature="e#17452#17453#0" expanded="true" />
+                <element signature="e#17521#17522#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,8 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>descriptive</find>
-      <find>format</find>
       <find>successfully</find>
       <find>percentm</find>
       <find>percentmatch</find>
@@ -210,11 +201,13 @@
       <find>data.txt</find>
       <find>edit</find>
       <find>ERROR</find>
-      <find>settings</find>
-      <find>setText</find>
       <find>center</find>
-      <find>textbox.set</find>
+      <find>settings</find>
       <find>inde</find>
+      <find>textbox.set</find>
+      <find>setText</find>
+      <find>textbox</find>
+      <find>scrollpane</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -895,7 +888,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515647231235</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Made indices file location selector work">
+      <created>1515647839631</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1515647839631</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -978,7 +978,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed up GUI" />
     <MESSAGE value="Added jar" />
     <MESSAGE value="Fixed a lot of stuff" />
     <MESSAGE value="9/18/17, backup" />
@@ -1003,7 +1002,8 @@
     <MESSAGE value="Backup before attempted removal of indices selection textbox" />
     <MESSAGE value="Removed indices visually, have not removed indices processing code" />
     <MESSAGE value="Made the entry box for &quot;minPercentForMatch&quot; work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the entry box for &quot;minPercentForMatch&quot; work" />
+    <MESSAGE value="Made indices file location selector work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made indices file location selector work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1387,19 +1387,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="274">
+          <caret line="169" column="23" lean-forward="false" selection-start-line="167" selection-start-column="8" selection-end-line="169" selection-end-column="23" />
           <folding>
-            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
-            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
-            <element signature="method#reset#0;class#Main#0" expanded="false" />
-            <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
-            <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
-            <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
-            <element signature="method#changeData#0;class#Main#0" expanded="false" />
+            <element signature="method#initComponents#0;class#MenuGUI#0" expanded="false" />
+            <element signature="method#learnMoreButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#MenuGUI#0" expanded="false" />
+            <element signature="method#main#0;class#MenuGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1418,29 +1414,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="169" column="23" lean-forward="false" selection-start-line="167" selection-start-column="8" selection-end-line="169" selection-end-column="23" />
+        <state relative-caret-position="357">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="method#initComponents#0;class#MenuGUI#0" expanded="false" />
-            <element signature="method#learnMoreButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#MenuGUI#0" expanded="false" />
-            <element signature="method#main#0;class#MenuGUI#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#reset#0;class#Main#0" expanded="false" />
+            <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
+            <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
+            <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
+            <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
+            <element signature="method#changeData#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="566" column="30" lean-forward="false" selection-start-line="566" selection-start-column="26" selection-end-line="566" selection-end-column="30" />
+        <state relative-caret-position="294">
+          <caret line="360" column="139" lean-forward="true" selection-start-line="360" selection-start-column="139" selection-end-line="360" selection-end-column="139" />
           <folding>
             <element signature="e#0#34607#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#584#585#0" expanded="true" />
             <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#872#935#0" expanded="true" />
             <element signature="e#3401#3402#0" expanded="true" />
             <element signature="e#3465#3466#0" expanded="true" />
             <element signature="e#3754#3755#0" expanded="true" />
@@ -1491,34 +1490,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="252" column="0" lean-forward="true" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="139" column="194" lean-forward="false" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="194" />
           <folding>
-            <element signature="e#0#18313#0" expanded="true" />
+            <element signature="e#0#18316#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#AdvSettingsGUI#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
             <element signature="docComment;method#initComponents#0;class#AdvSettingsGUI#0" expanded="false" />
             <element signature="e#694#724#0" expanded="true" />
-            <element signature="e#729#792#0" expanded="true" />
             <element signature="e#2789#2790#0" expanded="true" />
             <element signature="e#2854#2855#0" expanded="true" />
             <element signature="e#4510#4511#0" expanded="true" />
             <element signature="e#4579#4580#0" expanded="true" />
             <element signature="e#4787#4788#0" expanded="true" />
             <element signature="e#4854#4855#0" expanded="true" />
-            <element signature="e#7689#7690#0" expanded="true" />
-            <element signature="e#7756#7757#0" expanded="true" />
+            <element signature="e#7692#7693#0" expanded="true" />
+            <element signature="e#7759#7760#0" expanded="true" />
             <element signature="method#advBackButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
+            <element signature="method#indexChangeButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
             <element signature="method#percentMatchBoxActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="e#15728#15729#0" expanded="true" />
-            <element signature="e#15791#15792#0" expanded="true" />
             <element signature="docComment;method#main#0;class#AdvSettingsGUI#0" expanded="false" />
             <element signature="method#main#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="e#15952#16039#0" expanded="true" />
-            <element signature="e#17449#17450#0" expanded="true" />
-            <element signature="e#17518#17519#0" expanded="true" />
+            <element signature="e#15955#16042#0" expanded="true" />
+            <element signature="e#17452#17453#0" expanded="true" />
+            <element signature="e#17521#17522#0" expanded="true" />
           </folding>
         </state>
       </provider>

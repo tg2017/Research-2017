@@ -144,7 +144,7 @@ public class AdvSettingsGUI extends javax.swing.JFrame {
         );
 
         percentMatchLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        percentMatchLabel.setText("Minimum Percent Match Value");
+        percentMatchLabel.setText("Minimum Percent Match Value(%)");
 
         percentMatchBox.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         percentMatchBox.setText(Main.getMinPercentForMatch().toString());
