@@ -41,6 +41,8 @@ public class SettingsGUI extends javax.swing.JFrame {
         indexFilename = Main.getIndexFilename();
         sampleFilename = Main.getSampleFilename();
         reportFilename = Main.getReportFilename();
+        //Advanced Settings GUI
+        advSettings = new AdvSettingsGUI();
 
         //Their Variables (NetBeans)
         freqCheckbox = new JCheckBox();
@@ -521,7 +523,7 @@ public class SettingsGUI extends javax.swing.JFrame {
     }
 
     private void autoSampleCheckboxActionPerformed(java.awt.event.ActionEvent evt) {
-
+        //Not used
     }
 
     private void autoSampleCheckboxStateChanged(javax.swing.event.ChangeEvent evt) {
@@ -561,11 +563,17 @@ public class SettingsGUI extends javax.swing.JFrame {
     public static boolean checkUseShimmer() { return shimmerCheckbox.isSelected(); }
     public static boolean checkUseDescriptive() { return descriptiveRadio.isSelected(); }
 
+    //Allows Advanced Settings window to set the indices filename, so that all filenames are managed from this class
+    public static void setIndexFilename(String filename){
+        indexFilename = filename;
+    }
+
     //Tells Main class to change filenames to reflect changes made in this class
     public static void changeFilenames(){
         System.out.println(reportFilename);
         System.out.println(profileFilename);
         //System.out.println(changedFilenames[0]);
+
         //Initialize changedFilenames[]
         changedFilenames = new String[4];
         changedFilenames[Main.PROFILEFILENAMEINDEX] = profileFilename;
@@ -580,17 +588,28 @@ public class SettingsGUI extends javax.swing.JFrame {
     //Changes textboxes to reflect filenames. Note: Changes data in THIS CLASS, not Main class
     public static void setFilenames(String filenameProfiles, String filenameIndices, String filenameSamples, String filenameReport) {
         profileFileNameTextbox.setText(filenameProfiles);
-        //indexFileNameTextbox.setText(filenameIndices);
         sampleFileNameTextbox.setText(filenameSamples);
         reportFileNameTextbox.setText(filenameReport);
+
+        //Tell advSettings about the indices filename
+        advSettings.setIndexFileNameTextboxText(filenameIndices);
     }
 
     //Ensures that initialization by Main class does not reset checkboxes
     public static void setAlreadyUsed(boolean used){alreadyUsed = used;}
 
     //Open advanced settings window
-    public static void openAdvanced(){
+    private void openAdvanced(){
+        //Create new advSettings GUI before leaving settings menu
+        advSettings.setVisible(true);
 
+        //Before disposal, store data in DataVault
+        DataVault.setSettingsUseAuto(checkUseAuto());
+        DataVault.setSettingsUseFreq(checkUseFreq());
+        DataVault.setSettingsUseJitter(checkUseJitter());
+        DataVault.setSettingsUseShimmer(checkUseShimmer());
+
+        this.dispose();
     }
 
 
@@ -645,6 +664,7 @@ public class SettingsGUI extends javax.swing.JFrame {
     private static String reportFilename;
     private static String[] changedFilenames;
     private static boolean alreadyUsed = false;
+    private static AdvSettingsGUI advSettings;
 
     //Their (NetBeans) Variables
     private javax.swing.JLabel dataCheckboxTitle1;

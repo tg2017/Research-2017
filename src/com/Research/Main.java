@@ -18,6 +18,7 @@ public class Main {
         //Start GUI
         menu.setVisible(true);
         GUICreated = true;
+
     }
 
     //VERY IMPORTANT METHOD: OPERATES AS THE ENGINE OF THE PROGRAM - BASICALLY A MAIN METHOD
@@ -104,9 +105,9 @@ public class Main {
                 writeReport();
 
                 //Determine if program was correct. If so, increment "correct" counter by one. If not, increment "incorrect" counter by one.
-                if (!closestMatch.getNameDiff() && closestMatch.getPercentMatch() >= MINPERCENTFORMATCH) { //If the names are NOT DIFFERENT, AND percent match is within values, then program was correct
+                if (!closestMatch.getNameDiff() && closestMatch.getPercentMatch() >= minPercentForMatch) { //If the names are NOT DIFFERENT, AND percent match is within values, then program was correct
                     timesCorrect++;
-                } else if (closestMatch.getNameDiff() || closestMatch.getPercentMatch() < MINPERCENTFORMATCH) { //If names are DIFFERENT, program was incorrect
+                } else if (closestMatch.getNameDiff() || closestMatch.getPercentMatch() < minPercentForMatch) { //If names are DIFFERENT, program was incorrect
                     timesIncorrect++;
                 }
             }
@@ -253,12 +254,16 @@ public class Main {
         }
         //</editor-fold>
 
-        //Initialize thisDirectory and filenamesFilename
+        //Initialize thisDirectory, filenamesFilename and dataFilename
         thisDirectory = System.getProperty("user.dir");
         filenamesFilename = thisDirectory + "\\filenames.txt";
+        dataFilename = thisDirectory + "\\data.txt";
 
         //Get the filenames and tell SettingsGUI
         fetchFilenamesFromFile();
+
+        //Get data and tell SettingsGUI
+        fetchDataFromFile();
 
         //Initially create SettingsGUI, to make Main class aware of data present
         SettingsGUI settings = new SettingsGUI();
@@ -532,6 +537,9 @@ public class Main {
     public static String getReportFilename(){ return reportFilename; }
     public static String getSampleFilename(){ return samplesFilename; }
 
+    //Return minPercentForMatch
+    public static Double getMinPercentForMatch(){ return minPercentForMatch;}
+
     //Setters: Set filenames (used by GUI)
     public static void setProfileFilename(String newFilename) { profileFilename = newFilename; }
     public static void setIndexFilename(String newIndexFilename) { indexFilename = newIndexFilename; }
@@ -613,7 +621,6 @@ public class Main {
         setFilenames(filenameProfiles, filenameIndices, filenameSamples, filenameReport);
 
     }
-
     //Writes to "filenamesFilename" file
     public static void changeFilenames(String[] newFileNames){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filenamesFilename, false))) {
@@ -646,6 +653,61 @@ public class Main {
 
     }
 
+    //Methods that manage data in "data.txt" file
+    //Sets data variables
+    public static void setMinPercentForMatch(Double minimumPercentForMatch){
+        minPercentForMatch = minimumPercentForMatch;
+    }
+    //Reads in data from "data.txt" file
+    private static void fetchDataFromFile(){
+
+        //Initialize and use dataReader
+        dataReader = new CSVReader(dataFilename);
+        dataReader.setSplitString("new line");
+        String[] tempData = dataReader.getValues();
+
+        //ZERO IS THE INDEX OF THE minPercentForDouble IN THE DATA.TXT FILE
+        if(DataProcessor.isDouble(tempData[0])) {
+            //Set minPercentForMatch
+            minPercentForMatch = DataProcessor.convertToDouble(tempData[0]);
+        } else {
+            JOptionPane.showMessageDialog(null, "Error reading the Minimum Percent for Match from data.txt file");
+        }
+    }
+    //Writes to "data" file
+    public static void changeData(String[] NewData){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(dataFilename, false))) {
+
+            String newData = "";//Will store new data as single String, with "\r\n"'s
+
+            //Copy values of NewData into one string, newData, with "\r\n"'s
+            for(int i = 0; i < NewData.length; i++) {
+                if (i == 0) {
+                    newData += NewData[i];
+                } else {
+                    newData += "\r\n" + NewData[i];
+                }
+            }
+
+            //Write data to file
+            bw.write(newData);
+
+            //Display confirmation message
+            System.out.println("\n\nSuccessfully changed data");
+            JOptionPane.showMessageDialog(null, "Successfully changed data");
+
+
+        } catch (IOException e) {
+            //Print error message if exception is caught
+            e.printStackTrace();
+            System.out.println("Error changing filename in file: " + filenamesFilename);
+            JOptionPane.showMessageDialog(null, "Error changing filename in file: " + filenamesFilename);
+        }
+
+    }
+
+
+
     //Makes a Bell Curve based on data
     private static void makeBellCurve(int canvasWidth, int canvasHeight, int xScaleMin, int xScaleMax, int yScaleMin, double yScaleMax, double mu, double sigma){
 
@@ -667,17 +729,19 @@ public class Main {
     public static final int SAMPLEFILENAMEINDEX = 2;
     public static final int REPORTFILENAMEINDEX = 3;
 
-    public static final double MINPERCENTFORMATCH = 85.0; //Determines minimum percent to be considered a match
+    public static Double minPercentForMatch; //Determines minimum percent to be considered a match
 
     private static String profileFilename; //File location of csv file for profiles
     private static String indexFilename; //File location of indices csv file
     private static String thisDirectory ;//Stores directory of this class as a String. Used only by filenamesFilename (below)
 
-    private static String filenamesFilename;/*File location of txt file that contains the filenames of other files
-        ***NOTE: The file to which this variable relates MUST be stored in the same folder as the rest of the project,
+    private static String filenamesFilename;//File location of txt file that contains the filenames of other files
+    private static String dataFilename;//File location of txt file that contains various data, such as minPercentForMatch
+        /***NOTE: The files to which these variable relate MUST be stored in the same folder as the rest of the project,
         otherwise the program will have issues. See initialization in Main method (uses thisDirectory (above))*/
 
     private static CSVReader filenameReader; //Reads in the filenames for other Readers
+    private static CSVReader dataReader; //Reads in the data from data.txt
     private static CSVReader cr; //Reads in data from csv file for profiles
     private static CSVReader indexReader; //Reads in indices from indices csv file
 
