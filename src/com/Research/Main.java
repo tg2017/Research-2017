@@ -18,10 +18,9 @@ public class Main {
         //Start GUI
         menu.setVisible(true);
         GUICreated = true;
-
     }
 
-    //VERY IMPORTANT METHOD: OPERATES AS THE ENGINE OF THE PROGRAM - BASICALLY A MAIN METHOD
+    //VERY IMPORTANT METHOD: OPERATES AS THE ENGINE OF THE PROGRAM - BASICALLY THE "MAIN" METHOD
     //Note: This code is NOT in the Main method because it needs to be called DIRECTLY from the GUI, to avoid Main method running without GUI input
     public static void runTheProgram(){
 
@@ -389,12 +388,12 @@ public class Main {
 
         try { //Try/catch deals with pressing of "cancel" button
             //Get data from user (manually)
-            sampleName = GetData.getString("What is the name?", "Enter Name");
-            sampleMaxFreqStr = GetData.getString("What is the maximum frequency of the sample?", "Enter Max Frequency");
-            sampleMinFreqStr = GetData.getString("What is the minimum frequency of the sample?", "Enter Min Frequency");
-            sampleAvgFreqStr = GetData.getString("What is the average frequency of the sample?", "Enter Average Frequency");
-            sampleJitterStr = GetData.getString("What is the jitter ratio of the sample?", "Enter Jitter Ratio");
-            sampleShimmerStr = GetData.getString("What is the shimmer value of the sample?", "Enter Shimmer Value");
+            String sampleName = GetData.getString("What is the name?", "Enter Name");
+            String sampleMaxFreqStr = GetData.getString("What is the maximum frequency of the sample?", "Enter Max Frequency");
+            String sampleMinFreqStr = GetData.getString("What is the minimum frequency of the sample?", "Enter Min Frequency");
+            String sampleAvgFreqStr = GetData.getString("What is the average frequency of the sample?", "Enter Average Frequency");
+            String sampleJitterStr = GetData.getString("What is the jitter ratio of the sample?", "Enter Jitter Ratio");
+            String sampleShimmerStr = GetData.getString("What is the shimmer value of the sample?", "Enter Shimmer Value");
 
             //Add values to list
             sampleList.add(sampleName);
@@ -603,13 +602,13 @@ public class Main {
         sumsOfDiffs = new ArrayList<>(); //List that contains all of the sums of differences of the ProfileComparisons in the comparisons list
         samples = new ArrayList<>(); //Array of samples stored in the program - data is accessed from the csv file WHEN DATA IS ENTERED AUTOMATICALLY
         sampleList = new ArrayList<>(); //Stores sample values as Strings
-        String sampleName = null;
+        /*String sampleName = null;
         String sampleMaxFreqStr = null;
         String sampleMinFreqStr = null;
         String sampleAvgFreqStr = null;
         String sampleJitterStr = null;
         String sampleShimmerStr = null;
-        Profile sampleProfile = null;
+        Profile sampleProfile = null;*/
     }
 
     //Methods that manage filenames
@@ -726,9 +725,7 @@ public class Main {
 
 
     //Makes a Bell Curve based on data
-    private static void makeBellCurve(int canvasWidth, int canvasHeight, int xScaleMin, int xScaleMax, int yScaleMin, double yScaleMax, double mu, double sigma){
-
-    }
+    //UNUSED private static void makeBellCurve(int canvasWidth, int canvasHeight, int xScaleMin, int xScaleMax, int yScaleMin, double yScaleMax, double mu, double sigma){ }
 
 
 
@@ -746,7 +743,7 @@ public class Main {
     public static final int SAMPLEFILENAMEINDEX = 2;
     public static final int REPORTFILENAMEINDEX = 3;
 
-    public static Double minPercentForMatch; //Determines minimum percent to be considered a match
+    private static Double minPercentForMatch; //Determines minimum percent to be considered a match
 
     private static String profileFilename; //File location of csv file for profiles
     private static String indexFilename; //File location of indices csv file
@@ -776,13 +773,7 @@ public class Main {
     private static List<Double> sumsOfDiffs = new ArrayList<>(); //List that contains all of the sums of differences of the ProfileComparisons in the comparisons list
     private static List<Profile> samples = new ArrayList<>(); //Array of samples stored in the program - data is accessed from the csv file WHEN DATA IS ENTERED AUTOMATICALLY
 
-    //Data for Sample
-    private static String sampleName;
-    private static String sampleMaxFreqStr;
-    private static String sampleMinFreqStr;
-    private static String sampleAvgFreqStr;
-    private static String sampleJitterStr;
-    private static String sampleShimmerStr;
+    //Where Sample is stored for
     private static Profile sampleProfile;
 
     //Objects regarding the closest match

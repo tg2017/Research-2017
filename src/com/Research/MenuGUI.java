@@ -50,7 +50,7 @@ public class MenuGUI extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ProjectTitle");
+        setTitle("Voice Identification");
         setIconImages(null);
         setResizable(false);
 
@@ -58,7 +58,7 @@ public class MenuGUI extends javax.swing.JFrame {
 
         titleLabel.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
         titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleLabel.setText("ProjectTitle");
+        titleLabel.setText("Voice Identification");
 
         startButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         startButton.setText("Start");
