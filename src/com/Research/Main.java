@@ -36,7 +36,7 @@ public class Main {
         //Determine what form of report should be used
         shouldUseDescriptive();
 
-        System.out.println(useDescriptive);
+        //System.out.println(useDescriptive);
 
         ProfileComparison.setUseFreq(useFreq);
         ProfileComparison.setUseJitter(useJitter);
@@ -48,9 +48,9 @@ public class Main {
 
         //Print filenames
         System.out.println("File for profiles: " + profileFilename);
-        System.out.println("File for indices: " + indexFilename);
         System.out.println("File for samples: " + samplesFilename);
         System.out.println("File for report: " + reportFilename);
+        System.out.println("File for indices: " + indexFilename);
 
         //Initialize CSV Readers with filenames
         cr = new CSVReader(profileFilename);
@@ -94,9 +94,25 @@ public class Main {
                 indexOfLowest = sumsOfDiffs.indexOf(Collections.min(sumsOfDiffs));
                 closestMatch = comparisons.get(indexOfLowest);
 
-                //Update values for calculation of average and standard deviation
-                sumOfPercents += closestMatch.getPercentMatch();
-                percentMatches.add(closestMatch.getPercentMatch());
+                //Determine if program was correct. If so, increment "correct" counter by one. If not, increment "incorrect" counter by one. Either way, update percentMatch data.
+                if (!closestMatch.getNameDiff() && closestMatch.getPercentMatch() >= minPercentForMatch) { //If the names are NOT DIFFERENT, AND percent match is within values, then program was correct
+                    timesCorrect++;
+
+                    //Update values for calculation of average and standard deviation
+                    sumOfPercents += closestMatch.getPercentMatch();
+                    percentMatches.add(closestMatch.getPercentMatch());
+                    closestMatch.setValid(true);
+
+                } else if (closestMatch.getNameDiff() || closestMatch.getPercentMatch() < minPercentForMatch) { //If names are DIFFERENT, program was incorrect
+                    timesIncorrect++;
+
+                    //Update values for calculation of average and standard deviation
+                    //Only zeroes because the match was invalid
+                    sumOfPercents += 0;
+                    percentMatches.add(0.0);
+                    closestMatch.setValid(false);
+
+                }
 
                 //Print results to console
                 System.out.println("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
@@ -104,27 +120,23 @@ public class Main {
                 //Print data to report
                 writeReport();
 
-                //Determine if program was correct. If so, increment "correct" counter by one. If not, increment "incorrect" counter by one.
-                if (!closestMatch.getNameDiff() && closestMatch.getPercentMatch() >= minPercentForMatch) { //If the names are NOT DIFFERENT, AND percent match is within values, then program was correct
-                    timesCorrect++;
-                } else if (closestMatch.getNameDiff() || closestMatch.getPercentMatch() < minPercentForMatch) { //If names are DIFFERENT, program was incorrect
-                    timesIncorrect++;
-                }
+
             }
             //Determine percentage of times the program was correct and print data to report file
             if ((timesCorrect + timesIncorrect) != samples.size()) {
                 System.out.println("ERROR. Something went wrong while determining percentage correct.");
-                JOptionPane.showMessageDialog(null, "ERROR. Something went wrong while determining percentage correct.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "ERROR: Something went wrong while determining percentage correct.", "ERROR", JOptionPane.ERROR_MESSAGE);
             } else {
                 percentCorrect = (timesCorrect / samples.size()) * 100;
 
                 //Calculate One Proportional Z Interval
+                opzi = new OnePropZInt(samples.size(), timesCorrect);
                 try {
-                    opzi = new OnePropZInt(samples.size(), timesCorrect);
+                    opzi.checkParameters();
                 } catch(ParameterNotMetException ex){
                     ex.printStackTrace();
                     //JOptionPane.showMessageDialog(null, "Something went wrong while calculating the One Proportional Z Interval.\nCheck parameters and try again.", "ERROR", JOptionPane.ERROR_MESSAGE);
-                    JOptionPane.showMessageDialog(null, "Warning: \"One Proportional Z Interval\" parameter(s) not met.\nResults may be illogical.", "One Proportinal Z Interval Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Warning: \"One Proportion Z Interval\" parameter(s) not met.\nResults may be illogical.", "One Proportion Z Interval Error", JOptionPane.ERROR_MESSAGE);
                 } finally {
                     opziLowerBound = opzi.lowerBound * 100;
                     opziUpperBound = opzi.upperBound * 100;
@@ -170,17 +182,22 @@ public class Main {
 
                 printToReport(tempOutput);
 
-                StdDraw.setCanvasSize(600, 400);
-                StdDraw.setXscale(0, 100);
-                StdDraw.setYscale(0, .5);
+                //Make Bell Curve (if the user wants to)
+                boolean makeCurve = GetData.getBoolean("Would you like to make a bell curve reflecting your data?", "Bell Curve");
+                if(makeCurve) {
+                    StdDraw.setCanvasSize(600, 400);
+                    StdDraw.setXscale(0, 100);
+                    StdDraw.setYscale(0, .5);
 
-                BellCurve.plot(0,100,0,.5,average, standardDeviation);
-                System.out.println(average + " , " + standardDeviation);
-                //makeBellCurve(600, 400, 0, 100, 0, .5, average, standardDeviation);
+                    BellCurve.plot(0, 100, 0, .5, average, standardDeviation);
+                    System.out.println(average + " , " + standardDeviation);
+                    //makeBellCurve(600, 400, 0, 100, 0, .5, average, standardDeviation);
+                }
             }
 
 
         } else { //...Otherwise, get and handle data manually
+
             //Get data for sample from user and store it in a profile
             sampleProfile = manualSampleIn();
 
@@ -189,7 +206,7 @@ public class Main {
 
             /*Tell ProfileComparison objects "comparisons" what data to use
 
-            NOTE: Not used
+            ****NOTE: Not used****
 
             for (ProfileComparison comparison : comparisons) {
                 comparison.setUseFreq(useFreq);
@@ -467,7 +484,7 @@ public class Main {
         if(useDescriptive){
             printToReport("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
         } else {
-            printToReport("\n\n**********************************************************************\n\nSample:\n" + sampleProfile.getName() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest).getName() + "\n\nThe sample matches the profile by " + percent.format(closestMatch.getPercentMatch()) + "%");
+            printToReport("\n\n**********************************************************************\n\nSample:\n" + sampleProfile.getName() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest).getName() + "\n\nThe sample matches the profile by " + percent.format(closestMatch.getPercentMatch()) + "%" + "\nMatch Validity: " + closestMatch.isValid());
         }
     }
 

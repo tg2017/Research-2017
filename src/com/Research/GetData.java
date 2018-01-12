@@ -6,6 +6,7 @@ import javax.swing.*;
  * Created by Taylor on 7/14/2017.
  */
 public class GetData {
+
     public static String getString(String message, String title){
         String output = JOptionPane.showInputDialog(null, message, title, JOptionPane.PLAIN_MESSAGE);
         return output;
@@ -36,19 +37,8 @@ public class GetData {
     }
 
     public static boolean getBoolean(String message, String title){
-        String outputStr = JOptionPane.showInputDialog(null, message, title, JOptionPane.PLAIN_MESSAGE);
-        while (!outputStr.equals("true") && !outputStr.equals("false")) {
-            switch (outputStr) {
-                case "true":
-                    return true;
-                case "false":
-                    return false;
-                default:
-                    outputStr = JOptionPane.showInputDialog(null, "ERROR. Input must be a boolean value (true or false).\n\n" + message, title, JOptionPane.PLAIN_MESSAGE);
-                    break;
-            }
-        }
-        return false;
+        int choice = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
+        return choice == 0;
     }
 }
 

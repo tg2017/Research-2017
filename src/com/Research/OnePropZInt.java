@@ -11,7 +11,7 @@ public class OnePropZInt {
     public double lowerBound; //The lower value in the confidence interval
     public double upperBound; //The upper value in the confidence interval
 
-    public OnePropZInt(double sampleSize, double numberCorrect) throws ParameterNotMetException{
+    public OnePropZInt(double sampleSize, double numberCorrect){
         n = sampleSize;
         p = (numberCorrect / n);
         q = 1 - p;
@@ -19,18 +19,20 @@ public class OnePropZInt {
     }
 
     //Calculate the One Proportional Z Interval
-    private void calc() throws ParameterNotMetException{
+    private void calc() {
         //Calculate values
         lowerBound = p - z * (Math.sqrt((p * q) / n));
         upperBound = p + z * (Math.sqrt((p * q) / n));
+    }
 
+    public void checkParameters()throws ParameterNotMetException{
         System.out.println("n: " + n + " * " + "p: " + p + " = " + n*p);
         System.out.println("n: " + n + " * " + "q: " + q + " = " + n*q);
 
         if(!(n * p >= 10)){ //Check for Parameter 1
-            //throw new ParameterNotMetException("n * p < 10");
+            throw new ParameterNotMetException("n * p < 10");
         } else if(!(n * q >= 10)) { //Check for Parameter 2
-            //throw new ParameterNotMetException("n * q < 10");
+            throw new ParameterNotMetException("n * q < 10");
         }
     }
 }

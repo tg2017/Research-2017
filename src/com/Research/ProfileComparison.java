@@ -19,6 +19,7 @@ public class ProfileComparison {
     private double shimmerDiff;
     private double sumOfDiffs = 0.0;
     private double percentMatch = -1;
+    private boolean valid;
     private static boolean useFreq = true, useJitter = true, useShimmer = true;
 
 
@@ -104,11 +105,13 @@ public class ProfileComparison {
     public double getSumOfDiffs(){
         return sumOfDiffs;
     }
-
+    //
     public double getPercentMatch(){
         return percentMatch;
     }
+    public boolean isValid(){ return valid; }
 
+    //Setter methods
     public static void setUseFreq(boolean useIt){
         useFreq = useIt;
     }
@@ -118,6 +121,9 @@ public class ProfileComparison {
     public static void setUseShimmer(boolean useIt){
         useShimmer = useIt;
     }
+    //
+    public void setValid(boolean isValid){ valid = isValid;}
+
 
     public String toString(){
 
@@ -159,6 +165,13 @@ public class ProfileComparison {
 
             output += "\nThe overall difference is: " + sumOfDiffs;
             output += "\nThe sample matches the profile by " + percent.format(percentMatch) + "%";
+
+            //Include info about validity
+            if(valid) {
+                output += "\nThe match is valid";
+            } else {
+                output += "\nThe match is not valid";
+            }
         }
 
         return output;

@@ -6,10 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/data.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/indices.txt" />
+    <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="Added txt files Data and Indices">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/data.txt" afterPath="$PROJECT_DIR$/data.txt" />
+      <change beforePath="$PROJECT_DIR$/filenames.txt" afterPath="$PROJECT_DIR$/filenames.txt" />
+      <change beforePath="$PROJECT_DIR$/src/com/Research/GetData.java" afterPath="$PROJECT_DIR$/src/com/Research/GetData.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/Research/OnePropZInt.java" afterPath="$PROJECT_DIR$/src/com/Research/OnePropZInt.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" afterPath="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,31 +31,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state relative-caret-position="7518">
+              <caret line="755" column="121" lean-forward="true" selection-start-line="755" selection-start-column="121" selection-end-line="755" selection-end-column="121" />
               <folding>
+                <element signature="e#182#203#0" expanded="false" />
+                <element signature="method#createGUI#0;class#Main#0" expanded="false" />
+                <element signature="method#main#0;class#Main#0" expanded="false" />
+                <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
+                <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+                <element signature="method#printOutput#0;class#Main#0" expanded="false" />
+                <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
+                <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
+                <element signature="method#printToReport#0;class#Main#0" expanded="false" />
                 <element signature="method#writeReport#0;class#Main#0" expanded="false" />
                 <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+                <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+                <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+                <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+                <element signature="e#26005#26006#0" expanded="true" />
+                <element signature="e#26037#26038#0" expanded="true" />
+                <element signature="e#27130#27131#0" expanded="true" />
+                <element signature="e#27166#27167#0" expanded="true" />
                 <element signature="method#reset#0;class#Main#0" expanded="false" />
+                <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
                 <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
                 <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
                 <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
                 <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
                 <element signature="method#changeData#0;class#Main#0" expanded="false" />
+                <element signature="docComment;field#filenameReader#0;class#Main#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnePropZInt.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/Research/OnePropZInt.java">
+      <file leaf-file-name="GetData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Research/GetData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="438">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <element signature="method#getString#0;class#GetData#0" expanded="false" />
+                <element signature="method#getInt#0;class#GetData#0" expanded="false" />
+                <element signature="method#getDouble#0;class#GetData#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,12 +175,27 @@
       <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="-319">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="method#Profile#0;class#Profile#0" expanded="false" />
                 <element signature="method#initialize#0;class#Profile#0" expanded="false" />
                 <element signature="method#toString#0;class#Profile#0" expanded="false" />
+                <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+                <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileComparison.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+              <folding>
+                <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
+                <element signature="method#ProfileComparison#1;class#ProfileComparison#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -192,6 +233,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="OnePropZInt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Research/OnePropZInt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -203,8 +254,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>percentm</find>
-      <find>percentmatch</find>
       <find>average</find>
       <find>menu</find>
       <find>advancedSettings</find>
@@ -233,6 +282,8 @@
       <find>textbox</find>
       <find>settings</find>
       <find>example</find>
+      <find>bell curve</find>
+      <find>bellcurve</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -250,14 +301,12 @@
         <option value="$PROJECT_DIR$/src/com/Research/CSVSplitter.java" />
         <option value="$PROJECT_DIR$/src/com/Research/DoubleConverter.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Comparison.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/GetData.java" />
         <option value="$PROJECT_DIR$/src/com/Research/GUITest.form" />
         <option value="$PROJECT_DIR$/src/com/Research/ProjectGUI.form" />
         <option value="$PROJECT_DIR$/src/ProjectGUI.form" />
         <option value="$PROJECT_DIR$/src/com/Research/WaitForGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/filenames.txt" />
         <option value="$PROJECT_DIR$/src/com/Research/CSVReader.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Profile.java" />
         <option value="$PROJECT_DIR$/src/com/Research/ParameterNotMetException.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Gaussian.java" />
@@ -269,9 +318,11 @@
         <option value="$PROJECT_DIR$/src/com/Research/MenuGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/DataVault.java" />
         <option value="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
         <option value="$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/GetData.java" />
         <option value="$PROJECT_DIR$/src/com/Research/OnePropZInt.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
       </list>
     </option>
   </component>
@@ -934,11 +985,19 @@
       <option name="project" value="LOCAL" />
       <updated>1515649153649</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added txt files Data and Indices">
+      <created>1515707979655</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1515707979655</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -948,12 +1007,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20110497" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09944751" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0839779" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0515625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09281768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1016,7 +1075,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="9/18/17, backup" />
     <MESSAGE value="Fixed up comments" />
     <MESSAGE value="Added DataVault to prevent resetting of checkboxes in settings. NOTE: there are still problems with the changing of data to be used, this is NOT a working model" />
     <MESSAGE value="Fixed usage of different data" />
@@ -1041,7 +1099,8 @@
     <MESSAGE value="Made indices file location selector work" />
     <MESSAGE value="Before attempted size changes to textbox" />
     <MESSAGE value="Changed size of Advanced Settings window; 1/10/18 backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed size of Advanced Settings window; 1/10/18 backup" />
+    <MESSAGE value="Added txt files Data and Indices" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added txt files Data and Indices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1088,14 +1147,32 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#182#203#0" expanded="false" />
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
+            <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
+            <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26005#26006#0" expanded="true" />
+            <element signature="e#26037#26038#0" expanded="true" />
+            <element signature="e#27130#27131#0" expanded="true" />
+            <element signature="e#27166#27167#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
+            <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
             <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeData#0;class#Main#0" expanded="false" />
+            <element signature="docComment;field#filenameReader#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1134,14 +1211,32 @@
         <state relative-caret-position="289">
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding>
+            <element signature="e#182#203#0" expanded="false" />
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
+            <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
+            <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26005#26006#0" expanded="true" />
+            <element signature="e#26037#26038#0" expanded="true" />
+            <element signature="e#27130#27131#0" expanded="true" />
+            <element signature="e#27166#27167#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
+            <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
             <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeData#0;class#Main#0" expanded="false" />
+            <element signature="docComment;field#filenameReader#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1180,14 +1275,32 @@
         <state relative-caret-position="153">
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
+            <element signature="e#182#203#0" expanded="false" />
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
+            <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
+            <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26005#26006#0" expanded="true" />
+            <element signature="e#26037#26038#0" expanded="true" />
+            <element signature="e#27130#27131#0" expanded="true" />
+            <element signature="e#27166#27167#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
+            <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
             <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeData#0;class#Main#0" expanded="false" />
+            <element signature="docComment;field#filenameReader#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1226,14 +1339,32 @@
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
+            <element signature="e#182#203#0" expanded="false" />
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
+            <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
+            <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26005#26006#0" expanded="true" />
+            <element signature="e#26037#26038#0" expanded="true" />
+            <element signature="e#27130#27131#0" expanded="true" />
+            <element signature="e#27166#27167#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
+            <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
             <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
             <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
             <element signature="method#changeData#0;class#Main#0" expanded="false" />
+            <element signature="docComment;field#filenameReader#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1266,13 +1397,6 @@
     <entry file="file://$PROJECT_DIR$/src/ProjectGUI.java" />
     <entry file="file://$PROJECT_DIR$/src/ProjectGUI.form" />
     <entry file="file://$PROJECT_DIR$/src/com/Research/WaitForGUI.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/Research/GetData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/FileReader.java" />
     <entry file="file://$PROJECT_DIR$/filenames.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1306,16 +1430,6 @@
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/ArrayList.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="74" column="38" lean-forward="false" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
-          <folding>
-            <element signature="method#toString#0;class#ProfileComparison#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/ProgressBarFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-755">
@@ -1506,18 +1620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
-            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
-            <element signature="method#toString#0;class#Profile#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -1531,28 +1633,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state relative-caret-position="-319">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
-            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
-            <element signature="method#reset#0;class#Main#0" expanded="false" />
-            <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
-            <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
-            <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
-            <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
-            <element signature="method#changeData#0;class#Main#0" expanded="false" />
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/GetData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="method#getString#0;class#GetData#0" expanded="false" />
+            <element signature="method#getInt#0;class#GetData#0" expanded="false" />
+            <element signature="method#getDouble#0;class#GetData#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/ProfileComparison.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding>
+            <element signature="method#ProfileComparison#0;class#ProfileComparison#0" expanded="false" />
+            <element signature="method#ProfileComparison#1;class#ProfileComparison#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/OnePropZInt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state relative-caret-position="316">
+          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7518">
+          <caret line="755" column="121" lean-forward="true" selection-start-line="755" selection-start-column="121" selection-end-line="755" selection-end-column="121" />
+          <folding>
+            <element signature="e#182#203#0" expanded="false" />
+            <element signature="method#createGUI#0;class#Main#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
+            <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
+            <element signature="method#printOutput#0;class#Main#0" expanded="false" />
+            <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
+            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
+            <element signature="method#writeReport#0;class#Main#0" expanded="false" />
+            <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
+            <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26005#26006#0" expanded="true" />
+            <element signature="e#26037#26038#0" expanded="true" />
+            <element signature="e#27130#27131#0" expanded="true" />
+            <element signature="e#27166#27167#0" expanded="true" />
+            <element signature="method#reset#0;class#Main#0" expanded="false" />
+            <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
+            <element signature="method#fetchFilenamesFromFile#0;class#Main#0" expanded="false" />
+            <element signature="method#changeFilenames#0;class#Main#0" expanded="false" />
+            <element signature="method#setMinPercentForMatch#0;class#Main#0" expanded="false" />
+            <element signature="method#fetchDataFromFile#0;class#Main#0" expanded="false" />
+            <element signature="method#changeData#0;class#Main#0" expanded="false" />
+            <element signature="docComment;field#filenameReader#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
