@@ -84,9 +84,9 @@ public class MenuGUI extends javax.swing.JFrame {
             }
         });
 
-        creatorInfoLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        creatorInfoLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         creatorInfoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        creatorInfoLabel.setText("Taylor Giles 2017");
+        creatorInfoLabel.setText("© Taylor Giles 2017");
 
         exitButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         exitButton.setText("Exit");

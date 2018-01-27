@@ -807,7 +807,7 @@ public class Main {
     private static boolean useShimmer = true;
 
     //Variables pertaining to the creation and use of GUI
-    private static  MenuGUI menu = new MenuGUI();
+    private static MenuGUI menu = new MenuGUI();
     private static boolean finished = false;
     private static boolean GUICreated = false;
     private static boolean startProgram = false;

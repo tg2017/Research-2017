@@ -141,6 +141,7 @@ public class ProfileComparison {
             } else if (isEqualIgnoreName) {
                 output = "The profiles are exactly the same, except for the name, which differs.";
             }
+
             //Otherwise...
         } else {
             //Determine name equality and represent as String
@@ -157,10 +158,10 @@ public class ProfileComparison {
                 output += "\nThe difference in average frequency is: " + avgFreqDiff + " Hz";
             }
             if(useJitter) {
-                output += "\nThe difference in jitter is: " + jitterDiff;
+                output += "\nThe difference in jitter is: " + percent.format(jitterDiff);
             }
             if(useShimmer) {
-                output += "\nThe difference in shimmer is: " + shimmerDiff;
+                output += "\nThe difference in shimmer is: " + percent.format(shimmerDiff);
             }
 
             output += "\nThe overall difference is: " + sumOfDiffs;
