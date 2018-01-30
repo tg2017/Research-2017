@@ -47,6 +47,7 @@ public class BellCurveGUI extends javax.swing.JFrame {
         cancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         minXBox.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         minXBox.addActionListener(new java.awt.event.ActionListener() {

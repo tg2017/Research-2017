@@ -7,12 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/filenames.txt" afterPath="$PROJECT_DIR$/filenames.txt" />
       <change beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
       <change beforePath="$PROJECT_DIR$/src/com/Research/BellCurve.java" afterPath="$PROJECT_DIR$/src/com/Research/BellCurve.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/Research/StdDraw.java" afterPath="$PROJECT_DIR$/src/com/Research/StdDraw.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" afterPath="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="214">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#182#203#0" expanded="false" />
@@ -72,26 +71,25 @@
       <file leaf-file-name="BellCurveGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurveGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="265" column="0" lean-forward="true" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+            <state relative-caret-position="147">
+              <caret line="232" column="0" lean-forward="true" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
               <folding>
                 <element signature="e#648#678#0" expanded="true" />
-                <element signature="e#683#746#0" expanded="true" />
                 <element signature="method#initComponents#0;class#BellCurveGUI#0" expanded="false" />
-                <element signature="e#1785#1786#0" expanded="true" />
-                <element signature="e#1844#1845#0" expanded="true" />
-                <element signature="e#2074#2075#0" expanded="true" />
-                <element signature="e#2133#2134#0" expanded="true" />
-                <element signature="e#2363#2364#0" expanded="true" />
-                <element signature="e#2422#2423#0" expanded="true" />
-                <element signature="e#2652#2653#0" expanded="true" />
-                <element signature="e#2711#2712#0" expanded="true" />
-                <element signature="e#9144#9145#0" expanded="true" />
-                <element signature="e#9215#9216#0" expanded="true" />
-                <element signature="e#11087#11088#0" expanded="true" />
-                <element signature="e#11149#11150#0" expanded="true" />
-                <element signature="e#11353#11354#0" expanded="true" />
-                <element signature="e#11417#11418#0" expanded="true" />
+                <element signature="e#1814#1815#0" expanded="true" />
+                <element signature="e#1873#1874#0" expanded="true" />
+                <element signature="e#2103#2104#0" expanded="true" />
+                <element signature="e#2162#2163#0" expanded="true" />
+                <element signature="e#2392#2393#0" expanded="true" />
+                <element signature="e#2451#2452#0" expanded="true" />
+                <element signature="e#2681#2682#0" expanded="true" />
+                <element signature="e#2740#2741#0" expanded="true" />
+                <element signature="e#9173#9174#0" expanded="true" />
+                <element signature="e#9244#9245#0" expanded="true" />
+                <element signature="e#11116#11117#0" expanded="true" />
+                <element signature="e#11178#11179#0" expanded="true" />
+                <element signature="e#11382#11383#0" expanded="true" />
+                <element signature="e#11446#11447#0" expanded="true" />
                 <element signature="method#minXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
                 <element signature="method#minYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
                 <element signature="method#maxXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
@@ -104,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BellCurve.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BellCurve.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="336">
+              <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -319,17 +317,17 @@
         <option value="$PROJECT_DIR$/src/com/Research/OnePropZInt.java" />
         <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
         <option value="$PROJECT_DIR$/src/com/Research/MenuGUI.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/StdDraw.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/BellCurve.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/BellCurve.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="633" />
-    <option name="y" value="283" />
-    <option name="width" value="1932" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -631,13 +629,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497191406027</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Made to ArrayList">
-      <created>1497838182355</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1497838182355</updated>
     </task>
     <task id="LOCAL-00003" summary="DataProcessor removeBlanks method works">
       <created>1497987455188</created>
@@ -975,7 +966,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517088534643</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Overhauled Bell Curve (added GUI, words in corner, made it actually work, etc.) and added confirmation message for writing data to file">
+      <created>1517275892352</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1517275892352</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -990,7 +988,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11712707" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3082873" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0839779" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1058,7 +1056,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added error message for failure to find file" />
     <MESSAGE value="Added GUIs to Git, because I was unaware that they had not been added in the past" />
     <MESSAGE value="Backup 9/25/17" />
     <MESSAGE value="Changed Settings GUI, added options for report type and viewing files" />
@@ -1083,7 +1080,8 @@
     <MESSAGE value="Made minPercentMatch work, added question for Bell Curve" />
     <MESSAGE value="Moved some variables around and did other things to satisfy a few warnings" />
     <MESSAGE value="Added copyright symbol in menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added copyright symbol in menu" />
+    <MESSAGE value="Overhauled Bell Curve (added GUI, words in corner, made it actually work, etc.) and added confirmation message for writing data to file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Overhauled Bell Curve (added GUI, words in corner, made it actually work, etc.) and added confirmation message for writing data to file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1578,39 +1576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurveGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="265" column="0" lean-forward="true" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
-          <folding>
-            <element signature="e#648#678#0" expanded="true" />
-            <element signature="e#683#746#0" expanded="true" />
-            <element signature="method#initComponents#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="e#1785#1786#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
-            <element signature="e#2363#2364#0" expanded="true" />
-            <element signature="e#2422#2423#0" expanded="true" />
-            <element signature="e#2652#2653#0" expanded="true" />
-            <element signature="e#2711#2712#0" expanded="true" />
-            <element signature="e#9144#9145#0" expanded="true" />
-            <element signature="e#9215#9216#0" expanded="true" />
-            <element signature="e#11087#11088#0" expanded="true" />
-            <element signature="e#11149#11150#0" expanded="true" />
-            <element signature="e#11353#11354#0" expanded="true" />
-            <element signature="e#11417#11418#0" expanded="true" />
-            <element signature="method#minXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#minYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#maxXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#maxYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#standardDevCheckboxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#cancelButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#doneButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/StdDraw.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="695">
@@ -1621,20 +1586,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="214">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#182#203#0" expanded="false" />
@@ -1664,6 +1619,48 @@
             <element signature="method#changeData#0;class#Main#0" expanded="false" />
             <element signature="method#makeBellCurve#0;class#Main#0" expanded="false" />
             <element signature="docComment;field#filenameReader#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurveGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="232" column="0" lean-forward="true" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding>
+            <element signature="e#648#678#0" expanded="true" />
+            <element signature="method#initComponents#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
+            <element signature="e#2103#2104#0" expanded="true" />
+            <element signature="e#2162#2163#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2451#2452#0" expanded="true" />
+            <element signature="e#2681#2682#0" expanded="true" />
+            <element signature="e#2740#2741#0" expanded="true" />
+            <element signature="e#9173#9174#0" expanded="true" />
+            <element signature="e#9244#9245#0" expanded="true" />
+            <element signature="e#11116#11117#0" expanded="true" />
+            <element signature="e#11178#11179#0" expanded="true" />
+            <element signature="e#11382#11383#0" expanded="true" />
+            <element signature="e#11446#11447#0" expanded="true" />
+            <element signature="method#minXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#minYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#maxXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#maxYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#standardDevCheckboxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#cancelButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#doneButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

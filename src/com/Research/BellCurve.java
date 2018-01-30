@@ -25,6 +25,16 @@ public class BellCurve {
 
     public static void plot(int xScaleMin, int xScaleMax, double yScaleMin, double yScaleMax, boolean drawLines, double mu, double sigma) {
 
+        //Draw Bell Curve
+        StdDraw.setPenColor(StdDraw.RED);
+        StdDraw.setPenRadius(StdDraw.getPenRadius() + .005);
+        for (double x = xScaleMin; x <= xScaleMax; x += 0.01) {
+            StdDraw.point(x, Gaussian.pdf(x, mu, sigma));
+        }
+
+
+        //Reset pen
+        StdDraw.setPenRadius(StdDraw.getPenRadius() - .005);
         StdDraw.setPenColor(StdDraw.BLACK);
 
         //Plot scale lines
@@ -34,10 +44,6 @@ public class BellCurve {
                     StdDraw.point(scaleCount, y);
                 }
             }
-        }
-
-        for (double x = xScaleMin; x <= xScaleMax; x += 0.01) {
-            StdDraw.point(x, Gaussian.pdf(x, mu, sigma));
         }
 
         //Plot Standard Deviation lines
@@ -58,10 +64,10 @@ public class BellCurve {
         StdDraw.setFont(new Font("Times New Roman", Font.PLAIN, 14));
         number.setMaximumFractionDigits(2);
         StdDraw.setPenColor(StdDraw.BLACK);
-        StdDraw.textLeft((xScaleMin + 1), (yScaleMax - yScaleMax * .04), "X_AXIS_SCALE: " + " Min: " + xScaleMin + "  Max: " + xScaleMax);
-        StdDraw.textLeft((xScaleMin + 1), (yScaleMax - yScaleMax * .08), "Y_AXIS_SCALE: " + " Min: " + yScaleMin + "  Max: " + yScaleMax);
-        StdDraw.textLeft((xScaleMin + 1), (yScaleMax - yScaleMax * .12), "MEAN: " + number.format(mu));
-        StdDraw.textLeft((xScaleMin + 1), (yScaleMax - yScaleMax * .16), "STANDARD DEVIATION: " + number.format(sigma));
+        StdDraw.textLeft((xScaleMin + (xScaleMax - xScaleMin) * .02), (yScaleMax - yScaleMax * .04), "X_AXIS_SCALE: " + " Min: " + xScaleMin + "  Max: " + xScaleMax);
+        StdDraw.textLeft((xScaleMin + (xScaleMax - xScaleMin) * .02), (yScaleMax - yScaleMax * .08), "Y_AXIS_SCALE: " + " Min: " + yScaleMin + "  Max: " + yScaleMax);
+        StdDraw.textLeft((xScaleMin + (xScaleMax - xScaleMin) * .02), (yScaleMax - yScaleMax * .12), "MEAN: " + number.format(mu));
+        StdDraw.textLeft((xScaleMin + (xScaleMax - xScaleMin) * .02), (yScaleMax - yScaleMax * .16), "STANDARD DEVIATION: " + number.format(sigma));
     }
 
     /*public static void main(String[] args) {
