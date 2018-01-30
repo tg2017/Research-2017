@@ -205,7 +205,6 @@ public class Main {
                 double sumOfXPlusMean2 = 0; //This is the value that goes in the numerator in the Standard Deviation equation, sigma(x - mean)^2
                 for(int sumCount = 0; sumCount < totalPercents; sumCount++){
                     sumOfXPlusMean2 += Math.pow((Math.abs(percentMatches.get(sumCount) - average)), 2);
-                    System.out.println(percentMatches.get(sumCount));
                 }
                 standardDeviation = Math.sqrt(sumOfXPlusMean2 / (totalPercents - 1));
 
@@ -726,8 +725,6 @@ public class Main {
         }
 
     }
-
-
 
     //Makes a Bell Curve based on data
     public static void makeBellCurve(){
