@@ -20,6 +20,63 @@ public class Main {
         GUICreated = true;
     }
 
+    //Main method
+    public static void main(String[] args) {
+
+        /* Set the Windows look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Windows is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        //Initialize thisDirectory, filenamesFilename and dataFilename
+        thisDirectory = System.getProperty("user.dir");
+        filenamesFilename = thisDirectory + "\\filenames.txt";
+        dataFilename = thisDirectory + "\\data.txt";
+
+        //Get the filenames and tell SettingsGUI
+        fetchFilenamesFromFile();
+
+        //Get data and tell SettingsGUI
+        fetchDataFromFile();
+
+        //Initially create SettingsGUI, to make Main class aware of data present
+        SettingsGUI settings = new SettingsGUI();
+        settings.setVisible(false);
+
+        //Tell SettingsGUI about filename data
+        SettingsGUI.setFilenames(getProfileFilename(), getIndexFilename(), getSampleFilename(), getReportFilename());
+
+        //Reset checkboxes to default values - essentially, make settings forget this ever happened
+        SettingsGUI.setAlreadyUsed(false);
+
+        //Get rid of settings GUI window
+        settings.dispose();
+
+        //Create the GUI
+        createGUI();
+
+        System.out.println("Main Method - GUI created");
+
+    }
+
     //VERY IMPORTANT METHOD: OPERATES AS THE ENGINE OF THE PROGRAM - BASICALLY THE "MAIN" METHOD
     //Note: This code is NOT in the Main method because it needs to be called DIRECTLY from the GUI, to avoid Main method running without GUI input
     public static void runTheProgram(){
@@ -72,6 +129,7 @@ public class Main {
         useAuto = SettingsGUI.checkUseAuto();
         if (useAuto) { //If user chooses to enter data automatically, do so...
             autoSampleIn();
+            willWrite = GetData.getBoolean("Write report to report file?", "Report");
             for (Profile currentSample : samples) {
 
                 //Reset List values
@@ -99,6 +157,7 @@ public class Main {
 
                     //Update values for calculation of average and standard deviation
                     sumOfPercents += closestMatch.getPercentMatch();
+                    totalPercents++;
                     percentMatches.add(closestMatch.getPercentMatch());
                     closestMatch.setValid(true);
 
@@ -108,7 +167,7 @@ public class Main {
                     //Update values for calculation of average and standard deviation
                     //Only zeroes because the match was invalid
                     sumOfPercents += 0;
-                    percentMatches.add(0.0);
+                    totalPercents += 0;
                     closestMatch.setValid(false);
 
                 }
@@ -117,9 +176,8 @@ public class Main {
                 System.out.println("\n\n**********************************************************************\n\nSample Data:\n" + sampleProfile.toString() + "\n\nClosest Match:\n" + profiles.get(indexOfLowest) + "\n\nClosest Match Summary: \n" + closestMatch.toString());
 
                 //Print data to report
-                writeReport();
-
-
+                if(willWrite)
+                    writeReport();
             }
             //Determine percentage of times the program was correct and print data to report file
             if ((timesCorrect + timesIncorrect) != samples.size()) {
@@ -141,60 +199,58 @@ public class Main {
                     opziUpperBound = opzi.upperBound * 100;
                 }
 
-                average = sumOfPercents / samples.size();
+                average = sumOfPercents / totalPercents;
 
-                //Sum up the value for the numerator in the
+                //Sum up the value for the numerator in the standard deviation equation
                 double sumOfXPlusMean2 = 0; //This is the value that goes in the numerator in the Standard Deviation equation, sigma(x - mean)^2
-                for(int sumCount = 0; sumCount < samples.size(); sumCount++){
+                for(int sumCount = 0; sumCount < totalPercents; sumCount++){
                     sumOfXPlusMean2 += Math.pow((Math.abs(percentMatches.get(sumCount) - average)), 2);
+                    System.out.println(percentMatches.get(sumCount));
                 }
-                standardDeviation = Math.sqrt(sumOfXPlusMean2 / (samples.size() - 1));
+                standardDeviation = Math.sqrt(sumOfXPlusMean2 / (totalPercents - 1));
 
                 //Print out (some of) the calculations
                 System.out.println("\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples.");
                 System.out.println("The program was correct " + percentCorrect + "% of the time.");
 
                 //Write footer data to report file
-                String tempOutput = "";
+                String footerOutput = "";
                 NumberFormat percent = NumberFormat.getNumberInstance();
                 percent.setMaximumFractionDigits(2);
 
-                tempOutput += "\n\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples, \nusing ";
+                footerOutput += "\n\n**********************************************************************\n\nThe program correctly identified " + (int) timesCorrect + " out of " + samples.size() + " samples, \nusing ";
                 if(useFreq) {
-                    tempOutput += "frequency ";
+                    footerOutput += "frequency ";
                 }
                 if(useFreq && useJitter || useFreq && useShimmer){
-                    tempOutput += "& ";
+                    footerOutput += "& ";
                 }
                 if(useJitter){
-                    tempOutput += "jitter ";
+                    footerOutput += "jitter ";
                 }
                 if(useJitter && useShimmer){
-                    tempOutput += "& ";
+                    footerOutput += "& ";
                 }
                 if(useShimmer){
-                    tempOutput += "shimmer ";
+                    footerOutput += "shimmer ";
                 }
-                tempOutput += "data.";
-                tempOutput += "\nThe program was correct " + percent.format(percentCorrect) + "% of the time.";
-                tempOutput += "\nIt is 95% confident that the program will be correct within " + percent.format(opziLowerBound) + "% and " + percent.format(opziUpperBound) + "% of the time.\n\n**********************************************************************";
+                footerOutput += "data.";
+                footerOutput += "\nThe program was correct " + percent.format(percentCorrect) + "% of the time.";
+                footerOutput += "\nIt is 95% confident that the program will be correct within " + percent.format(opziLowerBound) + "% and " + percent.format(opziUpperBound) + "% of the time.\n\n**********************************************************************";
 
-                printToReport(tempOutput);
+                printToReport(footerOutput);
 
                 //Make Bell Curve (if the user wants to)
                 boolean makeCurve = GetData.getBoolean("Would you like to make a bell curve reflecting your data?", "Bell Curve");
                 if(makeCurve) {
-                    StdDraw.setCanvasSize(600, 400);
-                    StdDraw.setXscale(0, 100);
-                    StdDraw.setYscale(0, .5);
+                    //Create Bell Curve GUI
+                    bellCurveGUI.setVisible(true);
 
-                    BellCurve.plot(0, 100, 0, .5, average, standardDeviation);
-                    System.out.println(average + " , " + standardDeviation);
-                    //makeBellCurve(600, 400, 0, 100, 0, .5, average, standardDeviation);
+                    //NOTE: If user chooses to make the bell curve, the "finish()" method is called by the "makeBellCurve()" method
+                } else {
+                    finish();
                 }
             }
-
-
         } else { //...Otherwise, get and handle data manually
 
             //Get data for sample from user and store it in a profile
@@ -231,74 +287,11 @@ public class Main {
             System.out.println("\nClosest match summary: " + closestMatch.toString());
 
             //Print data to report
-            writeReport();
+            if(GetData.getBoolean("Write report to report file?", "Report"))
+                writeReport();
+
+            finish();
         }
-
-        //Increment counter to avoid duplication of data in next iteration of "engine" loop
-        timesRun++;
-
-        //Create new GUI to start again
-        createGUI();
-
-        //Restart "Successfully written" message counter
-        timesWrittenMessage = 0;
-    }
-
-    //Main method
-    public static void main(String[] args) {
-
-        /* Set the Windows look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SettingsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        //Initialize thisDirectory, filenamesFilename and dataFilename
-        thisDirectory = System.getProperty("user.dir");
-        filenamesFilename = thisDirectory + "\\filenames.txt";
-        dataFilename = thisDirectory + "\\data.txt";
-
-        //Get the filenames and tell SettingsGUI
-        fetchFilenamesFromFile();
-
-        //Get data and tell SettingsGUI
-        fetchDataFromFile();
-
-        //Initially create SettingsGUI, to make Main class aware of data present
-        SettingsGUI settings = new SettingsGUI();
-        settings.setVisible(false);
-
-        //Tell SettingsGUI about filename data
-        SettingsGUI.setFilenames(getProfileFilename(), getIndexFilename(), getSampleFilename(), getReportFilename());
-
-        //Reset checkboxes to default values - essentially, make settings forget this ever happened
-        SettingsGUI.setAlreadyUsed(false);
-
-        //Get rid of settings GUI window
-        settings.dispose();
-
-        //Create the GUI
-        createGUI();
-
-        System.out.println("Main Method - GUI created");
-
     }
 
     //Reads in data from csv file and stores them in Lists
@@ -450,7 +443,7 @@ public class Main {
     //Print **any** data to report file
     private static void printToReport(String output){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(reportFilename, true))) {
-              //Replace '\n' escape sequence with '\r\n', which writes to a new line IN FILE
+            //Replace '\n' escape sequence with '\r\n', which writes to a new line IN FILE
             reportOutput = output.replaceAll("\n", "\r\n");
 
             //Write data to file
@@ -581,7 +574,7 @@ public class Main {
     //Set start parameter (used by GUI)
     public static void setStart(boolean start){ startProgram = start; }
 
-    //Set if program is finished (used by GUI) (NOTE: This is just a precaution, the GUI calls the System.exit method itself)
+    //Set if program is finished (used by GUI) (NOTE: This is just a precaution, the Menu GUI calls the System.exit method itself)
     public static void setFinished(boolean done){ finished = done; }
 
     //Sets value that determines whether the GUI has already been created or not
@@ -609,6 +602,18 @@ public class Main {
         String sampleJitterStr = null;
         String sampleShimmerStr = null;
         Profile sampleProfile = null;*/
+    }
+
+    //Finish each iteration of "engine loop"
+    private static void finish(){
+        //Increment counter to avoid duplication of data in next iteration of "engine" loop
+        timesRun++;
+
+        //Create new GUI to start again
+        createGUI();
+
+        //Restart "Successfully written" message counter
+        timesWrittenMessage = 0;
     }
 
     //Methods that manage filenames
@@ -725,7 +730,17 @@ public class Main {
 
 
     //Makes a Bell Curve based on data
-    //UNUSED private static void makeBellCurve(int canvasWidth, int canvasHeight, int xScaleMin, int xScaleMax, int yScaleMin, double yScaleMax, double mu, double sigma){ }
+    public static void makeBellCurve(){
+        if(!bellCurveGUI.isCancelled()) {
+            StdDraw.setCanvasSize(600, 400);
+            StdDraw.setXscale(bellCurveGUI.getMinX(), bellCurveGUI.getMaxX());
+            StdDraw.setYscale(bellCurveGUI.getMinY(), bellCurveGUI.getMaxY());
+
+            BellCurve.plot(bellCurveGUI.getMinX(), bellCurveGUI.getMaxX(), bellCurveGUI.getMinY(), bellCurveGUI.getMaxY(), bellCurveGUI.isDrawSDLines(), average, standardDeviation);
+            System.out.println(average + " , " + standardDeviation);
+        }
+        finish();
+    }
 
 
 
@@ -751,8 +766,8 @@ public class Main {
 
     private static String filenamesFilename;//File location of txt file that contains the filenames of other files
     private static String dataFilename;//File location of txt file that contains various data, such as minPercentForMatch
-        /***NOTE: The files to which these variable relate MUST be stored in the same folder as the rest of the project,
-        otherwise the program will have issues. See initialization in Main method (uses thisDirectory (above))*/
+    /***NOTE: The files to which these variable relate MUST be stored in the same folder as the rest of the project,
+     otherwise the program will have issues. See initialization in Main method (uses thisDirectory (above))*/
 
     private static CSVReader filenameReader; //Reads in the filenames for other Readers
     private static CSVReader dataReader; //Reads in the data from data.txt
@@ -784,6 +799,7 @@ public class Main {
     private static String reportFilename;
     private static String reportOutput;
     private static boolean useDescriptive;
+    private static boolean willWrite;
 
     //Objects pertaining to the use of automatic data entry
     private static String samplesFilename;
@@ -800,6 +816,8 @@ public class Main {
     private static double average = 0;
     private static double standardDeviation = -1;
     private static ArrayList<Double> percentMatches = new ArrayList<>();
+    private static double totalPercents = 0;
+    private static BellCurveGUI bellCurveGUI = new BellCurveGUI();
 
     //Variables pertaining to the use of different points of data
     private static boolean useFreq = true;
@@ -815,7 +833,4 @@ public class Main {
     //Variables pertaining to the maintenance of the "engine" loop
     private static int timesRun = 0;
     private static int timesWrittenMessage = 0;
-
-
-
 }
