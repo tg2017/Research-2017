@@ -6,11 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="">
+    <list default="true" id="4851a021-415b-4156-a0cb-84e4b0f15504" name="Default" comment="Removed a line of testing code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/filenames.txt" afterPath="$PROJECT_DIR$/filenames.txt" />
       <change beforePath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" afterPath="$PROJECT_DIR$/out/production/Research project/com/Research/Main.class" />
       <change beforePath="$PROJECT_DIR$/src/com/Research/BellCurve.java" afterPath="$PROJECT_DIR$/src/com/Research/BellCurve.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" afterPath="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" />
       <change beforePath="$PROJECT_DIR$/src/com/Research/Main.java" afterPath="$PROJECT_DIR$/src/com/Research/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" afterPath="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,27 +31,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+            <state relative-caret-position="332">
+              <caret line="239" column="0" lean-forward="true" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#182#203#0" expanded="false" />
                 <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-                <element signature="method#main#0;class#Main#0" expanded="false" />
                 <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
                 <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
                 <element signature="method#printOutput#0;class#Main#0" expanded="false" />
                 <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
                 <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
-                <element signature="method#printToReport#0;class#Main#0" expanded="false" />
                 <element signature="method#writeReport#0;class#Main#0" expanded="false" />
                 <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
                 <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
                 <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
                 <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+                <element signature="e#26171#26172#0" expanded="true" />
+                <element signature="e#26203#26204#0" expanded="true" />
+                <element signature="e#27301#27302#0" expanded="true" />
+                <element signature="e#27337#27338#0" expanded="true" />
                 <element signature="method#reset#0;class#Main#0" expanded="false" />
                 <element signature="method#finish#0;class#Main#0" expanded="false" />
                 <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
@@ -67,32 +72,42 @@
       <file leaf-file-name="BellCurveGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurveGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="232" column="0" lean-forward="true" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+            <state relative-caret-position="275">
+              <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
               <folding>
-                <element signature="e#648#678#0" expanded="true" />
-                <element signature="method#initComponents#0;class#BellCurveGUI#0" expanded="false" />
-                <element signature="e#1814#1815#0" expanded="true" />
-                <element signature="e#1873#1874#0" expanded="true" />
-                <element signature="e#2103#2104#0" expanded="true" />
-                <element signature="e#2162#2163#0" expanded="true" />
-                <element signature="e#2392#2393#0" expanded="true" />
-                <element signature="e#2451#2452#0" expanded="true" />
-                <element signature="e#2681#2682#0" expanded="true" />
-                <element signature="e#2740#2741#0" expanded="true" />
-                <element signature="e#9173#9174#0" expanded="true" />
-                <element signature="e#9244#9245#0" expanded="true" />
-                <element signature="e#11116#11117#0" expanded="true" />
-                <element signature="e#11178#11179#0" expanded="true" />
-                <element signature="e#11382#11383#0" expanded="true" />
-                <element signature="e#11446#11447#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1859#1860#0" expanded="true" />
+                <element signature="e#1918#1919#0" expanded="true" />
+                <element signature="e#2148#2149#0" expanded="true" />
+                <element signature="e#2207#2208#0" expanded="true" />
+                <element signature="e#2437#2438#0" expanded="true" />
+                <element signature="e#2496#2497#0" expanded="true" />
+                <element signature="e#2726#2727#0" expanded="true" />
+                <element signature="e#2785#2786#0" expanded="true" />
+                <element signature="e#9218#9219#0" expanded="true" />
+                <element signature="e#9289#9290#0" expanded="true" />
+                <element signature="e#11095#11096#0" expanded="true" />
+                <element signature="e#11157#11158#0" expanded="true" />
+                <element signature="e#11361#11362#0" expanded="true" />
+                <element signature="e#11425#11426#0" expanded="true" />
                 <element signature="method#minXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
                 <element signature="method#minYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
                 <element signature="method#maxXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
                 <element signature="method#maxYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
                 <element signature="method#standardDevCheckboxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
                 <element signature="method#cancelButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-                <element signature="method#doneButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+                <element signature="e#16937#16938#0" expanded="true" />
+                <element signature="e#16964#16965#0" expanded="true" />
+                <element signature="e#16995#16996#0" expanded="true" />
+                <element signature="e#17022#17023#0" expanded="true" />
+                <element signature="e#17050#17051#0" expanded="true" />
+                <element signature="e#17077#17078#0" expanded="true" />
+                <element signature="e#17108#17109#0" expanded="true" />
+                <element signature="e#17135#17136#0" expanded="true" />
+                <element signature="e#17171#17172#0" expanded="true" />
+                <element signature="e#17203#17204#0" expanded="true" />
+                <element signature="e#17241#17242#0" expanded="true" />
+                <element signature="e#17275#17276#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,22 +116,10 @@
       <file leaf-file-name="BellCurve.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+            <state relative-caret-position="177">
+              <caret line="26" column="94" lean-forward="false" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StdDraw.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Research/StdDraw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="677" column="5" lean-forward="true" selection-start-line="677" selection-start-column="5" selection-end-line="677" selection-end-column="5" />
-              <folding>
-                <element signature="method#filledRectangle#0;class#StdDraw#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -155,11 +158,12 @@
       <file leaf-file-name="MenuGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="157" column="29" lean-forward="true" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
+            <state relative-caret-position="504">
+              <caret line="153" column="76" lean-forward="false" selection-start-line="153" selection-start-column="76" selection-end-line="153" selection-end-column="76" />
               <folding>
                 <element signature="e#668#731#0" expanded="true" />
                 <element signature="method#initComponents#0;class#MenuGUI#0" expanded="false" />
+                <element signature="method#startButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
                 <element signature="method#learnMoreButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
                 <element signature="method#settingsButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
                 <element signature="docComment;method#main#0;class#MenuGUI#0" expanded="false" />
@@ -172,17 +176,18 @@
       <file leaf-file-name="AdvSettingsGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="267" column="13" lean-forward="true" selection-start-line="267" selection-start-column="13" selection-end-line="267" selection-end-column="13" />
+            <state relative-caret-position="480">
+              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="80" />
               <folding>
                 <element signature="e#0#18284#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#AdvSettingsGUI#0;class#AdvSettingsGUI#0" expanded="false" />
+                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#473#474#0" expanded="true" />
                 <element signature="docComment;method#initComponents#0;class#AdvSettingsGUI#0" expanded="false" />
-                <element signature="e#729#792#0" expanded="true" />
-                <element signature="method#initComponents#0;class#AdvSettingsGUI#0" expanded="false" />
                 <element signature="method#advBackButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
                 <element signature="method#indexChangeButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
+                <element signature="method#percentMatchBoxActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
                 <element signature="docComment;method#main#0;class#AdvSettingsGUI#0" expanded="false" />
                 <element signature="method#main#0;class#AdvSettingsGUI#0" expanded="false" />
               </folding>
@@ -190,28 +195,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SettingsGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="488" column="17" lean-forward="false" selection-start-line="488" selection-start-column="16" selection-end-line="488" selection-end-column="17" />
+            <state relative-caret-position="380">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
-                <element signature="e#0#34607#0" expanded="true" />
+                <element signature="e#0#34526#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#584#585#0" expanded="true" />
                 <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#872#935#0" expanded="true" />
-                <element signature="method#initComponents#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+                <element signature="method#profileChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#sampleChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
-                <element signature="e#28759#28801#0" expanded="false" />
+                <element signature="e#28911#28953#0" expanded="false" />
                 <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
                 <element signature="method#main#0;class#SettingsGUI#0" expanded="false" />
@@ -223,8 +227,8 @@
       <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="63">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="method#Profile#0;class#Profile#0" expanded="false" />
                 <element signature="method#initialize#0;class#Profile#0" expanded="false" />
@@ -247,13 +251,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>main</find>
-      <find>back</find>
-      <find>preferred</find>
-      <find>preferredSize</find>
-      <find>filename</find>
-      <find>change</find>
-      <find>fetch</find>
       <find>filenameReader</find>
       <find>error</find>
       <find>data.txt</find>
@@ -268,7 +265,6 @@
       <find>example</find>
       <find>bell curve</find>
       <find>bellcurve</find>
-      <find>textbox</find>
       <find>projecttitle</find>
       <find>voice id</find>
       <find>numberfor</find>
@@ -277,6 +273,14 @@
       <find>bell</find>
       <find>finished</find>
       <find>gui</find>
+      <find>textbox</find>
+      <find>printToReport</find>
+      <find>toReport</find>
+      <find>The program correctly identified</find>
+      <find>frame</find>
+      <find>size</find>
+      <find>title</find>
+      <find>scroll</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -307,28 +311,28 @@
         <option value="$PROJECT_DIR$/src/com/Research/ProgressBarFrame.java" />
         <option value="$PROJECT_DIR$/src/com/Research/StdOut.java" />
         <option value="$PROJECT_DIR$/src/com/Research/DataVault.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/GetData.java" />
         <option value="$PROJECT_DIR$/src/com/Research/OnePropZInt.java" />
         <option value="$PROJECT_DIR$/src/com/Research/ProfileComparison.java" />
         <option value="$PROJECT_DIR$/src/com/Research/MenuGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/StdDraw.java" />
-        <option value="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" />
         <option value="$PROJECT_DIR$/src/com/Research/BellCurve.java" />
         <option value="$PROJECT_DIR$/src/com/Research/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/BellCurveGUI.java" />
+        <option value="$PROJECT_DIR$/src/com/Research/SettingsGUI.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="-141" />
+    <option name="y" value="-16" />
     <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -341,11 +345,38 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Research-2017" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Research-2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Research-2017" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Research-2017" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Research-2017" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Research-2017" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Research" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../BellCurveTest" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Taylor/Desktop/All Files/School/Science Research/2017 Project program/src/com/Research/SettingsGUI.java" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="ToolWindow" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
@@ -625,13 +656,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497191406027</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Started Profile class, converted &quot;for&quot; loops to &quot;foreach&quot; loops">
-      <created>1498089274943</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1498089274943</updated>
     </task>
     <task id="LOCAL-00005" summary="Added comments">
       <created>1498100402085</created>
@@ -969,7 +993,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517279244441</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Removed a line of testing code">
+      <created>1517279466672</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1517279466672</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -984,12 +1015,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3082873" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05268935" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0839779" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.092708334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1052,7 +1083,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Backup 9/25/17" />
     <MESSAGE value="Changed Settings GUI, added options for report type and viewing files" />
     <MESSAGE value="Backup 10/1/17" />
     <MESSAGE value="Added percent match" />
@@ -1077,7 +1107,8 @@
     <MESSAGE value="Added copyright symbol in menu" />
     <MESSAGE value="Overhauled Bell Curve (added GUI, words in corner, made it actually work, etc.) and added confirmation message for writing data to file" />
     <MESSAGE value="Aesthetic fixes to bell curve" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aesthetic fixes to bell curve" />
+    <MESSAGE value="Removed a line of testing code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed a line of testing code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1122,18 +1153,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#182#203#0" expanded="false" />
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
-            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
             <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26171#26172#0" expanded="true" />
+            <element signature="e#26203#26204#0" expanded="true" />
+            <element signature="e#27301#27302#0" expanded="true" />
+            <element signature="e#27337#27338#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#finish#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
@@ -1187,18 +1220,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#182#203#0" expanded="false" />
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
-            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
             <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26171#26172#0" expanded="true" />
+            <element signature="e#26203#26204#0" expanded="true" />
+            <element signature="e#27301#27302#0" expanded="true" />
+            <element signature="e#27337#27338#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#finish#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
@@ -1252,18 +1287,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#182#203#0" expanded="false" />
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
-            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
             <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26171#26172#0" expanded="true" />
+            <element signature="e#26203#26204#0" expanded="true" />
+            <element signature="e#27301#27302#0" expanded="true" />
+            <element signature="e#27337#27338#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#finish#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
@@ -1317,18 +1354,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#182#203#0" expanded="false" />
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
-            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
             <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26171#26172#0" expanded="true" />
+            <element signature="e#26203#26204#0" expanded="true" />
+            <element signature="e#27301#27302#0" expanded="true" />
+            <element signature="e#27337#27338#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#finish#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
@@ -1458,20 +1497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
-            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
-            <element signature="method#toString#0;class#Profile#0" expanded="false" />
-            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
-            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/DataProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1498,13 +1523,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/StdDraw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13881">
+          <caret line="677" column="5" lean-forward="false" selection-start-line="677" selection-start-column="5" selection-end-line="677" selection-end-column="5" />
+          <folding>
+            <element signature="method#filledRectangle#0;class#StdDraw#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/MenuGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="157" column="29" lean-forward="true" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
+        <state relative-caret-position="504">
+          <caret line="153" column="76" lean-forward="false" selection-start-line="153" selection-start-column="76" selection-end-line="153" selection-end-column="76" />
           <folding>
             <element signature="e#668#731#0" expanded="true" />
             <element signature="method#initComponents#0;class#MenuGUI#0" expanded="false" />
+            <element signature="method#startButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
             <element signature="method#learnMoreButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
             <element signature="method#settingsButtonActionPerformed#0;class#MenuGUI#0" expanded="false" />
             <element signature="docComment;method#main#0;class#MenuGUI#0" expanded="false" />
@@ -1513,125 +1549,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Research/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="267" column="13" lean-forward="true" selection-start-line="267" selection-start-column="13" selection-end-line="267" selection-end-column="13" />
+        <state relative-caret-position="63">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18284#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#AdvSettingsGUI#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="docComment;method#initComponents#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="e#729#792#0" expanded="true" />
-            <element signature="method#initComponents#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="method#advBackButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="method#indexChangeButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#AdvSettingsGUI#0" expanded="false" />
-            <element signature="method#main#0;class#AdvSettingsGUI#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="488" column="17" lean-forward="false" selection-start-line="488" selection-start-column="16" selection-end-line="488" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#34607#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#872#935#0" expanded="true" />
-            <element signature="method#initComponents#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#sampleChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="e#28759#28801#0" expanded="false" />
-            <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
-            <element signature="method#main#0;class#SettingsGUI#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/StdDraw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="677" column="5" lean-forward="true" selection-start-line="677" selection-start-column="5" selection-end-line="677" selection-end-column="5" />
-          <folding>
-            <element signature="method#filledRectangle#0;class#StdDraw#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurveGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="232" column="0" lean-forward="true" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
-          <folding>
-            <element signature="e#648#678#0" expanded="true" />
-            <element signature="method#initComponents#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1873#1874#0" expanded="true" />
-            <element signature="e#2103#2104#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
-            <element signature="e#2392#2393#0" expanded="true" />
-            <element signature="e#2451#2452#0" expanded="true" />
-            <element signature="e#2681#2682#0" expanded="true" />
-            <element signature="e#2740#2741#0" expanded="true" />
-            <element signature="e#9173#9174#0" expanded="true" />
-            <element signature="e#9244#9245#0" expanded="true" />
-            <element signature="e#11116#11117#0" expanded="true" />
-            <element signature="e#11178#11179#0" expanded="true" />
-            <element signature="e#11382#11383#0" expanded="true" />
-            <element signature="e#11446#11447#0" expanded="true" />
-            <element signature="method#minXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#minYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#maxXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#maxYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#standardDevCheckboxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#cancelButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
-            <element signature="method#doneButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#Profile#0;class#Profile#0" expanded="false" />
+            <element signature="method#initialize#0;class#Profile#0" expanded="false" />
+            <element signature="method#toString#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfile#0;class#Profile#0" expanded="false" />
+            <element signature="method#compareToProfiles#0;class#Profile#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="177">
+          <caret line="26" column="94" lean-forward="false" selection-start-line="26" selection-start-column="94" selection-end-line="26" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/AdvSettingsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#18284#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#AdvSettingsGUI#0;class#AdvSettingsGUI#0" expanded="false" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="docComment;method#initComponents#0;class#AdvSettingsGUI#0" expanded="false" />
+            <element signature="method#advBackButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
+            <element signature="method#indexChangeButtonActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
+            <element signature="method#percentMatchBoxActionPerformed#0;class#AdvSettingsGUI#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#AdvSettingsGUI#0" expanded="false" />
+            <element signature="method#main#0;class#AdvSettingsGUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Research/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+        <state relative-caret-position="332">
+          <caret line="239" column="0" lean-forward="true" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#182#203#0" expanded="false" />
             <element signature="method#createGUI#0;class#Main#0" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
             <element signature="method#readAndStore#0;class#Main#0" expanded="false" />
             <element signature="method#createProfiles#0;class#Main#0" expanded="false" />
             <element signature="method#printOutput#0;class#Main#0" expanded="false" />
             <element signature="method#manualSampleIn#0;class#Main#0" expanded="false" />
             <element signature="method#autoSampleIn#0;class#Main#0" expanded="false" />
-            <element signature="method#printToReport#0;class#Main#0" expanded="false" />
             <element signature="method#writeReport#0;class#Main#0" expanded="false" />
             <element signature="method#openProfileFile#0;class#Main#0" expanded="false" />
             <element signature="method#openIndicesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openSamplesFile#0;class#Main#0" expanded="false" />
             <element signature="method#openReportFile#0;class#Main#0" expanded="false" />
+            <element signature="e#26171#26172#0" expanded="true" />
+            <element signature="e#26203#26204#0" expanded="true" />
+            <element signature="e#27301#27302#0" expanded="true" />
+            <element signature="e#27337#27338#0" expanded="true" />
             <element signature="method#reset#0;class#Main#0" expanded="false" />
             <element signature="method#finish#0;class#Main#0" expanded="false" />
             <element signature="method#setFilenames#0;class#Main#0" expanded="false" />
@@ -1642,6 +1625,75 @@
             <element signature="method#changeData#0;class#Main#0" expanded="false" />
             <element signature="method#makeBellCurve#0;class#Main#0" expanded="false" />
             <element signature="docComment;field#filenameReader#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/BellCurveGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
+            <element signature="e#1918#1919#0" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2437#2438#0" expanded="true" />
+            <element signature="e#2496#2497#0" expanded="true" />
+            <element signature="e#2726#2727#0" expanded="true" />
+            <element signature="e#2785#2786#0" expanded="true" />
+            <element signature="e#9218#9219#0" expanded="true" />
+            <element signature="e#9289#9290#0" expanded="true" />
+            <element signature="e#11095#11096#0" expanded="true" />
+            <element signature="e#11157#11158#0" expanded="true" />
+            <element signature="e#11361#11362#0" expanded="true" />
+            <element signature="e#11425#11426#0" expanded="true" />
+            <element signature="method#minXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#minYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#maxXBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#maxYBoxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#standardDevCheckboxActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="method#cancelButtonActionPerformed#0;class#BellCurveGUI#0" expanded="false" />
+            <element signature="e#16937#16938#0" expanded="true" />
+            <element signature="e#16964#16965#0" expanded="true" />
+            <element signature="e#16995#16996#0" expanded="true" />
+            <element signature="e#17022#17023#0" expanded="true" />
+            <element signature="e#17050#17051#0" expanded="true" />
+            <element signature="e#17077#17078#0" expanded="true" />
+            <element signature="e#17108#17109#0" expanded="true" />
+            <element signature="e#17135#17136#0" expanded="true" />
+            <element signature="e#17171#17172#0" expanded="true" />
+            <element signature="e#17203#17204#0" expanded="true" />
+            <element signature="e#17241#17242#0" expanded="true" />
+            <element signature="e#17275#17276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Research/SettingsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#34526#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="method#freqCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#jitterCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#shimmerCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#profileChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#settingsBackButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#autoSampleCheckboxActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#autoSampleCheckboxStateChanged#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#reportChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#sampleChangeButtonActionPerformed#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#changeFilenames#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="e#28911#28953#0" expanded="false" />
+            <element signature="method#setFilenames#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#SettingsGUI#0" expanded="false" />
+            <element signature="method#main#0;class#SettingsGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>

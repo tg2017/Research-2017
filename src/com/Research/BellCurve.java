@@ -9,8 +9,9 @@ import java.text.NumberFormat;
  *  Dependencies: StdDraw.java Gaussian.java
  *
  * Copyright © 2000–2017, Robert Sedgewick and Kevin Wayne.
- *      Edited by Taylor Giles in November 2017
  * Last updated: Fri Oct 20 14:12:12 EDT 2017.
+ *
+ *      Edited by Taylor Giles in 2017 & 2018
  ******************************************************************************/
 
 public class BellCurve {
@@ -27,14 +28,14 @@ public class BellCurve {
 
         //Draw Bell Curve
         StdDraw.setPenColor(StdDraw.RED);
-        StdDraw.setPenRadius(StdDraw.getPenRadius() + .005);
+        StdDraw.setPenRadius(0.008);
         for (double x = xScaleMin; x <= xScaleMax; x += 0.01) {
             StdDraw.point(x, Gaussian.pdf(x, mu, sigma));
         }
 
 
         //Reset pen
-        StdDraw.setPenRadius(StdDraw.getPenRadius() - .005);
+        StdDraw.setPenRadius(0.002);
         StdDraw.setPenColor(StdDraw.BLACK);
 
         //Plot scale lines

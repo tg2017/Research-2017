@@ -1,4 +1,4 @@
-C:/Users/super/Desktop/Research/Profiles (2017 Project) - Sheet1 (3).csv
+C:/Users/super/Documents/All Files/School/Research/Profiles (2017 Project) - Sheet1 (3).csv
 C:/Users/super/Documents/All Files/School/Research/Program/Research-2017/indices.txt
-C:/Users/super/Desktop/Research/Samples (2017 Project) - Sheet1 (3).csv
-C:/Users/super/Documents/All Files/School/Research/All Data Report.txt
+C:/Users/super/Documents/All Files/School/Research/Samples (2017 Project) - Sheet1 (3).csv
+C:/Users/super/Desktop/reporttest.txt

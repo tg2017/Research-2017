@@ -51,18 +51,14 @@ public class SettingsGUI extends javax.swing.JFrame {
         settingsBackButton = new JButton();
         settingsTitle = new JLabel();
         dataCheckboxTitle = new JLabel();
-        jScrollPane1 = new JScrollPane();
-        profileFileNameTextbox = new JTextPane();
+        profileFileNameTextbox = new JTextField();
         profileFileNameLabel = new JLabel();
-        jScrollPane2 = new JScrollPane();
         //indexFileNameTextbox = new JTextPane();
-        jScrollPane3 = new JScrollPane();
-        sampleFileNameTextbox = new JTextPane();
+        sampleFileNameTextbox = new JTextField();
         indexFileNameLabel = new JLabel();
         sampleFileNameLabel = new JLabel();
         advancedSettingsButton = new JButton();
-        jScrollPane4 = new JScrollPane();
-        reportFileNameTextbox = new JTextPane();
+        reportFileNameTextbox = new JTextField();
         reportFileNameLabel = new JLabel();
         profileChangeButton = new JButton();
         indexChangeButton = new JButton();
@@ -134,7 +130,8 @@ public class SettingsGUI extends javax.swing.JFrame {
 
         profileFileNameTextbox.setText(Main.getProfileFilename());
         profileFileNameTextbox.setEditable(false);
-        jScrollPane1.setViewportView(profileFileNameTextbox);
+        profileFileNameTextbox.setBackground(new java.awt.Color(255, 255, 255));
+
 
         profileFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
 
@@ -142,7 +139,8 @@ public class SettingsGUI extends javax.swing.JFrame {
 
         sampleFileNameTextbox.setText(Main.getSampleFilename());
         sampleFileNameTextbox.setEditable(false);
-        jScrollPane2.setViewportView(sampleFileNameTextbox);
+        sampleFileNameTextbox.setBackground(new java.awt.Color(255, 255, 255));
+
 
         sampleFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
 
@@ -158,7 +156,8 @@ public class SettingsGUI extends javax.swing.JFrame {
 
         reportFileNameTextbox.setText(Main.getReportFilename());
         reportFileNameTextbox.setEditable(false);
-        jScrollPane4.setViewportView(reportFileNameTextbox);
+        reportFileNameTextbox.setBackground(new java.awt.Color(255, 255, 255));
+
 
         reportFileNameLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
 
@@ -358,9 +357,9 @@ public class SettingsGUI extends javax.swing.JFrame {
                                                         .addComponent(autoSampleCheckbox)
                                                         .addGroup(layout.createSequentialGroup()
                                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
-                                                                        .addComponent(jScrollPane4)
-                                                                        .addComponent(jScrollPane1)
+                                                                        .addComponent(profileFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(sampleFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(reportFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                         .addComponent(profileFileNameLabel)
                                                                         .addComponent(sampleFileNameLabel)
                                                                         .addComponent(reportFileNameLabel))
@@ -402,7 +401,7 @@ public class SettingsGUI extends javax.swing.JFrame {
                                 .addComponent(profileFileNameLabel)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(profileFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                                 .addComponent(profileChangeButton)
                                                 .addComponent(profileOpenButton)))
@@ -410,7 +409,7 @@ public class SettingsGUI extends javax.swing.JFrame {
                                 .addComponent(sampleFileNameLabel)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(sampleFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                                 .addComponent(sampleChangeButton)
                                                 .addComponent(samplesOpenButton)))
@@ -418,7 +417,7 @@ public class SettingsGUI extends javax.swing.JFrame {
                                 .addComponent(reportFileNameLabel)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(reportFileNameTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                                 .addComponent(reportChangeButton)
                                                 .addComponent(reportOpenButton)))
@@ -678,24 +677,20 @@ public class SettingsGUI extends javax.swing.JFrame {
     private javax.swing.JLabel indexFileNameLabel;
     private javax.swing.JButton indicesOpenButton;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private static javax.swing.JCheckBox jitterCheckbox;
     private javax.swing.JButton profileChangeButton;
     private javax.swing.JLabel profileFileNameLabel;
-    private static javax.swing.JTextPane profileFileNameTextbox;
+    private static JTextField profileFileNameTextbox;
     private javax.swing.JButton profileOpenButton;
     private javax.swing.JButton reportChangeButton;
     private javax.swing.JLabel reportFileNameLabel;
-    private static javax.swing.JTextPane reportFileNameTextbox;
+    private static JTextField reportFileNameTextbox;
     private javax.swing.JButton reportOpenButton;
     private javax.swing.JLabel reportTypeTitle;
     private javax.swing.JButton sampleChangeButton;
     private javax.swing.JLabel sampleFileNameLabel;
-    private static javax.swing.JTextPane sampleFileNameTextbox;
+    private static JTextField sampleFileNameTextbox;
     private javax.swing.JButton samplesOpenButton;
     private javax.swing.JButton settingsBackButton;
     private javax.swing.JButton advancedSettingsButton;

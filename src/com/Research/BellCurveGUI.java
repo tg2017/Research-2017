@@ -7,6 +7,7 @@ package com.Research;
  */
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  *
@@ -46,8 +47,9 @@ public class BellCurveGUI extends javax.swing.JFrame {
         doneButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
+        setTitle("Bell Curve");
 
         minXBox.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         minXBox.addActionListener(new java.awt.event.ActionListener() {
@@ -157,8 +159,8 @@ public class BellCurveGUI extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
                 jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(standardDevCheckbox)
@@ -229,6 +231,11 @@ public class BellCurveGUI extends javax.swing.JFrame {
         );
 
         pack();
+
+        //Center the jFrame on screen
+        setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }// </editor-fold>
 
     private void minXBoxActionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,6 +289,7 @@ public class BellCurveGUI extends javax.swing.JFrame {
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {
         cancelled = true;
+        Main.makeBellCurve();
         this.dispose();
     }
 
@@ -346,4 +354,3 @@ public class BellCurveGUI extends javax.swing.JFrame {
     private javax.swing.JLabel title;
     // End of variables declaration
 }
-

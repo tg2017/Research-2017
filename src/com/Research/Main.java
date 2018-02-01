@@ -234,10 +234,13 @@ public class Main {
                     footerOutput += "shimmer ";
                 }
                 footerOutput += "data.";
-                footerOutput += "\nThe program was correct " + percent.format(percentCorrect) + "% of the time.";
-                footerOutput += "\nIt is 95% confident that the program will be correct within " + percent.format(opziLowerBound) + "% and " + percent.format(opziUpperBound) + "% of the time.\n\n**********************************************************************";
+                footerOutput += "\n\nThe program was correct " + percent.format(percentCorrect) + "% of the time.";
+                footerOutput += "\n\nWithin a 95% confidence interval, the program will correctly match\n" +
+                        " between" + percent.format(opziLowerBound) + "% and " + percent.format(opziUpperBound) + "% of samples.\n\n**********************************************************************";
 
-                printToReport(footerOutput);
+                if(willWrite) {
+                    printToReport(footerOutput);
+                }
 
                 //Make Bell Curve (if the user wants to)
                 boolean makeCurve = GetData.getBoolean("Would you like to make a bell curve reflecting your data?", "Bell Curve");
@@ -441,30 +444,32 @@ public class Main {
 
     //Print **any** data to report file
     private static void printToReport(String output){
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(reportFilename, true))) {
-            //Replace '\n' escape sequence with '\r\n', which writes to a new line IN FILE
-            reportOutput = output.replaceAll("\n", "\r\n");
+        if(willWrite) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(reportFilename, true))) {
+                //Replace '\n' escape sequence with '\r\n', which writes to a new line IN FILE
+                reportOutput = output.replaceAll("\n", "\r\n");
 
-            //Write data to file
-            bw.write(reportOutput);
+                //Write data to file
+                bw.write(reportOutput);
 
-            System.out.println("\n\nSuccessfully wrote data to file: " + reportFilename);
+                System.out.println("\n\nSuccessfully wrote data to file: " + reportFilename);
 
-            //Display "Successfully Written" message if auto-input is chosen and finished
-            if(useAuto) {
-                if (timesWrittenMessage == (samples.size())) {
+                //Display "Successfully Written" message if auto-input is chosen and finished
+                if (useAuto) {
+                    if (timesWrittenMessage == (samples.size())) {
+                        JOptionPane.showMessageDialog(null, "Successfully wrote data to file: " + reportFilename);
+                    }
+                } else {
                     JOptionPane.showMessageDialog(null, "Successfully wrote data to file: " + reportFilename);
                 }
-            } else {
-                JOptionPane.showMessageDialog(null, "Successfully wrote data to file: " + reportFilename);
+                timesWrittenMessage++;
+                System.out.println("Number of samples written to file in this run-through: " + timesWrittenMessage);
+            } catch (IOException e) {
+                //Print error message if exception is caught
+                e.printStackTrace();
+                System.out.println("Error writing to file: " + reportFilename);
+                JOptionPane.showMessageDialog(null, "Error writing to file: " + reportFilename);
             }
-            timesWrittenMessage++;
-            System.out.println("Number of samples written to file in this run-through: " + timesWrittenMessage);
-        } catch (IOException e) {
-            //Print error message if exception is caught
-            e.printStackTrace();
-            System.out.println("Error writing to file: " + reportFilename);
-            JOptionPane.showMessageDialog(null, "Error writing to file: " + reportFilename);
         }
     }
 
